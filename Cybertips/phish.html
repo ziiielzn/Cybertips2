@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is Cyber Threat?</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="session-check.js"></script>
+    <script src="nav-profile.js" defer></script>
+    <script src="course-progress.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            height: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0a192f;
+            color: #ccd6f6;
+            cursor: pointer;
+            min-height: 100%;
+            width: 100%;
+            position: relative;
+        }
+
+        /* Customize scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(100, 255, 218, 0.3);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(100, 255, 218, 0.5);
+        }
+
+        /* Background glow effects */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(135deg, rgba(0,169,224,0.1) 0%, rgba(0,0,0,0) 50%),
+                linear-gradient(-135deg, rgba(100,255,218,0.1) 0%, rgba(0,0,0,0) 50%);
+            z-index: 0;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: 
+                linear-gradient(to right, 
+                    rgba(0,169,224,0) 0%, 
+                    rgba(0,169,224,0.1) 50%, 
+                    rgba(0,169,224,0) 100%);
+            animation: animateGlow 8s linear infinite;
+            z-index: 0;
+        }
+
+        #content {
+            position: relative;
+            margin: 2rem auto;
+            width: 90%;
+            max-width: 1200px;
+            min-height: calc(100vh - 4rem);
+            padding: 20px;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        h1 {
+            color: #64ffda;
+            margin-bottom: 20px;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            text-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+            white-space: nowrap;
+            width: 100%;
+            text-align: center;
+        }
+
+        h2 {
+            color: #64ffda;
+            margin-bottom: 20px;
+            font-size: clamp(1.2rem, 1vw, 1.9rem);
+            text-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+            white-space: nowrap;
+            width: 100%;
+            text-align: center;
+        }
+
+        .logo {
+            margin: 20px 0;
+            flex-shrink: 0;
+            align-self: center;
+        }
+
+        .logo img {
+            max-width: 180px;
+            max-height: 120px;
+            width: auto;
+            height: auto;
+            /* Removed the filter that was making it white */
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+        }
+
+        .logomid {
+            margin: 20px 0;
+            flex-shrink: 0;
+            align-self: center;
+        }
+
+        .logomid img {
+            max-width: 400px;
+            max-height: 500px;
+            width: auto;
+            height: auto;
+            /* Removed the filter that was making it white */
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            margin-bottom: 15px;
+            max-width: 100%;
+            text-align: left;
+        }
+
+        ul {
+            padding-left: 0;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            list-style-type: none;
+            max-width: 100%;
+            align-self: stretch;
+        }
+
+        li {
+            margin-bottom: 12px;
+            text-align: left;
+            line-height: 1.6;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        li::before {
+            content: "✓";
+            color: #64ffda;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .continue {
+            font-style: italic;
+            color: #64ffda;
+            margin-top: 25px;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            animation: pulse 2s infinite;
+            text-shadow: 0 0 5px rgba(100, 255, 218, 0.5);
+            flex-shrink: 0;
+            width: 100%;
+            text-align: center;
+            align-self: center;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.6; }
+            50% { opacity: 1; text-shadow: 0 0 10px rgba(100, 255, 218, 0.8); }
+            100% { opacity: 0.6; }
+        }
+
+        @keyframes animateGlow {
+            0% { transform: rotate(0deg) translate(-10%, -10%) rotate(0deg); }
+            100% { transform: rotate(360deg) translate(-10%, -10%) rotate(-360deg); }
+        }
+
+        /* Floating glow elements */
+        .glow-box {
+            position: absolute;
+            border: 1px solid rgba(100, 255, 218, 0.2);
+            z-index: 0;
+            animation: float 15s infinite linear;
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+        }
+
+        .glow-box:nth-child(1) {
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .glow-box:nth-child(2) {
+            top: 70%;
+            right: 15%;
+            animation-delay: -5s;
+        }
+
+        .glow-box:nth-child(3) {
+            bottom: 20%;
+            left: 20%;
+            animation-delay: -10s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.3; }
+            50% { transform: translateY(-20px) rotate(5deg); opacity: 0.6; }
+        }
+
+        /* Mobile optimizations */
+        @media (max-height: 600px) {
+            #content {
+                max-height: 95vh;
+                padding: 10px;
+            }
+            
+            .logo img {
+                max-width: 120px;
+                max-height: 80px;
+            }
+            
+            h1 {
+                margin-bottom: 10px;
+            }
+            
+            .logo {
+                margin: 10px 0;
+            }
+            
+            p, li {
+                margin-bottom: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #content {
+                width: 95%;
+                padding: 15px;
+            }
+            
+            ul {
+                padding-left: 0;
+            }
+            
+            li {
+                padding-left: 25px;
+            }
+        }
+
+        /* Add flip card styles */
+        .flip-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 10px;
+        }
+
+        .flip-card {
+            background-color: transparent;
+            width: 320px;
+            height: 280px;
+            perspective: 1000px;
+            cursor: pointer;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card.flipped .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .flip-card-front {
+            background-color: #fff;
+            border: 2px solid #ff4444;
+            color: #333;
+        }
+
+        .flip-card-back {
+            background-color: #fff;
+            border: 2px solid #64ffda;
+            color: #333;
+            transform: rotateY(180deg);
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+
+        .card-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .card-text {
+            font-size: 0.9rem;
+            line-height: 1.4;
+            color: #666;
+        }
+
+        /* Adjust content width for cards */
+        #content {
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        /* Adjust the warning dot */
+        .warning-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #ff4444;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        .safe-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #64ffda;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        /* Dropdown styles */
+        .dropdown-section {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .arrow-mark {
+            color: #ff4444;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+
+        .arrow-mark.active {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px;
+            background: rgba(0, 25, 47, 0.95);
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .dropdown-title {
+            color: #ff4444;
+            font-size: 1.8rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .dropdown-translation {
+            display: none;
+            color: #ccd6f6;
+            font-size: 1.2rem;
+            padding: 15px;
+            padding-left: 45px;
+            position: relative;
+            background: rgba(0, 25, 47, 0.95);
+            margin-top: 2px;
+            border-radius: 5px;
+        }
+
+        .dropdown-translation.active {
+            display: block;
+        }
+
+        .dropdown-translation::before {
+            content: "→";
+            position: absolute;
+            left: 20px;
+            color: #64ffda;
+        }
+
+        /* Special styling for example translations */
+        .dropdown-translation:nth-child(3) {
+            color: #64ffda;
+            font-style: italic;
+        }
+
+        .dropdown-divider {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #ff4444, transparent);
+            margin: 0;
+        }
+
+        /* Progress bar styles */
+        .progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(10, 25, 47, 0.95);
+            z-index: 1000;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .progress-wrapper {
+            flex-grow: 1;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            margin-right: 15px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #64ffda, #00a9e0);
+            width: 0%;
+            transition: width 0.3s ease;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+        }
+
+        .progress-percentage {
+            color: #64ffda;
+            font-size: 14px;
+            font-weight: bold;
+            min-width: 60px;
+            text-align: right;
+            text-shadow: 0 0 5px rgba(100, 255, 218, 0.5);
+        }
+
+        /* Back button styles */
+        .back-button {
+            position: fixed;
+            top: 60px;
+            left: 20px;
+            padding: 10px 20px;
+            background: rgba(100, 255, 218, 0.1);
+            border: 1px solid #64ffda;
+            color: #64ffda;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .back-button:hover {
+            background: rgba(100, 255, 218, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Add these styles for the quiz */
+        #quiz-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 25, 47, 0.95);
+            border-radius: 10px;
+            border: 1px solid #64ffda;
+        }
+
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .option-btn, #retry-btn, #continue-btn {
+            padding: 15px 20px;
+            background: rgba(100, 255, 218, 0.1);
+            border: 1px solid #64ffda;
+            color: #ccd6f6;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            text-align: center;
+            margin: 10px;
+        }
+
+        #continue-btn {
+            background: rgba(100, 255, 218, 0.2);
+            color: #64ffda;
+        }
+
+        #continue-btn:hover {
+            background: rgba(100, 255, 218, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .option-btn:hover {
+            background: rgba(100, 255, 218, 0.2);
+            transform: translateX(5px);
+        }
+
+        .option-btn.correct {
+            background: rgba(0, 255, 0, 0.2);
+            border-color: #00ff00;
+        }
+
+        .option-btn.incorrect {
+            background: rgba(255, 0, 0, 0.2);
+            border-color: #ff0000;
+        }
+
+        #retry-btn {
+            padding: 10px 20px;
+            background: rgba(100, 255, 218, 0.1);
+            border: 1px solid #64ffda;
+            color: #64ffda;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        #retry-btn:hover {
+            background: rgba(100, 255, 218, 0.2);
+        }
+
+        #score-container {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #64ffda;
+        }
+
+        /* Add styles for the explanation text */
+        .explanation-text {
+            margin-top: 15px;
+            padding: 15px;
+            background: rgba(100, 255, 218, 0.1);
+            border-left: 3px solid #64ffda;
+            color: #ccd6f6;
+            border-radius: 0 5px 5px 0;
+            font-style: italic;
+            display: none;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Add styles for the question text to handle line breaks */
+        #question-text {
+            white-space: pre-line;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-container">
+        <div class="progress-wrapper">
+            <div class="progress-bar"></div>
+        </div>
+        <div class="progress-percentage">0%</div>
+    </div>
+    <a href="learn.html" class="back-button">← Back</a>
+    <div id="content">
+        <!-- Content will be updated here with each click -->
+    </div>
+
+    <!-- Glow elements -->
+    <div class="glow-box"></div>
+    <div class="glow-box"></div>
+    <div class="glow-box"></div>
+
+    <script>
+        const slides = [
+            `<h1>WHAT IS SOCIAL ENGINEERING?</h1>
+            <div class="logo">
+                <img src="se1.png" alt="Cyber Security">
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+            
+            `<h1>WHAT IS SOCIAL ENGINEERING?</h1>
+            <div class="logo">
+                <img src="se1.png" alt="Cyber Security">
+            </div>
+            <p>Social engineering is a cyberattack that targets people instead of systems. Instead of hacking into a network using code, attackers trick individuals into giving up confidential information—like passwords, credit card numbers, or access codes.</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>WHAT IS SOCIAL ENGINEERING?</h1>
+            <div class="logo">
+                <img src="se1.png" alt="Cyber Security">
+            </div>
+            <p>Social engineering is a cyberattack that targets people instead of systems. Instead of hacking into a network using code, attackers trick individuals into giving up confidential information—like passwords, credit card numbers, or access codes.</p>
+            <p>Think of it as hacking the human mind.</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>WHAT IS SOCIAL ENGINEERING?</h1>
+            <div class="logo">
+                <img src="se2.png" alt="Cyber Security">
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>WHAT IS SOCIAL ENGINEERING?</h1>
+            <div class="logo">
+                <img src="se2.png" alt="Cyber Security">
+            </div>
+            <h1>Click the arrow for more information</h1>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>WHAT IS SOCIAL ENGINEERING?</h1>
+            <div class="logo">
+                <img src="se2.png" alt="Cyber Security">
+            </div>
+            <h1>Click the arrow for more information</h1>
+            <div class="dropdown-section">
+                <div class="dropdown-header">
+                    <span class="arrow-mark">▼</span><h2 class="dropdown-title">1. Phishing</h2>
+                </div>
+                <div class="dropdown-translation">
+                     The most popular type. A fake email or message tricks the victim into clicking a malicious link or revealing sensitive data.
+                </div>
+                <div class="dropdown-translation">
+                     Example: An email that looks like it's from your bank says, "Your account has been compromised. Click here to reset your password."
+                </div>
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>WHAT IS SOCIAL ENGINEERING?</h1>
+            <div class="logo">
+                <img src="se2.png" alt="Cyber Security">
+            </div>
+            <h1>Click the arrow for more information</h1>
+            <div class="dropdown-section">
+                <div class="dropdown-header">
+                    <span class="arrow-mark">▼</span><h2 class="dropdown-title">1. Phishing</h2>
+                </div>
+                <div class="dropdown-translation">
+                     The most popular type. A fake email or message tricks the victim into clicking a malicious link or revealing sensitive data.
+                </div>
+                <div class="dropdown-translation">
+                     Example: An email that looks like it's from your bank says, "Your account has been compromised. Click here to reset your password."
+                </div>
+            </div>
+            <div class="dropdown-section">
+                <div class="dropdown-header">
+                    <span class="arrow-mark">▼</span><h2 class="dropdown-title">2. Spear Phishing</h2>
+                </div>
+                <div class="dropdown-translation">
+                     Like phishing, but targeted at a specific individual (e.g., the company CEO). These are more personalized and harder to detect.
+                </div>
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>WHAT IS SOCIAL ENGINEERING?</h1>
+            <div class="logo">
+                <img src="se2.png" alt="Cyber Security">
+            </div>
+            <h1>Click the arrow for more information</h1>
+            <div class="dropdown-section">
+                <div class="dropdown-header">
+                    <span class="arrow-mark">▼</span><h2 class="dropdown-title">1. Phishing</h2>
+                </div>
+                <div class="dropdown-translation">
+                     The most popular type. A fake email or message tricks the victim into clicking a malicious link or revealing sensitive data.
+                </div>
+                <div class="dropdown-translation">
+                     Example: An email that looks like it's from your bank says, "Your account has been compromised. Click here to reset your password."
+                </div>
+            </div>
+            <div class="dropdown-section">
+                <div class="dropdown-header">
+                    <span class="arrow-mark">▼</span><h2 class="dropdown-title">2. Spear Phishing</h2>
+                </div>
+                <div class="dropdown-translation">
+                     Like phishing, but targeted at a specific individual (e.g., the company CEO). These are more personalized and harder to detect.
+                </div>
+            </div>
+            <div class="dropdown-section">
+                <div class="dropdown-header">
+                    <span class="arrow-mark">▼</span><h2 class="dropdown-title">3. Vishing (Voice Phishing)</h2>
+                </div>
+                <div class="dropdown-translation">
+                     Scammers call pretending to be tech support, government agents, or banks.
+                </div>
+                <div class="dropdown-translation">
+                     Example: "Hi, I'm from Microsoft. We detected a virus on your computer. Can you install this software?"
+                </div>
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>WHAT IS SOCIAL ENGINEERING?</h1>
+            <div class="logo">
+                <img src="se2.png" alt="Cyber Security">
+            </div>
+            <h1>Click the arrow for more information</h1>
+            <div class="dropdown-section">
+                <div class="dropdown-header">
+                    <span class="arrow-mark">▼</span><h2 class="dropdown-title">1. Phishing</h2>
+                </div>
+                <div class="dropdown-translation">
+                     The most popular type. A fake email or message tricks the victim into clicking a malicious link or revealing sensitive data.
+                </div>
+                <div class="dropdown-translation">
+                     Example: An email that looks like it's from your bank says, "Your account has been compromised. Click here to reset your password."
+                </div>
+            </div>
+            <div class="dropdown-section">
+                <div class="dropdown-header">
+                    <span class="arrow-mark">▼</span><h2 class="dropdown-title">2. Spear Phishing</h2>
+                </div>
+                <div class="dropdown-translation">
+                     Like phishing, but targeted at a specific individual (e.g., the company CEO). These are more personalized and harder to detect.
+                </div>
+            </div>
+            <div class="dropdown-section">
+                <div class="dropdown-header">
+                    <span class="arrow-mark">▼</span><h2 class="dropdown-title">3. Vishing (Voice Phishing)</h2>
+                </div>
+                <div class="dropdown-translation">
+                     Scammers call pretending to be tech support, government agents, or banks.
+                </div>
+                <div class="dropdown-translation">
+                     Example: "Hi, I'm from Microsoft. We detected a virus on your computer. Can you install this software?"
+                </div>
+            </div>
+            <div class="dropdown-section">
+                <div class="dropdown-header">
+                    <span class="arrow-mark">▼</span><h2 class="dropdown-title">4. Baiting</h2>
+                </div>
+                <div class="dropdown-translation">
+                     Promises of free stuff—USBs, music, movie downloads—but it's a trap!
+                </div>
+                <div class="dropdown-translation">
+                     Example: A flash drive labeled "Salary Data" is left in the office parking lot. Curiosity gets the better of you…
+                </div>
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>WHAT IS SOCIAL ENGINEERING?</h1>
+            <div class="logo">
+                <img src="se2.png" alt="Cyber Security">
+            </div>
+            <h1>Click the arrow for more information</h1>
+            <div class="dropdown-section">
+                <div class="dropdown-header">
+                    <span class="arrow-mark">▼</span><h2 class="dropdown-title">1. Phishing</h2>
+                </div>
+                <div class="dropdown-translation">
+                     The most popular type. A fake email or message tricks the victim into clicking a malicious link or revealing sensitive data.
+                </div>
+                <div class="dropdown-translation">
+                     Example: An email that looks like it's from your bank says, "Your account has been compromised. Click here to reset your password."
+                </div>
+            </div>
+            <div class="dropdown-section">
+                <div class="dropdown-header">
+                    <span class="arrow-mark">▼</span><h2 class="dropdown-title">2. Spear Phishing</h2>
+                </div>
+                <div class="dropdown-translation">
+                     Like phishing, but targeted at a specific individual (e.g., the company CEO). These are more personalized and harder to detect.
+                </div>
+            </div>
+            <div class="dropdown-section">
+                <div class="dropdown-header">
+                    <span class="arrow-mark">▼</span><h2 class="dropdown-title">3. Vishing (Voice Phishing)</h2>
+                </div>
+                <div class="dropdown-translation">
+                     Scammers call pretending to be tech support, government agents, or banks.
+                </div>
+                <div class="dropdown-translation">
+                     Example: "Hi, I'm from Microsoft. We detected a virus on your computer. Can you install this software?"
+                </div>
+            </div>
+            <div class="dropdown-section">
+                <div class="dropdown-header">
+                    <span class="arrow-mark">▼</span><h2 class="dropdown-title">4. Baiting</h2>
+                </div>
+                <div class="dropdown-translation">
+                     Promises of free stuff—USBs, music, movie downloads—but it's a trap!
+                </div>
+                <div class="dropdown-translation">
+                     Example: A flash drive labeled "Salary Data" is left in the office parking lot. Curiosity gets the better of you…
+                </div>
+            </div>
+            <div class="dropdown-section">
+                <div class="dropdown-header">
+                    <span class="arrow-mark">▼</span><h2 class="dropdown-title">5. Pretexting</h2>
+                </div>
+                <div class="dropdown-translation">
+                     An attacker invents a scenario to trick the victim into providing information.
+                </div>
+                <div class="dropdown-translation">
+                     Example: "I'm from IT. We're updating our system. Can I get your login credentials?"
+                </div>
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>RED LIGHT, GREEN LIGHT!</h1>
+            <div class="logo">
+                <img src="se1.png" alt="Cyber Security">
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>RED LIGHT, GREEN LIGHT!</h1>
+            <div class="logo">
+                <img src="se1.png" alt="Cyber Security">
+            </div>
+            <p>Red Flags to Watch For</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>RED LIGHT, GREEN LIGHT!</h1>
+            <div class="logo">
+                <img src="se1.png" alt="Cyber Security">
+            </div>
+            <p>Red Flags to Watch For</p>
+            <p><span class="warning-dot"></span>Emails asking for urgent action or password resets.</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>RED LIGHT, GREEN LIGHT!</h1>
+            <div class="logo">
+                <img src="se1.png" alt="Cyber Security">
+            </div>
+            <p>Red Flags to Watch For</p>
+            <p><span class="warning-dot"></span>Emails asking for urgent action or password resets.</p>
+            <p><span class="warning-dot"></span>Unusual links or attachments.</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>RED LIGHT, GREEN LIGHT!</h1>
+            <div class="logo">
+                <img src="se1.png" alt="Cyber Security">
+            </div>
+            <p>Red Flags to Watch For</p>
+            <p><span class="warning-dot"></span>Emails asking for urgent action or password resets.</p>
+            <p><span class="warning-dot"></span>Unusual links or attachments.</p>
+            <p><span class="warning-dot"></span>Unknown callers asking for private information.</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>RED LIGHT, GREEN LIGHT!</h1>
+            <div class="logo">
+                <img src="se1.png" alt="Cyber Security">
+            </div>
+            <p>Red Flags to Watch For</p>
+            <p><span class="warning-dot"></span>Emails asking for urgent action or password resets.</p>
+            <p><span class="warning-dot"></span>Unusual links or attachments.</p>
+            <p><span class="warning-dot"></span>Unknown callers asking for private information.</p>
+            <p><span class="warning-dot"></span>Messages that sound too good to be true</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>RED LIGHT, GREEN LIGHT!</h1>
+            <div class="logo">
+                <img src="se1.png" alt="Cyber Security">
+            </div>
+            <p>Red Flags to Watch For</p>
+            <p><span class="warning-dot"></span>Emails asking for urgent action or password resets.</p>
+            <p><span class="warning-dot"></span>Unusual links or attachments.</p>
+            <p><span class="warning-dot"></span>Unknown callers asking for private information.</p>
+            <p><span class="warning-dot"></span>Messages that sound too good to be true</p>
+            <p>How to Protect Yourself</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>RED LIGHT, GREEN LIGHT!</h1>
+            <div class="logo">
+                <img src="se1.png" alt="Cyber Security">
+            </div>
+            <p>Red Flags to Watch For</p>
+            <p><span class="warning-dot"></span>Emails asking for urgent action or password resets.</p>
+            <p><span class="warning-dot"></span>Unusual links or attachments.</p>
+            <p><span class="warning-dot"></span>Unknown callers asking for private information.</p>
+            <p><span class="warning-dot"></span>Messages that sound too good to be true</p>
+            <p>How to Protect Yourself</p>
+            <p><span class="safe-dot"></span>Think before you click. Always double-check links and email addresses.</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>RED LIGHT, GREEN LIGHT!</h1>
+            <div class="logo">
+                <img src="se1.png" alt="Cyber Security">
+            </div>
+            <p>Red Flags to Watch For</p>
+            <p><span class="warning-dot"></span>Emails asking for urgent action or password resets.</p>
+            <p><span class="warning-dot"></span>Unusual links or attachments.</p>
+            <p><span class="warning-dot"></span>Unknown callers asking for private information.</p>
+            <p><span class="warning-dot"></span>Messages that sound too good to be true</p>
+            <p>How to Protect Yourself</p>
+            <p><span class="safe-dot"></span>Think before you click. Always double-check links and email addresses.</p>
+            <p><span class="safe-dot"></span>Verify the source. Contact the organization directly using trusted info.</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>RED LIGHT, GREEN LIGHT!</h1>
+            <div class="logo">
+                <img src="se1.png" alt="Cyber Security">
+            </div>
+            <p>Red Flags to Watch For</p>
+            <p><span class="warning-dot"></span>Emails asking for urgent action or password resets.</p>
+            <p><span class="warning-dot"></span>Unusual links or attachments.</p>
+            <p><span class="warning-dot"></span>Unknown callers asking for private information.</p>
+            <p><span class="warning-dot"></span>Messages that sound too good to be true</p>
+            <p>How to Protect Yourself</p>
+            <p><span class="safe-dot"></span>Think before you click. Always double-check links and email addresses.</p>
+            <p><span class="safe-dot"></span>Verify the source. Contact the organization directly using trusted info.</p>
+            <p><span class="safe-dot"></span>Use multi-factor authentication (MFA). Even if your password is stolen, it adds a second layer of protection.</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>RED LIGHT, GREEN LIGHT!</h1>
+            <div class="logo">
+                <img src="se1.png" alt="Cyber Security">
+            </div>
+            <p>Red Flags to Watch For</p>
+            <p><span class="warning-dot"></span>Emails asking for urgent action or password resets.</p>
+            <p><span class="warning-dot"></span>Unusual links or attachments.</p>
+            <p><span class="warning-dot"></span>Unknown callers asking for private information.</p>
+            <p><span class="warning-dot"></span>Messages that sound too good to be true</p>
+            <p>How to Protect Yourself</p>
+            <p><span class="safe-dot"></span>Think before you click. Always double-check links and email addresses.</p>
+            <p><span class="safe-dot"></span>Verify the source. Contact the organization directly using trusted info.</p>
+            <p><span class="safe-dot"></span>Use multi-factor authentication (MFA). Even if your password is stolen, it adds a second layer of protection.</p>
+            <p><span class="safe-dot"></span>Educate yourself and others. The best defense is awareness.</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>SOCIAL ENGINEERING & PHISHING</h1>
+            <div class="logomid">
+                <img src="se1.png" alt="Cyber Security">
+            </div>
+            <h1>CONGRATULATIONS! YOU COMPLETED THE LESSON!</h1>
+            <h2>You must complete the quiz to finish this course.</h2>
+            <div class="continue">Click anywhere to take the quiz...</div>`
+        ];
+
+        let currentSlide = 0;
+        const contentDiv = document.getElementById('content');
+        
+        // Prevent context menu on right click
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        // Initialize with first slide
+        contentDiv.innerHTML = slides[currentSlide];
+        updateProgressBar();
+        
+        // Initialize course progress tracking
+        const courseProgress = new CourseProgress(5, slides.length); // Course ID 5 for Phishing
+        courseProgress.init();
+
+        // Set initial slide progress
+        courseProgress.setCurrentSlide(currentSlide + 1);
+        
+        // Add click event listener for dropdown and flip cards
+        document.addEventListener('click', function(e) {
+            const flipCard = e.target.closest('.flip-card');
+            const dropdownHeader = e.target.closest('.dropdown-header');
+            const backButton = e.target.closest('.back-button');
+            
+            // Hide back button on last slide
+            const backButtonElement = document.querySelector('.back-button');
+            if (currentSlide === slides.length - 1 && backButtonElement) {
+                backButtonElement.style.display = 'none';
+            } else if (backButtonElement) {
+                backButtonElement.style.display = 'block';
+            }
+
+            if (backButton) {
+                return;
+            } else if (flipCard) {
+                e.stopPropagation();
+                flipCard.classList.toggle('flipped');
+            } else if (dropdownHeader) {
+                e.stopPropagation();
+                const arrow = dropdownHeader.querySelector('.arrow-mark');
+                const section = dropdownHeader.closest('.dropdown-section');
+                const translations = section.querySelectorAll('.dropdown-translation');
+                arrow.classList.toggle('active');
+                translations.forEach(translation => {
+                    translation.classList.toggle('active');
+                });
+            } else {
+                if (currentSlide === slides.length - 1) {
+                    // Redirect to quiz page on last slide click
+                    window.location.href = 'phish-quiz.html';
+                    return;
+                } else {
+                    currentSlide++;
+                    contentDiv.innerHTML = slides[currentSlide];
+                    contentDiv.scrollTop = 0;
+                    updateProgressBar();
+                    // Update course progress
+                    courseProgress.setCurrentSlide(currentSlide + 1);
+                    
+                    // Check if we need to hide back button after slide change
+                    if (currentSlide === slides.length - 1 && backButtonElement) {
+                        backButtonElement.style.display = 'none';
+                    }
+                }
+            }
+        });
+        
+        // Handle touch events with the same logic
+        document.addEventListener('touchstart', function(e) {
+            const flipCard = e.target.closest('.flip-card');
+            const dropdownHeader = e.target.closest('.dropdown-header');
+            const backButton = e.target.closest('.back-button');
+            const quizButton = e.target.closest('.option-btn');
+            const retryButton = e.target.closest('#retry-btn');
+            const continueButton = e.target.closest('#continue-btn');
+            
+            // Hide back button on last slide
+            const backButtonElement = document.querySelector('.back-button');
+            if (currentSlide === slides.length - 1 && backButtonElement) {
+                backButtonElement.style.display = 'none';
+            } else if (backButtonElement) {
+                backButtonElement.style.display = 'block';
+            }
+
+            if (backButton) {
+                return;
+            } else if (flipCard) {
+                e.stopPropagation();
+                flipCard.classList.toggle('flipped');
+            } else if (dropdownHeader) {
+                e.stopPropagation();
+                const arrow = dropdownHeader.querySelector('.arrow-mark');
+                const section = dropdownHeader.closest('.dropdown-section');
+                const translations = section.querySelectorAll('.dropdown-translation');
+                arrow.classList.toggle('active');
+                translations.forEach(translation => {
+                    translation.classList.toggle('active');
+                });
+            } else if (quizButton || retryButton || continueButton) {
+                e.stopPropagation();
+            } else {
+                if (currentSlide === slides.length - 1) {
+                    // Redirect to quiz page on last slide click
+                    window.location.href = 'phish-quiz.html';
+                    return;
+                } else {
+                    currentSlide++;
+                    contentDiv.innerHTML = slides[currentSlide];
+                    contentDiv.scrollTop = 0;
+                    updateProgressBar();
+                    // Update course progress
+                    courseProgress.setCurrentSlide(currentSlide + 1);
+                    
+                    // Check if we need to hide back button after slide change
+                    if (currentSlide === slides.length - 1 && backButtonElement) {
+                        backButtonElement.style.display = 'none';
+                    }
+                }
+            }
+        });
+
+        // Initialize - check if we need to hide back button on page load
+        window.addEventListener('load', function() {
+            const backButtonElement = document.querySelector('.back-button');
+            if (currentSlide === slides.length - 1 && backButtonElement) {
+                backButtonElement.style.display = 'none';
+            }
+        });
+
+        // Function to update progress bar
+        function updateProgressBar() {
+            const progress = ((currentSlide + 1) / slides.length) * 100;
+            document.querySelector('.progress-bar').style.width = `${progress}%`;
+            document.querySelector('.progress-percentage').textContent = `${Math.round(progress)}%`;
+        }
+
+        // Add this before the existing script
+        const quizQuestions = [
+            {
+                question: "Subject: URGENT: Your Netflix account has been suspended!\nMessage:“We couldn't process your payment. Click the link below to update your billing info within 24 hours to avoid losing access.” [Update Now]",
+                options: ["Phishing", "Legit"],
+                correct: 0,
+                explanation: "Urgent tone, suspicious link, and fear-based tactics are classic phishing signs."
+            },
+            {
+                question: 'Subject: Urgent: Account Verification Required \nMessage: "Your account has been temporarily suspended. To restore access, please verify your identity by clicking here." [Verify Account]"',
+                options: ["Phishing", "Legit"],
+                correct: 0,
+                explanation: "Legitimate companies usually provide a secure method of verifying your account directly through their official website, not through unsolicited emails. Be cautious of urgent requests for personal information or actions. Always go directly to the website to verify."
+            },
+            {
+                question: 'Subject: Facebook Login Attempt from New Device \n"We detected a login attempt from a new device. If this was not you, click here to secure your account." [Review Activity]"',
+                options: ["Phishing", "Legit"],
+                correct: 1,
+                explanation: "Facebook does send alerts like this. But always go directly to the website/app instead of clicking links in emails."
+            },
+            {
+                question: 'Subject: Free Starbucks Voucher Just for You! \nMessage: "Complete this quick survey and get a ₱500 Starbucks voucher instantly!" [Take Survey]"',
+                options: ["Phishing", "Legit"],
+                correct: 0,
+                explanation: '"Free stuff" scams are baiting techniques. Suspicious URL = hard pass."'
+            },
+            {
+                question: 'Subject: Class Schedule Update from the Registrar \nMessage: "We have updated your schedule for the upcoming semester. Please log in to the student portal to view the changes. Kindly check your portal."',
+                options: ["Phishing", "Legit"],
+                correct: 1,
+                explanation: "If it's from an official school email and the link goes to the actual student portal, it's likely legit."
+            },
+            {
+                question: 'Subject: Order Confirmation #12345 \nMessage: "Thank you for your purchase! Your order #12345 has been successfully processed. You can track your order or view the details below."',
+                options: ["Phishing", "Legit"],
+                correct: 1,
+                explanation: "Order confirmations from well-known companies usually include links for tracking or managing your order. If you recognize the retailer and the order number matches your recent purchases, it's a legitimate email. Always confirm the sender's address."
+            },
+            {
+                question: 'Subject: Your GCash Account Will Be Locked \nMessage: "Due to suspicious activity, we are locking your GCash account. Click the link below to verify your identity." [Verify Now]"',
+                options: ["Phishing", "Legit"],
+                correct: 0,
+                explanation: "Financial scare tactics + fake urgency = red flag. Always verify with the official app."
+            },
+            {
+                question: '"Subject: Your Monthly Statement Is Ready \nMessage:"Your monthly bank statement is now available. Click below to view or download your statement. Use this as your password to open the file birthmonth(last3digitsofacctnumber)" [View Statement]"',
+                options: ["Phishing", "Legit"],
+                correct: 1,
+                explanation: "Why: Most banks and financial institutions send secure notifications when your statements are available. The link provided should direct you to the official bank website, not a third-party site. Always double-check the sender's email address."
+            },
+            {
+                question: 'Subject: Congratulations! You have Won a $500 Gift Card \nMessage: "Congratulations! You have been selected to receive a $500 gift card. Click the link below to claim your prize!" [Claim Gift Card]"',
+                options: ["Phishing", "Legit"],
+                correct: 0,
+                explanation: "Emails claiming you've won a prize you didn't enter for are a classic phishing tactic. Legitimate companies don't randomly give away gift cards without a proper contest entry or verification. Always be skeptical of unsolicited rewards."
+            },
+            {
+                question: 'Subject: Your Payment Is Due: Immediate Action Required \nMessage: "Your payment for XYZ Service is overdue. Failure to pay within 24 hours will result in a suspension of your account. Click here to make the payment.""',
+                options: ["Phishing", "Legit"],
+                correct: 0,
+                explanation: "Legitimate businesses typically provide ample time for payment and will contact you via secure means. The urgency and link in the email could be an attempt to trick you into entering payment details on a fake site. Always verify through official channels."
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+        let quizCompleted = false;
+
+        function displayQuestion() {
+            const questionContainer = document.getElementById('question-container');
+            const questionText = document.getElementById('question-text');
+            const options = document.getElementsByClassName('option-btn');
+            
+            // Remove any existing explanation
+            const oldExplanation = questionContainer.querySelector('.explanation-text');
+            if (oldExplanation) {
+                oldExplanation.remove();
+            }
+            
+            questionText.textContent = quizQuestions[currentQuestion].question;
+            for (let i = 0; i < 2; i++) {
+                options[i].textContent = quizQuestions[currentQuestion].options[i];
+                options[i].className = 'option-btn';
+            }
+        }
+
+        function checkAnswer(choice) {
+            if (quizCompleted) return;
+            
+            const options = document.getElementsByClassName('option-btn');
+            const correct = quizQuestions[currentQuestion].correct;
+            const questionContainer = document.getElementById('question-container');
+            
+            // Disable buttons to prevent multiple clicks
+            Array.from(options).forEach(btn => btn.disabled = true);
+            
+            options[choice].classList.add(choice === correct ? 'correct' : 'incorrect');
+            options[correct].classList.add('correct');
+            
+            if (choice === correct) {
+                score++;
+                // Only show explanation for correct answers
+                const explanationDiv = document.createElement('div');
+                explanationDiv.className = 'explanation-text';
+                explanationDiv.textContent = quizQuestions[currentQuestion].explanation;
+                questionContainer.appendChild(explanationDiv);
+                
+                // Show explanation with animation
+                setTimeout(() => {
+                    explanationDiv.style.display = 'block';
+                }, 100);
+            }
+            
+            // Adjust timing based on whether showing explanation
+            const delayTime = choice === correct ? 2500 : 1000;
+            
+            setTimeout(() => {
+                currentQuestion++;
+                if (currentQuestion < quizQuestions.length) {
+                    displayQuestion();
+                } else {
+                    showResults();
+                }
+                // Re-enable buttons for next question
+                Array.from(options).forEach(btn => btn.disabled = false);
+            }, delayTime); // Longer delay for correct answers to read explanation
+        }
+
+        function showResults() {
+            const scorePercent = (score / quizQuestions.length) * 100;
+            document.getElementById('question-container').style.display = 'none';
+            document.getElementById('score-container').style.display = 'block';
+            document.getElementById('score').textContent = scorePercent;
+            
+            if (scorePercent >= 80) {
+                quizCompleted = true;
+                document.getElementById('continue-btn').style.display = 'block';
+                document.getElementById('retry-btn').style.display = 'none';
+            } else {
+                document.getElementById('retry-btn').style.display = 'block';
+                document.getElementById('continue-btn').style.display = 'none';
+            }
+        }
+
+        function retryQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            document.getElementById('question-container').style.display = 'block';
+            document.getElementById('score-container').style.display = 'none';
+            document.getElementById('retry-btn').style.display = 'none';
+            displayQuestion();
+        }
+
+        function proceedToNext() {
+            if (quizCompleted) {
+                currentSlide++;
+                contentDiv.innerHTML = slides[currentSlide];
+                contentDiv.scrollTop = 0;
+                updateProgressBar();
+            }
+        }
+    </script>
+</body>
+</html>

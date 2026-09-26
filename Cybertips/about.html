@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Our Team - CyberTips</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="nav-profile.js" defer></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            height: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0a192f;
+            color: #ccd6f6;
+            min-height: 100%;
+            width: 100%;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Customize scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(100, 255, 218, 0.3);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(100, 255, 218, 0.5);
+        }
+
+        /* Background glow effects */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(135deg, rgba(0,169,224,0.1) 0%, rgba(0,0,0,0) 50%),
+                linear-gradient(-135deg, rgba(100,255,218,0.1) 0%, rgba(0,0,0,0) 50%);
+            z-index: 0;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: 
+                linear-gradient(to right, 
+                    rgba(0,169,224,0) 0%, 
+                    rgba(0,169,224,0.1) 50%, 
+                    rgba(0,169,224,0) 100%);
+            animation: animateGlow 8s linear infinite;
+            z-index: 0;
+        }
+
+        .about-page {
+            flex: 1 0 auto;
+            min-height: 100vh;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.9);
+            border-bottom: 1px solid rgba(100, 255, 218, 0.2);
+            position: relative;
+            z-index: 2;
+        }
+
+        main {
+            flex: 1 0 auto;
+            padding: 40px 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .team-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #64ffda;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            text-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .team-member {
+            background: rgba(13, 36, 64, 0.5);
+            border: 1px solid rgba(100, 255, 218, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
+            border-color: #64ffda;
+        }
+
+        .team-member img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 3px solid transparent;
+            transition: all 0.3s ease;
+            object-fit: cover;
+        }
+
+        .team-member:hover img {
+            transform: scale(1.1);
+            border-color: #64ffda;
+            box-shadow: 0 0 15px rgba(100, 255, 218, 0.5);
+        }
+
+        .team-member h3 {
+            color: #ffffff;
+            font-size: 1.5rem;
+            margin: 15px 0 10px;
+        }
+
+        .team-member .role {
+            color: #64ffda;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .team-member .role:last-of-type {
+            margin-bottom: 20px;
+        }
+
+        .team-member .basic-knowledge {
+            color: #8892b0;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-links a {
+            color: #64ffda;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            color: #ffffff;
+            transform: translateY(-3px);
+            text-shadow: 0 0 10px rgba(100, 255, 218, 0.7);
+        }
+
+        .footer {
+            flex-shrink: 0;
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 20px 0;
+            margin-top: auto;
+        }
+
+        @media (max-width: 900px) {
+            .team-grid {
+                grid-template-columns: repeat(1, 1fr);
+                max-width: 500px;
+                margin: 0 auto 40px auto;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .team-member img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        @keyframes animateGlow {
+            0% { transform: rotate(0deg) translate(-10%, -10%) rotate(0deg); }
+            100% { transform: rotate(360deg) translate(-10%, -10%) rotate(-360deg); }
+        }
+
+        /* Floating glow elements */
+        .glow-box {
+            position: absolute;
+            border: 1px solid rgba(100, 255, 218, 0.2);
+            z-index: 0;
+            animation: float 15s infinite linear;
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0); }
+            50% { transform: translate(20px, 20px); }
+            100% { transform: translate(0, 0); }
+        }
+
+        /* Add timeline styles */
+        .journey-section {
+            max-width: 800px;
+            margin: 80px auto 0;
+            padding: 0 20px;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: rgba(100, 255, 218, 0.3);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #64ffda;
+            box-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+        }
+
+        .timeline-content {
+            width: 45%;
+            padding: 20px;
+            background: rgba(13, 36, 64, 0.5);
+            border: 1px solid rgba(100, 255, 218, 0.2);
+            border-radius: 8px;
+            margin-left: 55%;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: 0;
+            margin-right: 55%;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(100, 255, 218, 0.2);
+            border-color: #64ffda;
+        }
+
+        .timeline-content h3 {
+            color: #64ffda;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .timeline-content p {
+            color: #8892b0;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 30px;
+            }
+
+            .timeline-dot {
+                left: 30px;
+            }
+
+            .timeline-content {
+                width: calc(100% - 60px);
+                margin-left: 60px;
+            }
+
+            .timeline-item:nth-child(even) .timeline-content {
+                margin-left: 60px;
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="about-page">
+        <!-- Navigation Bar -->
+        <header class="navbar">
+            <div class="logo-container">
+                <img src="logo.png" alt="Cyber Tips Logo" class="logo"/>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="learn.html">Learn</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                </ul>
+            </nav>
+            <div class="profile-icon-container">
+                <a href="profile.html">
+                    <i class="fas fa-user profile-icon"></i>
+                </a>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <div class="team-section">
+                <h1 class="section-title">Meet Our Team</h1>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="princess.jpg" alt="Princess Ibias">
+                        <h3>Princess A. Ibias</h3>
+                        <div class="role">Researcher</div>
+                        <div class="role">UI/UX Designer</div>
+                        <div class="basic-knowledge">Basic knowledge of HTML, CSS, and JS</div>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/piltish" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/philtis.ly" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <img src="mico.jpg" alt="Mico Valeras">
+                        <h3>Mico A. Valeras</h3>
+                        <div class="role">Lead Developer</div>
+                        <div class="role">UI/UX Designer</div>
+                        <div class="basic-knowledge">Basic knowledge of HTML, CSS, and JS</div>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/mico.valeras.1" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/micovaleras" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <img src="laarni.jpg" alt="Laarni Nacario">
+                        <h3>Laarni Z. Nacario</h3>
+                        <div class="role">Project Manager</div>
+                        <div class="role">UI/UX Designer</div>
+                        <div class="basic-knowledge">Basic knowledge of HTML, CSS, and JS</div>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/ziiielzn" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/ziiielzn._" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- My Journey Section -->
+            <div class="journey-section">
+                <h2 class="section-title">Our Journey</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>March 5-23, 2025: The Blueprint Stage</h3>
+                            <p>We planned to design a cybersecurity website that's clean, simple, and actually useful. We mapped out the structure, layout, and user interface using Figma to create a visual prototype. We started with small and basic topics for cyber tips with only 50% working and the rest were under development.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>April 10-25, 2025: Design to Code Development</h3>
+                            <p>We had the Figma designs locked in and had begun translating them into real code. We changed the UI Design into quite appealing for the UX. With our visual plans ready, we dove headfirst into hard coding the entire site. started turning Figma frames into HTML, CSS, and JavaScript. We also started populating the site with researched cybersecurity tips—short, simple, and useful.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>May 2-23, 2025: The Final Touches</h3>
+                            <p>We completed feature development fixed bugs, cleaned up the UI, and improved overall performance. Added finishing touches to content, visuals, and the other cyber tips content for our website.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-logo-container">
+                <img src="logo.png" alt="Cyber Tips Logo" class="footer-logo"/>
+            </div>
+            <p class="footer-text">CourseCompass 2024, All rights reserved</p>
+        </footer>
+    </div>
+
+    <div class="glow-box"></div>
+    <div class="glow-box"></div>
+    <div class="glow-box"></div>
+</body>
+</html>

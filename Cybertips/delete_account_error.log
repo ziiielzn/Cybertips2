@@ -1,0 +1,18 @@
+[24-May-2025 08:50:12 Europe/Berlin] Delete account process started
+[24-May-2025 08:50:12 Europe/Berlin] Session data: Array
+(
+    [user_id] => 1
+)
+
+[24-May-2025 08:50:12 Europe/Berlin] POST data: Array
+(
+    [current-password] => LNTauyan07!
+    [confirm-delete] => on
+)
+
+[24-May-2025 08:50:12 Europe/Berlin] PHP Warning:  require_once(db_connect.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\Cybertips\delete_account.php on line 37
+[24-May-2025 08:50:12 Europe/Berlin] Delete account process completed
+[24-May-2025 08:50:12 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'db_connect.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\Cybertips\delete_account.php:37
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\Cybertips\delete_account.php on line 37

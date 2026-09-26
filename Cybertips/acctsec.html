@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is Cyber Threat?</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="nav-profile.js" defer></script>
+    <script src="session-check.js"></script>
+    <script src="course-progress.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            height: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0a192f;
+            color: #ccd6f6;
+            cursor: pointer;
+            min-height: 100%;
+            width: 100%;
+            position: relative;
+        }
+
+        /* Customize scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(100, 255, 218, 0.3);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(100, 255, 218, 0.5);
+        }
+
+        /* Background glow effects */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(135deg, rgba(0,169,224,0.1) 0%, rgba(0,0,0,0) 50%),
+                linear-gradient(-135deg, rgba(100,255,218,0.1) 0%, rgba(0,0,0,0) 50%);
+            z-index: 0;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: 
+                linear-gradient(to right, 
+                    rgba(0,169,224,0) 0%, 
+                    rgba(0,169,224,0.1) 50%, 
+                    rgba(0,169,224,0) 100%);
+            animation: animateGlow 8s linear infinite;
+            z-index: 0;
+        }
+
+        #content {
+            position: relative;
+            margin: 2rem auto;
+            width: 90%;
+            max-width: 1200px;
+            min-height: calc(100vh - 4rem);
+            padding: 20px;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        h1 {
+            color: #64ffda;
+            margin-bottom: 20px;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            text-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+            white-space: nowrap;
+            width: 100%;
+            text-align: center;
+        }
+
+        .logo {
+            margin: 20px 0;
+            flex-shrink: 0;
+            align-self: center;
+        }
+
+        .logo img {
+            max-width: 180px;
+            max-height: 120px;
+            width: auto;
+            height: auto;
+            /* Removed the filter that was making it white */
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+        }
+
+        .logomid {
+            margin: 20px 0;
+            flex-shrink: 0;
+            align-self: center;
+        }
+
+        .logomid img {
+            max-width: 700px;
+            max-height: 900px;
+            width: auto;
+            height: auto;
+            /* Removed the filter that was making it white */
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            margin-bottom: 15px;
+            max-width: 100%;
+            text-align: left;
+        }
+
+        ul {
+            padding-left: 0;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            list-style-type: none;
+            max-width: 100%;
+            align-self: stretch;
+        }
+
+        li {
+            margin-bottom: 12px;
+            text-align: left;
+            line-height: 1.6;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        li::before {
+            content: "✓";
+            color: #64ffda;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .continue {
+            font-style: italic;
+            color: #64ffda;
+            margin-top: 25px;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            animation: pulse 2s infinite;
+            text-shadow: 0 0 5px rgba(100, 255, 218, 0.5);
+            flex-shrink: 0;
+            width: 100%;
+            text-align: center;
+            align-self: center;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.6; }
+            50% { opacity: 1; text-shadow: 0 0 10px rgba(100, 255, 218, 0.8); }
+            100% { opacity: 0.6; }
+        }
+
+        @keyframes animateGlow {
+            0% { transform: rotate(0deg) translate(-10%, -10%) rotate(0deg); }
+            100% { transform: rotate(360deg) translate(-10%, -10%) rotate(-360deg); }
+        }
+
+        /* Floating glow elements */
+        .glow-box {
+            position: absolute;
+            border: 1px solid rgba(100, 255, 218, 0.2);
+            z-index: 0;
+            animation: float 15s infinite linear;
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+        }
+
+        .glow-box:nth-child(1) {
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .glow-box:nth-child(2) {
+            top: 70%;
+            right: 15%;
+            animation-delay: -5s;
+        }
+
+        .glow-box:nth-child(3) {
+            bottom: 20%;
+            left: 20%;
+            animation-delay: -10s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.3; }
+            50% { transform: translateY(-20px) rotate(5deg); opacity: 0.6; }
+        }
+
+        /* Mobile optimizations */
+        @media (max-height: 600px) {
+            #content {
+                max-height: 95vh;
+                padding: 10px;
+            }
+            
+            .logo img {
+                max-width: 120px;
+                max-height: 80px;
+            }
+            
+            h1 {
+                margin-bottom: 10px;
+            }
+            
+            .logo {
+                margin: 10px 0;
+            }
+            
+            p, li {
+                margin-bottom: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #content {
+                width: 95%;
+                padding: 15px;
+            }
+            
+            ul {
+                padding-left: 0;
+            }
+            
+            li {
+                padding-left: 25px;
+            }
+        }
+
+        /* Add flip card styles */
+        .flip-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 10px;
+        }
+
+        .flip-card {
+            background-color: transparent;
+            width: 320px;
+            height: 280px;
+            perspective: 1000px;
+            cursor: pointer;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card.flipped .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .flip-card-front {
+            background-color: #fff;
+            border: 2px solid #ff4444;
+            color: #333;
+        }
+
+        .flip-card-back {
+            background-color: #fff;
+            border: 2px solid #64ffda;
+            color: #333;
+            transform: rotateY(180deg);
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+
+        .card-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .card-text {
+            font-size: 0.9rem;
+            line-height: 1.4;
+            color: #666;
+        }
+
+        /* Adjust content width for cards */
+        #content {
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        /* Adjust the warning dot */
+        .warning-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #ff4444;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        .safe-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #64ffda;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        /* Dropdown styles */
+        .dropdown-section {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .arrow-mark {
+            color: #ff4444;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+
+        .arrow-mark.active {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px;
+            background: rgba(0, 25, 47, 0.95);
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .dropdown-title {
+            color: #ff4444;
+            font-size: 1.8rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .dropdown-translation {
+            display: none;
+            color: #ccd6f6;
+            font-size: 1.2rem;
+            padding: 15px;
+            padding-left: 45px;
+            position: relative;
+            background: rgba(0, 25, 47, 0.95);
+            margin-top: 2px;
+            border-radius: 5px;
+        }
+
+        .dropdown-translation.active {
+            display: block;
+        }
+
+        .dropdown-translation::before {
+            content: "→";
+            position: absolute;
+            left: 20px;
+            color: #64ffda;
+        }
+
+        .dropdown-divider {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #ff4444, transparent);
+            margin: 0;
+        }
+
+        /* Progress bar styles */
+        .progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(10, 25, 47, 0.95);
+            z-index: 1000;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .progress-wrapper {
+            flex-grow: 1;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            margin-right: 15px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #64ffda, #00a9e0);
+            width: 0%;
+            transition: width 0.3s ease;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+        }
+
+        .progress-percentage {
+            color: #64ffda;
+            font-size: 14px;
+            font-weight: bold;
+            min-width: 60px;
+            text-align: right;
+            text-shadow: 0 0 5px rgba(100, 255, 218, 0.5);
+        }
+
+        /* Back button styles */
+        .back-button {
+            position: fixed;
+            top: 60px;
+            left: 20px;
+            padding: 10px 20px;
+            background: rgba(100, 255, 218, 0.1);
+            border: 1px solid #64ffda;
+            color: #64ffda;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .back-button:hover {
+            background: rgba(100, 255, 218, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .box-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 50px auto;
+            max-width: 1000px;
+            padding: 0 20px;
+        }
+        
+        .info-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid #64ffda;
+            border-radius: 15px;
+            padding: 25px;
+            width: 300px;
+            height: 320px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(100, 255, 218, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .info-box img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 15px;
+            flex-shrink: 0;
+        }
+        
+        .info-box h3 {
+            color: #64ffda;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .info-box p {
+            color: #ccd6f6;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            margin: 0;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-container">
+        <div class="progress-wrapper">
+            <div class="progress-bar"></div>
+        </div>
+        <div class="progress-percentage">0%</div>
+    </div>
+    <a href="learn.html" class="back-button">← Back</a>
+    <div id="content">
+        <!-- Content will be updated here with each click -->
+    </div>
+
+    <!-- Glow elements -->
+    <div class="glow-box"></div>
+    <div class="glow-box"></div>
+    <div class="glow-box"></div>
+
+    <script>
+        const slides = [
+            `<h1>WHAT IS ACCOUNT SECURITY?</h1>
+            <div class="logo">
+                <img src="acct1.png" alt="Cyber Security">
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+        
+            `<h1>WHAT IS ACCOUNT SECURITY?</h1>
+            <div class="logo">
+                <img src="acct1.png" alt="Cyber Security">
+            </div>
+            <p>Account security refers to the measures and practices put in place to protect online accounts from unauthorized access, misuse, or breaches. It involves using strong, unique passwords, enabling multi-factor authentication (MFA), and keeping personal information confidential to reduce the risk of cyber threats.</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+            
+            `<h1>WHAT IS ACCOUNT SECURITY?</h1>
+            <div class="logo">
+                <img src="acct1.png" alt="Cyber Security">
+            </div>
+            <p>Account security refers to the measures and practices put in place to protect online accounts from unauthorized access, misuse, or breaches. It involves using strong, unique passwords, enabling multi-factor authentication (MFA), and keeping personal information confidential to reduce the risk of cyber threats.</p>
+            <p>Regularly monitoring account activity, updating security settings, and being cautious of phishing attempts are also vital components of maintaining account security. By implementing these practices, users can safeguard their sensitive information and prevent potential data loss or identity theft.</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+            
+            `<h1>COMMON ATTACK METHODS</h1>
+            <div class="logo">
+                <img src="acct2.png" alt="Cyber Security">
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>COMMON ATTACK METHODS</h1>
+            <div class="logo">
+                <img src="acct2.png" alt="Cyber Security">
+            </div>
+            <p>In the realm of cybersecurity, attackers utilize various methods to compromise systems, steal sensitive information, or disrupt operations.</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>COMMON ATTACK METHODS</h1>
+            <div class="logo">
+                <img src="acct2.png" alt="Cyber Security">
+            </div>
+            <p>In the realm of cybersecurity, attackers utilize various methods to compromise systems, steal sensitive information, or disrupt operations.</p>
+            <div class="box-container">
+                <div class="info-box">
+                    <img src="cam1.png" alt="MITM Attack">
+                    <h3><span class="warning-dot"></span> Brute Force Attacks</h3>
+                    <p>A brute force attack systematically attempts all possible character combinations to guess passwords or encryption keys.</p>
+                    <p>Attackers rely on the sheer processing power of computers to execute these attacks.</p>
+                </div>
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>COMMON ATTACK METHODS</h1>
+            <div class="logo">
+                <img src="acct2.png" alt="Cyber Security">
+            </div>
+            <p>In the realm of cybersecurity, attackers utilize various methods to compromise systems, steal sensitive information, or disrupt operations.</p>
+            <div class="box-container">
+                <div class="info-box">
+                    <img src="cam1.png" alt="MITM Attack">
+                    <h3><span class="warning-dot"></span> Brute Force Attacks</h3>
+                    <p>A brute force attack systematically attempts all possible character combinations to guess passwords or encryption keys.</p>
+                    <p>Attackers rely on the sheer processing power of computers to execute these attacks.</p>
+                </div>
+
+                <div class="info-box">
+                    <img src="cam2.png" alt="Unauthorized Access">
+                    <h3><span class="warning-dot"></span>Credential Stuffing</h3>
+                    <p>Credential stuffing is when attackers use stolen username-password pairs from data breaches to access other accounts.</p>
+                    <p>Since many users reuse credentials across platforms, attackers can exploit this habit.</p>
+                </div>
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>COMMON ATTACK METHODS</h1>
+            <div class="logo">
+                <img src="acct2.png" alt="Cyber Security">
+            </div>
+            <p>In the realm of cybersecurity, attackers utilize various methods to compromise systems, steal sensitive information, or disrupt operations.</p>
+            <div class="box-container">
+                <div class="info-box">
+                    <img src="cam1.png" alt="MITM Attack">
+                    <h3><span class="warning-dot"></span> Brute Force Attacks</h3>
+                    <p>A brute force attack systematically attempts all possible character combinations to guess passwords or encryption keys.</p>
+                    <p>Attackers rely on the sheer processing power of computers to execute these attacks.</p>
+                </div>
+
+                <div class="info-box">
+                    <img src="cam2.png" alt="Unauthorized Access">
+                    <h3><span class="warning-dot"></span>Credential Stuffing</h3>
+                    <p>Credential stuffing is when attackers use stolen username-password pairs from data breaches to access other accounts.</p>
+                    <p>Since many users reuse credentials across platforms, attackers can exploit this habit.</p>
+                </div>
+
+                <div class="info-box">
+                    <img src="cam3.png" alt="Network Sniffing">
+                    <h3><span class="warning-dot"></span>Phishing</h3>
+                    <p>Phishing is a social engineering attack that deceives victims into disclosing sensitive information, like login credentials or financial details.</p>
+                    <p>This is typically done through deceptive emails, websites, or messages.</p>
+                </div>
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>BEST PRACTICES FOR SECURING</h1>
+            <h1>ONLINE ACCOUNTS</h1>
+            <div class="logo">
+                <img src="acct3.png" alt="Cyber Security">
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>BEST PRACTICES FOR SECURING</h1>
+            <h1>ONLINE ACCOUNTS</h1>
+            <div class="logo">
+                <img src="acct3.png" alt="Cyber Security">
+            </div>
+            <p>Securing online accounts is vital to protect against cyberattacks and data breaches. Following best practices ensures your accounts and personal information remain safe from unauthorized access.</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>BEST PRACTICES FOR SECURING</h1>
+            <h1>ONLINE ACCOUNTS</h1>
+            <div class="logo">
+                <img src="acct3.png" alt="Cyber Security">
+            </div>
+            <p>Securing online accounts is vital to protect against cyberattacks and data breaches. Following best practices ensures your accounts and personal information remain safe from unauthorized access.</p>
+            <div class="box-container">
+                <div class="info-box">
+                    <img src="oa1.png" alt="MITM Attack">
+                    <h3><span class="safe-dot"></span>Use Strong, Unique Passwords</h3>
+                    <p>Weak passwords are one of the most common vulnerabilities in account security.</p>
+                    <p>Avoid using easily guessable information like birthdays, names, or common phrases.</p>
+                </div>
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>BEST PRACTICES FOR SECURING</h1>
+            <h1>ONLINE ACCOUNTS</h1>
+            <div class="logo">
+                <img src="acct3.png" alt="Cyber Security">
+            </div>
+            <p>Securing online accounts is vital to protect against cyberattacks and data breaches. Following best practices ensures your accounts and personal information remain safe from unauthorized access.</p>
+            <div class="box-container">
+                <div class="info-box">
+                    <img src="oa1.png" alt="MITM Attack">
+                    <h3><span class="safe-dot"></span>Use Strong, Unique Passwords</h3>
+                    <p>Weak passwords are one of the most common vulnerabilities in account security.</p>
+                    <p>Avoid using easily guessable information like birthdays, names, or common phrases.</p>
+                </div>
+
+                <div class="info-box">
+                    <img src="oa2.png" alt="Unauthorized Access">
+                    <h3><span class="safe-dot"></span> Enable Multi-Factor Authentication (MFA)</h3>
+                    <p>MFA adds an extra layer of security by requiring a second form of verification in addition to your password.</p>
+                    <p>Use Biometric verification, such as fingerprints or facial recognition.</p>
+                </div>
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>BEST PRACTICES FOR SECURING</h1>
+            <h1>ONLINE ACCOUNTS</h1>
+            <div class="logo">
+                <img src="acct3.png" alt="Cyber Security">
+            </div>
+            <p>Securing online accounts is vital to protect against cyberattacks and data breaches. Following best practices ensures your accounts and personal information remain safe from unauthorized access.</p>
+            <div class="box-container">
+                <div class="info-box">
+                    <img src="oa1.png" alt="MITM Attack">
+                    <h3><span class="safe-dot"></span>Use Strong, Unique Passwords</h3>
+                    <p>Weak passwords are one of the most common vulnerabilities in account security.</p>
+                    <p>Avoid using easily guessable information like birthdays, names, or common phrases.</p>
+                </div>
+
+                <div class="info-box">
+                    <img src="oa2.png" alt="Unauthorized Access">
+                    <h3><span class="safe-dot"></span> Enable Multi-Factor Authentication (MFA)</h3>
+                    <p>MFA adds an extra layer of security by requiring a second form of verification in addition to your password.</p>
+                    <p>Use Biometric verification, such as fingerprints or facial recognition.</p>
+                </div>
+
+                <div class="info-box">
+                    <img src="oa3.png" alt="Network Sniffing">
+                    <h3><span class="safe-dot"></span>Be Cautious with Public Wi-Fi</h3>
+                    <p>Public Wi-Fi networks are often insecure and can expose your data to attackers.</p>
+                    <p>Use a Virtual Private Network (VPN) to encrypt your internet connection.</p>
+                </div>
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>ACCOUNT SECURITY</h1>
+            <div class="logomid">
+                <img src="acct1.png" alt="Cyber Security">
+            </div>
+            <h1>CONGRATULATIONS! YOU COMPLETED THE LESSON!</h1>
+            <div class="continue">Presentation complete. Click to finish.</div>`
+        ];
+
+        let currentSlide = 0;
+        const contentDiv = document.getElementById('content');
+        
+        // Prevent context menu on right click
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        // Initialize with first slide
+        contentDiv.innerHTML = slides[currentSlide];
+        updateProgressBar();
+        
+        // Initialize course progress tracking
+        const courseProgress = new CourseProgress(2, slides.length); // Course ID 2 for Account Security
+        courseProgress.init();
+
+        // Set initial slide progress
+        courseProgress.setCurrentSlide(currentSlide + 1);
+        
+        // Add click event listener for dropdown and flip cards
+        document.addEventListener('click', function(e) {
+            const flipCard = e.target.closest('.flip-card');
+            const dropdownHeader = e.target.closest('.dropdown-header');
+            const backButton = e.target.closest('.back-button');
+            
+            if (backButton) {
+                // Let the link handle the navigation
+                return;
+            } else if (flipCard) {
+                e.stopPropagation();
+                flipCard.classList.toggle('flipped');
+            } else if (dropdownHeader) {
+                e.stopPropagation();
+                const arrow = dropdownHeader.querySelector('.arrow-mark');
+                const translation = dropdownHeader.nextElementSibling;
+                arrow.classList.toggle('active');
+                translation.classList.toggle('active');
+            } else {
+                if (currentSlide === slides.length - 1) {
+                    // If we're on the last slide, update progress before redirecting
+                    courseProgress.setCurrentSlide(slides.length);
+                    window.location.href = 'learn.html';
+                } else {
+                    currentSlide++;
+                    contentDiv.innerHTML = slides[currentSlide];
+                    contentDiv.scrollTop = 0;
+                    updateProgressBar();
+                    // Update course progress
+                    courseProgress.setCurrentSlide(currentSlide + 1);
+                }
+            }
+        });
+        
+        // Handle touch events with the same logic
+        document.addEventListener('touchstart', function(e) {
+            const flipCard = e.target.closest('.flip-card');
+            const dropdownHeader = e.target.closest('.dropdown-header');
+            const backButton = e.target.closest('.back-button');
+            
+            if (backButton) {
+                // Let the link handle the navigation
+                return;
+            } else if (flipCard) {
+                e.stopPropagation();
+                flipCard.classList.toggle('flipped');
+            } else if (dropdownHeader) {
+                e.stopPropagation();
+                const arrow = dropdownHeader.querySelector('.arrow-mark');
+                const translation = dropdownHeader.nextElementSibling;
+                arrow.classList.toggle('active');
+                translation.classList.toggle('active');
+            } else {
+                if (currentSlide === slides.length - 1) {
+                    // If we're on the last slide, update progress before redirecting
+                    courseProgress.setCurrentSlide(slides.length);
+                    window.location.href = 'learn.html';
+                } else {
+                    currentSlide++;
+                    contentDiv.innerHTML = slides[currentSlide];
+                    contentDiv.scrollTop = 0;
+                    updateProgressBar();
+                    // Update course progress
+                    courseProgress.setCurrentSlide(currentSlide + 1);
+                }
+            }
+        });
+
+        // Function to update progress bar
+        function updateProgressBar() {
+            const progress = ((currentSlide + 1) / slides.length) * 100;
+            document.querySelector('.progress-bar').style.width = `${progress}%`;
+            document.querySelector('.progress-percentage').textContent = `${Math.round(progress)}%`;
+        }
+    </script>
+</body>
+</html>

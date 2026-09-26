@@ -1,0 +1,1293 @@
+[2025-05-23 03:56:04] Attempting to fetch data for user ID: 1
+[2025-05-23 03:56:04] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 03:56:04] PDO Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'field list'
+[2025-05-23 03:56:04] Error Code: 42S22
+[2025-05-23 04:00:08] Attempting to fetch data for user ID: 1
+[2025-05-23 04:00:08] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 04:00:08] User data found: {"username":"AngelTauyan02","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 04:00:23] Attempting to fetch data for user ID: 1
+[2025-05-23 04:00:23] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 04:00:23] User data found: {"username":"AngelTauyan02","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 04:02:56] Attempting to fetch data for user ID: 1
+[2025-05-23 04:02:56] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 04:02:56] User data found: {"username":"AngelTauyan02","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 04:08:20] Attempting to fetch data for user ID: 1
+[2025-05-23 04:08:41] Attempting to fetch data for user ID: 1
+[2025-05-23 04:08:41] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 04:08:41] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 04:12:06] Attempting to fetch data for user ID: 2
+[2025-05-23 04:12:06] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 2
+[2025-05-23 04:12:06] User data found: {"username":"NoraTauyan18","email":"noralyntauyan@gmail.com","profile_picture":null}
+[2025-05-23 04:21:07] Attempting to fetch data for user ID: 1
+[2025-05-23 04:21:07] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 04:21:07] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 05:17:07] Attempting to fetch data for user ID: 1
+[2025-05-23 05:17:07] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 05:17:07] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 05:17:30] Attempting to fetch data for user ID: 1
+[2025-05-23 05:17:30] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 05:17:30] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 05:17:37] Attempting to fetch data for user ID: 1
+[2025-05-23 05:17:37] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 05:17:37] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 05:20:22] Attempting to fetch data for user ID: 1
+[2025-05-23 05:20:22] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 05:20:22] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 05:21:14] Attempting to fetch data for user ID: 1
+[2025-05-23 05:21:14] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 05:21:14] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 05:30:17] Attempting to fetch data for user ID: 1
+[2025-05-23 05:30:17] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 05:30:17] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 05:30:41] Attempting to fetch data for user ID: 1
+[2025-05-23 05:30:41] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 05:30:41] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 05:30:51] Attempting to fetch data for user ID: 1
+[2025-05-23 05:30:51] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 05:30:51] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 05:32:12] Attempting to fetch data for user ID: 1
+[2025-05-23 05:32:12] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 05:32:12] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 05:35:00] Attempting to fetch data for user ID: 1
+[2025-05-23 05:35:00] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 05:35:00] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 05:35:01] Attempting to fetch data for user ID: 1
+[2025-05-23 05:35:01] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 05:35:01] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 05:36:23] Attempting to fetch data for user ID: 1
+[2025-05-23 05:36:23] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 05:36:23] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 05:37:02] Attempting to fetch data for user ID: 1
+[2025-05-23 05:37:02] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 05:37:02] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 05:37:18] Attempting to fetch data for user ID: 1
+[2025-05-23 05:37:18] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 05:37:18] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 05:39:28] Attempting to fetch data for user ID: 1
+[2025-05-23 05:39:28] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 05:39:28] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 05:39:37] Attempting to fetch data for user ID: 1
+[2025-05-23 05:39:37] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 05:39:37] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 05:41:37] Attempting to fetch data for user ID: 1
+[2025-05-23 05:41:37] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 05:41:37] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 05:41:45] Attempting to fetch data for user ID: 1
+[2025-05-23 05:41:45] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 05:41:45] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 05:43:03] Attempting to fetch data for user ID: 1
+[2025-05-23 05:43:03] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 05:43:03] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 05:43:11] Attempting to fetch data for user ID: 1
+[2025-05-23 05:43:11] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 05:43:11] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 05:43:23] Attempting to fetch data for user ID: 1
+[2025-05-23 05:43:23] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 05:43:23] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 05:45:06] Attempting to fetch data for user ID: 1
+[2025-05-23 05:45:06] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 05:45:06] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 05:45:14] Attempting to fetch data for user ID: 1
+[2025-05-23 05:45:14] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 05:45:14] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 05:45:29] Attempting to fetch data for user ID: 1
+[2025-05-23 05:45:29] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 05:45:29] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 05:47:25] Attempting to fetch data for user ID: 1
+[2025-05-23 05:47:25] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 05:47:25] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 05:47:33] Attempting to fetch data for user ID: 1
+[2025-05-23 05:47:33] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 05:47:33] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 05:47:35] Attempting to fetch data for user ID: 1
+[2025-05-23 05:47:35] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 05:47:35] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 05:47:36] Attempting to fetch data for user ID: 1
+[2025-05-23 05:47:36] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 05:47:36] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 05:49:38] Attempting to fetch data for user ID: 1
+[2025-05-23 05:49:38] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 05:49:38] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 05:49:46] Attempting to fetch data for user ID: 1
+[2025-05-23 05:49:46] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 05:49:46] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 05:57:11] Attempting to fetch data for user ID: 1
+[2025-05-23 05:57:11] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 05:57:11] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 05:57:21] Attempting to fetch data for user ID: 1
+[2025-05-23 05:57:21] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 05:57:21] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 05:58:43] Attempting to fetch data for user ID: 1
+[2025-05-23 05:58:43] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 05:58:43] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 07:04:24] Attempting to fetch data for user ID: 1
+[2025-05-23 07:04:24] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 07:04:24] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 09:04:21] Attempting to fetch data for user ID: 1
+[2025-05-23 09:04:21] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 09:04:21] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 09:12:35] User not logged in. Session ID: vk2st8geevrj0jossfbsm6rgqg
+[2025-05-23 09:12:59] User not logged in. Session ID: vk2st8geevrj0jossfbsm6rgqg
+[2025-05-23 09:13:11] Attempting to fetch data for user ID: 2
+[2025-05-23 09:13:11] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 2
+[2025-05-23 09:13:11] User data found: {"username":"NoraTauyan18","email":"noralyntauyan@gmail.com","profile_picture":null}
+[2025-05-23 09:16:00] User not logged in. Session ID: p1nju1kcm2uk79sfo3qfeq9psl
+[2025-05-23 09:17:17] Attempting to fetch data for user ID: 3
+[2025-05-23 09:17:17] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 3
+[2025-05-23 09:17:17] User data found: {"username":"JohnDoe12","email":"johndoe12@gmail.com","profile_picture":null}
+[2025-05-23 09:19:25] Attempting to fetch data for user ID: 1
+[2025-05-23 09:19:25] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 09:19:25] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 14:35:02] Attempting to fetch data for user ID: 1
+[2025-05-23 14:35:02] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 14:35:02] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 15:11:08] Attempting to fetch data for user ID: 1
+[2025-05-23 15:11:08] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 15:11:08] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-23 15:16:08] Attempting to fetch data for user ID: 1
+[2025-05-23 15:16:08] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 15:16:08] No user found with ID: 1
+[2025-05-23 15:25:22] Attempting to fetch data for user ID: 2
+[2025-05-23 15:25:22] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 2
+[2025-05-23 15:25:22] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"default-profile.jpg"}
+[2025-05-23 15:26:58] Attempting to fetch data for user ID: 2
+[2025-05-23 15:26:58] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 2
+[2025-05-23 15:26:58] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"default-profile.jpg"}
+[2025-05-23 15:28:00] Attempting to fetch data for user ID: 2
+[2025-05-23 15:28:00] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 2
+[2025-05-23 15:28:00] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"default-profile.jpg"}
+[2025-05-23 15:29:06] Attempting to fetch data for user ID: 2
+[2025-05-23 15:55:39] Attempting to fetch data for user ID: 1
+[2025-05-23 15:55:39] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 15:55:39] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"default-profile.jpg"}
+[2025-05-23 15:58:42] Attempting to fetch data for user ID: 1
+[2025-05-23 15:58:42] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 15:58:42] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"default-profile.jpg"}
+[2025-05-23 15:59:20] Attempting to fetch data for user ID: 1
+[2025-05-23 15:59:20] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 15:59:20] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"default-profile.jpg"}
+[2025-05-23 15:59:25] Attempting to fetch data for user ID: 1
+[2025-05-23 16:00:44] Attempting to fetch data for user ID: 1
+[2025-05-23 16:05:13] Attempting to fetch data for user ID: 1
+[2025-05-23 16:05:13] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 16:05:13] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748008844_fe0a654e0718bd43.jpg"}
+[2025-05-23 16:05:50] Attempting to fetch data for user ID: 1
+[2025-05-23 16:05:50] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 16:05:50] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748008844_fe0a654e0718bd43.jpg"}
+[2025-05-23 16:07:07] Attempting to fetch data for user ID: 1
+[2025-05-23 16:07:07] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 16:07:07] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748008844_fe0a654e0718bd43.jpg"}
+[2025-05-23 16:07:10] Attempting to fetch data for user ID: 1
+[2025-05-23 16:07:10] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 16:07:10] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748008844_fe0a654e0718bd43.jpg"}
+[2025-05-23 16:07:12] Attempting to fetch data for user ID: 1
+[2025-05-23 16:07:12] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 16:07:12] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748008844_fe0a654e0718bd43.jpg"}
+[2025-05-23 16:07:13] Attempting to fetch data for user ID: 1
+[2025-05-23 16:07:13] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 16:07:13] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748008844_fe0a654e0718bd43.jpg"}
+[2025-05-23 16:10:33] Attempting to fetch data for user ID: 1
+[2025-05-23 16:10:33] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 16:10:33] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748008844_fe0a654e0718bd43.jpg"}
+[2025-05-23 16:20:01] Attempting to fetch data for user ID: 1
+[2025-05-23 16:20:01] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 16:20:01] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748008844_fe0a654e0718bd43.jpg"}
+[2025-05-23 16:20:04] Attempting to fetch data for user ID: 1
+[2025-05-23 16:20:04] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 16:20:04] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748008844_fe0a654e0718bd43.jpg"}
+[2025-05-23 16:20:32] Attempting to fetch data for user ID: 1
+[2025-05-23 16:20:40] Attempting to fetch data for user ID: 1
+[2025-05-23 16:20:40] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 16:20:40] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748010032_dc41e008ecd1d80f.JPEG"}
+[2025-05-23 16:22:36] Attempting to fetch data for user ID: 1
+[2025-05-23 16:22:36] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 16:22:36] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748010032_dc41e008ecd1d80f.JPEG"}
+[2025-05-23 16:22:47] Attempting to fetch data for user ID: 1
+[2025-05-23 16:22:47] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 16:22:47] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748010032_dc41e008ecd1d80f.JPEG"}
+[2025-05-23 16:25:41] Attempting to fetch data for user ID: 1
+[2025-05-23 16:25:41] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 16:25:41] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748010032_dc41e008ecd1d80f.JPEG"}
+[2025-05-23 16:29:43] Attempting to fetch data for user ID: 1
+[2025-05-23 16:29:43] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 16:29:43] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748010032_dc41e008ecd1d80f.JPEG"}
+[2025-05-23 16:32:30] Attempting to fetch data for user ID: 1
+[2025-05-23 16:32:30] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 16:32:30] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748010032_dc41e008ecd1d80f.JPEG"}
+[2025-05-23 16:54:32] Attempting to fetch data for user ID: 1
+[2025-05-23 16:54:32] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 16:54:32] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748010032_dc41e008ecd1d80f.JPEG"}
+[2025-05-23 18:43:21] Attempting to fetch data for user ID: 1
+[2025-05-23 18:43:21] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 18:43:21] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748010032_dc41e008ecd1d80f.JPEG"}
+[2025-05-23 18:44:28] Attempting to fetch data for user ID: 1
+[2025-05-23 18:44:28] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 18:44:28] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748010032_dc41e008ecd1d80f.JPEG"}
+[2025-05-23 18:45:07] Attempting to fetch data for user ID: 1
+[2025-05-23 18:45:07] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 18:45:07] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748010032_dc41e008ecd1d80f.JPEG"}
+[2025-05-23 18:46:01] Attempting to fetch data for user ID: 1
+[2025-05-23 18:46:01] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-23 18:46:01] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748010032_dc41e008ecd1d80f.JPEG"}
+[2025-05-24 03:31:57] Attempting to fetch data for user ID: 1
+[2025-05-24 03:31:57] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 03:31:57] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748010032_dc41e008ecd1d80f.JPEG"}
+[2025-05-24 06:12:57] Attempting to fetch data for user ID: 1
+[2025-05-24 06:13:06] Attempting to fetch data for user ID: 1
+[2025-05-24 06:13:36] Attempting to fetch data for user ID: 1
+[2025-05-24 06:13:43] Attempting to fetch data for user ID: 1
+[2025-05-24 06:13:50] Attempting to fetch data for user ID: 1
+[2025-05-24 06:13:57] Attempting to fetch data for user ID: 1
+[2025-05-24 06:20:44] Attempting to fetch data for user ID: 1
+[2025-05-24 06:20:44] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 06:20:44] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 06:20:50] Attempting to fetch data for user ID: 1
+[2025-05-24 06:20:54] Attempting to fetch data for user ID: 1
+[2025-05-24 06:20:54] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 06:20:54] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060450_9a2f7af189d85e67.jpg"}
+[2025-05-24 06:21:01] Attempting to fetch data for user ID: 1
+[2025-05-24 06:21:01] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 06:21:01] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060450_9a2f7af189d85e67.jpg"}
+[2025-05-24 06:22:17] Attempting to fetch data for user ID: 1
+[2025-05-24 06:22:17] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 06:22:17] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 06:22:22] Attempting to fetch data for user ID: 1
+[2025-05-24 06:22:33] Attempting to fetch data for user ID: 1
+[2025-05-24 06:22:33] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 06:22:33] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 06:23:17] Attempting to fetch data for user ID: 1
+[2025-05-24 06:23:17] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 06:23:17] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 06:23:35] Attempting to fetch data for user ID: 1
+[2025-05-24 06:23:35] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 06:23:35] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 06:23:37] Attempting to fetch data for user ID: 1
+[2025-05-24 06:23:37] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 06:23:37] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 06:44:01] Attempting to fetch data for user ID: 1
+[2025-05-24 06:44:01] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 06:44:01] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 06:44:05] Attempting to fetch data for user ID: 1
+[2025-05-24 06:44:05] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 06:44:05] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:31:07] Attempting to fetch data for user ID: 1
+[2025-05-24 07:31:07] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:31:07] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:31:19] Attempting to fetch data for user ID: 1
+[2025-05-24 07:31:19] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:31:19] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:33:04] Attempting to fetch data for user ID: 1
+[2025-05-24 07:33:04] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:33:04] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:33:04] Attempting to fetch data for user ID: 1
+[2025-05-24 07:33:04] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:33:04] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:33:13] Attempting to fetch data for user ID: 1
+[2025-05-24 07:33:13] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:33:13] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:33:13] Attempting to fetch data for user ID: 1
+[2025-05-24 07:33:13] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:33:13] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:34:33] Attempting to fetch data for user ID: 1
+[2025-05-24 07:34:33] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:34:33] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:34:33] Attempting to fetch data for user ID: 1
+[2025-05-24 07:34:33] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:34:33] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:34:44] Attempting to fetch data for user ID: 1
+[2025-05-24 07:34:44] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:34:44] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:34:44] Attempting to fetch data for user ID: 1
+[2025-05-24 07:34:44] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:34:44] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:34:57] Attempting to fetch data for user ID: 1
+[2025-05-24 07:34:57] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:34:57] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:34:57] Attempting to fetch data for user ID: 1
+[2025-05-24 07:34:57] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:34:57] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:35:42] Attempting to fetch data for user ID: 1
+[2025-05-24 07:35:42] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:35:42] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:35:42] Attempting to fetch data for user ID: 1
+[2025-05-24 07:35:42] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:35:42] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:35:52] Attempting to fetch data for user ID: 1
+[2025-05-24 07:35:52] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:35:52] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:35:52] Attempting to fetch data for user ID: 1
+[2025-05-24 07:35:52] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:35:52] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:37:11] Attempting to fetch data for user ID: 1
+[2025-05-24 07:37:11] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:37:11] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:37:11] Attempting to fetch data for user ID: 1
+[2025-05-24 07:37:11] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:37:11] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:37:21] Attempting to fetch data for user ID: 1
+[2025-05-24 07:37:21] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:37:21] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:37:21] Attempting to fetch data for user ID: 1
+[2025-05-24 07:37:21] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:37:21] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:37:59] Attempting to fetch data for user ID: 1
+[2025-05-24 07:37:59] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:37:59] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:37:59] Attempting to fetch data for user ID: 1
+[2025-05-24 07:37:59] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:37:59] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:38:20] Attempting to fetch data for user ID: 1
+[2025-05-24 07:38:20] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:38:20] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:38:20] Attempting to fetch data for user ID: 1
+[2025-05-24 07:38:20] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:38:20] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:38:37] Attempting to fetch data for user ID: 1
+[2025-05-24 07:38:37] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:38:37] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:38:38] Attempting to fetch data for user ID: 1
+[2025-05-24 07:38:38] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:38:38] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:39:18] Attempting to fetch data for user ID: 1
+[2025-05-24 07:39:18] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:39:18] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:39:18] Attempting to fetch data for user ID: 1
+[2025-05-24 07:39:18] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:39:18] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:39:28] Attempting to fetch data for user ID: 1
+[2025-05-24 07:39:28] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:39:28] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:39:28] Attempting to fetch data for user ID: 1
+[2025-05-24 07:39:28] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:39:28] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:42:01] Attempting to fetch data for user ID: 1
+[2025-05-24 07:42:01] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:42:01] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:42:01] Attempting to fetch data for user ID: 1
+[2025-05-24 07:42:01] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:42:01] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:42:01] Attempting to fetch data for user ID: 1
+[2025-05-24 07:42:01] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:42:01] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:42:01] Attempting to fetch data for user ID: 1
+[2025-05-24 07:42:01] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:42:01] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:42:02] Attempting to fetch data for user ID: 1
+[2025-05-24 07:42:02] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:42:02] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:42:02] Attempting to fetch data for user ID: 1
+[2025-05-24 07:42:02] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:42:02] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:42:11] Attempting to fetch data for user ID: 1
+[2025-05-24 07:42:11] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:42:11] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:42:11] Attempting to fetch data for user ID: 1
+[2025-05-24 07:42:11] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:42:11] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:42:22] Attempting to fetch data for user ID: 1
+[2025-05-24 07:42:22] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:42:22] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:42:22] Attempting to fetch data for user ID: 1
+[2025-05-24 07:42:22] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:42:22] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:42:26] Attempting to fetch data for user ID: 1
+[2025-05-24 07:42:26] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:42:26] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:42:26] Attempting to fetch data for user ID: 1
+[2025-05-24 07:42:26] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:42:26] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:42:51] Attempting to fetch data for user ID: 1
+[2025-05-24 07:42:51] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:42:51] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:42:51] Attempting to fetch data for user ID: 1
+[2025-05-24 07:42:51] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:42:51] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:43:00] Attempting to fetch data for user ID: 1
+[2025-05-24 07:43:00] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:43:00] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:43:00] Attempting to fetch data for user ID: 1
+[2025-05-24 07:43:00] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:43:00] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:43:13] Attempting to fetch data for user ID: 1
+[2025-05-24 07:43:13] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:43:13] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:43:13] Attempting to fetch data for user ID: 1
+[2025-05-24 07:43:13] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:43:13] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:48:29] Attempting to fetch data for user ID: 1
+[2025-05-24 07:48:29] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:48:29] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:48:30] Attempting to fetch data for user ID: 1
+[2025-05-24 07:48:30] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:48:30] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:50:04] Attempting to fetch data for user ID: 1
+[2025-05-24 07:50:04] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:50:04] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:50:04] Attempting to fetch data for user ID: 1
+[2025-05-24 07:50:04] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:50:04] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:50:04] Attempting to fetch data for user ID: 1
+[2025-05-24 07:50:04] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:50:04] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:50:04] Attempting to fetch data for user ID: 1
+[2025-05-24 07:50:04] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:50:04] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:50:06] Attempting to fetch data for user ID: 1
+[2025-05-24 07:50:06] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:50:06] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:50:06] Attempting to fetch data for user ID: 1
+[2025-05-24 07:50:06] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:50:06] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:50:08] Attempting to fetch data for user ID: 1
+[2025-05-24 07:50:08] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:50:08] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:50:08] Attempting to fetch data for user ID: 1
+[2025-05-24 07:50:08] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:50:08] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:50:08] Attempting to fetch data for user ID: 1
+[2025-05-24 07:50:08] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:50:08] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:50:08] Attempting to fetch data for user ID: 1
+[2025-05-24 07:50:08] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:50:08] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:50:08] Attempting to fetch data for user ID: 1
+[2025-05-24 07:50:08] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:50:08] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:50:08] Attempting to fetch data for user ID: 1
+[2025-05-24 07:50:08] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:50:08] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:50:09] Attempting to fetch data for user ID: 1
+[2025-05-24 07:50:09] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:50:09] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:50:09] Attempting to fetch data for user ID: 1
+[2025-05-24 07:50:09] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:50:09] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:50:09] Attempting to fetch data for user ID: 1
+[2025-05-24 07:50:09] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:50:09] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:50:09] Attempting to fetch data for user ID: 1
+[2025-05-24 07:50:09] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:50:09] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:50:10] Attempting to fetch data for user ID: 1
+[2025-05-24 07:50:10] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:50:10] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:50:10] Attempting to fetch data for user ID: 1
+[2025-05-24 07:50:10] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:50:10] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:50:10] Attempting to fetch data for user ID: 1
+[2025-05-24 07:50:11] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:50:11] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:50:13] Attempting to fetch data for user ID: 1
+[2025-05-24 07:50:13] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:50:13] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:50:13] Attempting to fetch data for user ID: 1
+[2025-05-24 07:50:13] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:50:13] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:50:18] Attempting to fetch data for user ID: 1
+[2025-05-24 07:50:18] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:50:18] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:50:18] Attempting to fetch data for user ID: 1
+[2025-05-24 07:50:18] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:50:18] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748060542_19e01316f6f5733c.jpg"}
+[2025-05-24 07:54:39] Attempting to fetch data for user ID: 1
+[2025-05-24 07:54:39] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:54:39] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 07:54:39] Attempting to fetch data for user ID: 1
+[2025-05-24 07:54:39] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:54:39] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 07:54:48] Attempting to fetch data for user ID: 1
+[2025-05-24 07:54:56] Attempting to fetch data for user ID: 1
+[2025-05-24 07:54:56] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:54:56] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 07:54:56] Attempting to fetch data for user ID: 1
+[2025-05-24 07:54:56] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:54:56] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 07:55:13] Attempting to fetch data for user ID: 1
+[2025-05-24 07:55:13] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:55:13] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 07:55:14] Attempting to fetch data for user ID: 1
+[2025-05-24 07:55:14] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:55:14] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 07:55:25] Attempting to fetch data for user ID: 1
+[2025-05-24 07:55:25] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:55:25] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 07:55:25] Attempting to fetch data for user ID: 1
+[2025-05-24 07:55:25] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:55:25] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 07:55:35] Attempting to fetch data for user ID: 1
+[2025-05-24 07:55:35] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:55:35] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 07:55:35] Attempting to fetch data for user ID: 1
+[2025-05-24 07:55:35] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:55:35] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 07:55:49] Attempting to fetch data for user ID: 1
+[2025-05-24 07:55:49] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:55:49] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 07:55:49] Attempting to fetch data for user ID: 1
+[2025-05-24 07:55:49] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:55:49] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 07:56:01] Attempting to fetch data for user ID: 1
+[2025-05-24 07:56:01] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:56:01] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 07:56:01] Attempting to fetch data for user ID: 1
+[2025-05-24 07:56:01] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:56:01] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 07:58:07] Attempting to fetch data for user ID: 1
+[2025-05-24 07:58:07] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:58:07] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 07:58:07] Attempting to fetch data for user ID: 1
+[2025-05-24 07:58:07] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 07:58:07] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 08:00:37] User not logged in. Session ID: j9oqg6pe0n8lab29ngj82u88hl
+[2025-05-24 08:00:37] User not logged in. Session ID: j9oqg6pe0n8lab29ngj82u88hl
+[2025-05-24 08:01:55] Attempting to fetch data for user ID: 2
+[2025-05-24 08:01:55] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 2
+[2025-05-24 08:01:55] User data found: {"username":"JohnDoe12","email":"johndoe12@gmail.com","profile_picture":null}
+[2025-05-24 08:01:55] Attempting to fetch data for user ID: 2
+[2025-05-24 08:01:55] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 2
+[2025-05-24 08:01:55] User data found: {"username":"JohnDoe12","email":"johndoe12@gmail.com","profile_picture":null}
+[2025-05-24 08:02:01] Attempting to fetch data for user ID: 2
+[2025-05-24 08:02:45] Attempting to fetch data for user ID: 2
+[2025-05-24 08:02:45] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 2
+[2025-05-24 08:02:45] User data found: {"username":"JohnDoe12","email":"johndoe12@gmail.com","profile_picture":"uploads\/1748066521_fa43129366612eba.gif"}
+[2025-05-24 08:02:46] Attempting to fetch data for user ID: 2
+[2025-05-24 08:02:46] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 2
+[2025-05-24 08:02:46] User data found: {"username":"JohnDoe12","email":"johndoe12@gmail.com","profile_picture":"uploads\/1748066521_fa43129366612eba.gif"}
+[2025-05-24 08:03:03] Attempting to fetch data for user ID: 2
+[2025-05-24 08:03:03] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 2
+[2025-05-24 08:03:03] User data found: {"username":"JohnDoe12","email":"johndoe12@gmail.com","profile_picture":"uploads\/1748066521_fa43129366612eba.gif"}
+[2025-05-24 08:03:04] Attempting to fetch data for user ID: 2
+[2025-05-24 08:03:04] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 2
+[2025-05-24 08:03:04] User data found: {"username":"JohnDoe12","email":"johndoe12@gmail.com","profile_picture":"uploads\/1748066521_fa43129366612eba.gif"}
+[2025-05-24 08:03:19] Attempting to fetch data for user ID: 2
+[2025-05-24 08:03:19] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 2
+[2025-05-24 08:03:19] User data found: {"username":"JohnDoe12","email":"johndoe12@gmail.com","profile_picture":"uploads\/1748066521_fa43129366612eba.gif"}
+[2025-05-24 08:03:19] Attempting to fetch data for user ID: 2
+[2025-05-24 08:03:19] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 2
+[2025-05-24 08:03:19] User data found: {"username":"JohnDoe12","email":"johndoe12@gmail.com","profile_picture":"uploads\/1748066521_fa43129366612eba.gif"}
+[2025-05-24 08:04:00] Attempting to fetch data for user ID: 2
+[2025-05-24 08:04:00] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 2
+[2025-05-24 08:04:00] User data found: {"username":"JohnDoe12","email":"johndoe12@gmail.com","profile_picture":"uploads\/1748066521_fa43129366612eba.gif"}
+[2025-05-24 08:04:00] Attempting to fetch data for user ID: 2
+[2025-05-24 08:04:00] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 2
+[2025-05-24 08:04:00] User data found: {"username":"JohnDoe12","email":"johndoe12@gmail.com","profile_picture":"uploads\/1748066521_fa43129366612eba.gif"}
+[2025-05-24 08:09:07] Attempting to fetch data for user ID: 1
+[2025-05-24 08:09:07] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:09:07] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 08:09:07] Attempting to fetch data for user ID: 1
+[2025-05-24 08:09:07] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:09:07] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 08:09:08] Attempting to fetch data for user ID: 1
+[2025-05-24 08:09:08] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:09:08] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 08:09:08] Attempting to fetch data for user ID: 1
+[2025-05-24 08:09:08] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:09:08] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 08:09:09] Attempting to fetch data for user ID: 1
+[2025-05-24 08:09:09] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:09:09] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 08:09:09] Attempting to fetch data for user ID: 1
+[2025-05-24 08:09:09] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:09:09] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 08:09:10] Attempting to fetch data for user ID: 1
+[2025-05-24 08:09:10] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:09:10] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 08:09:11] Attempting to fetch data for user ID: 1
+[2025-05-24 08:09:11] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:09:11] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 08:09:25] Attempting to fetch data for user ID: 1
+[2025-05-24 08:09:25] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:09:25] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 08:09:25] Attempting to fetch data for user ID: 1
+[2025-05-24 08:09:25] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:09:25] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 08:09:29] Attempting to fetch data for user ID: 1
+[2025-05-24 08:09:29] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:09:29] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 08:09:29] Attempting to fetch data for user ID: 1
+[2025-05-24 08:09:29] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:09:29] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 08:09:30] Attempting to fetch data for user ID: 1
+[2025-05-24 08:09:30] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:09:30] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 08:09:30] Attempting to fetch data for user ID: 1
+[2025-05-24 08:09:30] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:09:30] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 08:09:31] Attempting to fetch data for user ID: 1
+[2025-05-24 08:09:31] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:09:31] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 08:09:31] Attempting to fetch data for user ID: 1
+[2025-05-24 08:09:31] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:09:31] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 08:14:11] Attempting to fetch data for user ID: 1
+[2025-05-24 08:14:11] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:14:11] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 08:14:11] Attempting to fetch data for user ID: 1
+[2025-05-24 08:14:11] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:14:11] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 08:14:12] Attempting to fetch data for user ID: 1
+[2025-05-24 08:14:12] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:14:12] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 08:14:12] Attempting to fetch data for user ID: 1
+[2025-05-24 08:14:12] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:14:12] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 08:15:29] Attempting to fetch data for user ID: 2
+[2025-05-24 08:15:29] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 2
+[2025-05-24 08:15:29] User data found: {"username":"JohnDoe12","email":"johndoe12@gmail.com","profile_picture":"uploads\/1748066521_fa43129366612eba.gif"}
+[2025-05-24 08:15:29] Attempting to fetch data for user ID: 2
+[2025-05-24 08:15:29] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 2
+[2025-05-24 08:15:29] User data found: {"username":"JohnDoe12","email":"johndoe12@gmail.com","profile_picture":"uploads\/1748066521_fa43129366612eba.gif"}
+[2025-05-24 08:15:30] Attempting to fetch data for user ID: 2
+[2025-05-24 08:15:30] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 2
+[2025-05-24 08:15:30] User data found: {"username":"JohnDoe12","email":"johndoe12@gmail.com","profile_picture":"uploads\/1748066521_fa43129366612eba.gif"}
+[2025-05-24 08:15:30] Attempting to fetch data for user ID: 2
+[2025-05-24 08:15:30] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 2
+[2025-05-24 08:15:30] User data found: {"username":"JohnDoe12","email":"johndoe12@gmail.com","profile_picture":"uploads\/1748066521_fa43129366612eba.gif"}
+[2025-05-24 08:15:32] Attempting to fetch data for user ID: 2
+[2025-05-24 08:15:32] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 2
+[2025-05-24 08:15:32] User data found: {"username":"JohnDoe12","email":"johndoe12@gmail.com","profile_picture":"uploads\/1748066521_fa43129366612eba.gif"}
+[2025-05-24 08:15:32] Attempting to fetch data for user ID: 2
+[2025-05-24 08:15:32] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 2
+[2025-05-24 08:15:32] User data found: {"username":"JohnDoe12","email":"johndoe12@gmail.com","profile_picture":"uploads\/1748066521_fa43129366612eba.gif"}
+[2025-05-24 08:15:37] Attempting to fetch data for user ID: 1
+[2025-05-24 08:15:37] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:15:37] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 08:15:38] Attempting to fetch data for user ID: 1
+[2025-05-24 08:15:38] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:15:38] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 08:15:39] Attempting to fetch data for user ID: 1
+[2025-05-24 08:15:39] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:15:39] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 08:15:39] Attempting to fetch data for user ID: 1
+[2025-05-24 08:15:39] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:15:39] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 08:17:57] Attempting to fetch data for user ID: 1
+[2025-05-24 08:17:57] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:17:57] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 08:17:57] Attempting to fetch data for user ID: 1
+[2025-05-24 08:17:57] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:17:57] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 08:17:58] Attempting to fetch data for user ID: 1
+[2025-05-24 08:17:58] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:17:58] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 08:17:58] Attempting to fetch data for user ID: 1
+[2025-05-24 08:17:58] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:17:58] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 08:17:59] Attempting to fetch data for user ID: 1
+[2025-05-24 08:17:59] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:17:59] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 08:17:59] Attempting to fetch data for user ID: 1
+[2025-05-24 08:17:59] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:17:59] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748066088_12f6f4823db4794c.JPEG"}
+[2025-05-24 08:21:00] Attempting to fetch data for user ID: 1
+[2025-05-24 08:21:00] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:21:00] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 08:21:00] Attempting to fetch data for user ID: 1
+[2025-05-24 08:21:00] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:21:00] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 08:26:07] Attempting to fetch data for user ID: 1
+[2025-05-24 08:26:07] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:26:07] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 08:26:07] Attempting to fetch data for user ID: 1
+[2025-05-24 08:26:07] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:26:07] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 08:26:08] Attempting to fetch data for user ID: 1
+[2025-05-24 08:26:08] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:26:08] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 08:26:08] Attempting to fetch data for user ID: 1
+[2025-05-24 08:26:08] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:26:08] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 08:26:11] Attempting to fetch data for user ID: 1
+[2025-05-24 08:26:11] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:26:11] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 08:26:11] Attempting to fetch data for user ID: 1
+[2025-05-24 08:26:11] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:26:11] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 08:26:18] Attempting to fetch data for user ID: 1
+[2025-05-24 08:26:21] Attempting to fetch data for user ID: 1
+[2025-05-24 08:26:21] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:26:21] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:26:21] Attempting to fetch data for user ID: 1
+[2025-05-24 08:26:21] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:26:21] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:27:17] Attempting to fetch data for user ID: 1
+[2025-05-24 08:27:17] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:27:17] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:27:17] Attempting to fetch data for user ID: 1
+[2025-05-24 08:27:17] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:27:17] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:33:37] Attempting to fetch data for user ID: 1
+[2025-05-24 08:33:37] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:33:37] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:33:37] Attempting to fetch data for user ID: 1
+[2025-05-24 08:33:37] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:33:37] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:35:39] Attempting to fetch data for user ID: 1
+[2025-05-24 08:35:39] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:35:39] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:35:39] Attempting to fetch data for user ID: 1
+[2025-05-24 08:35:39] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:35:39] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:43:06] Attempting to fetch data for user ID: 1
+[2025-05-24 08:43:06] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:43:06] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:43:06] Attempting to fetch data for user ID: 1
+[2025-05-24 08:43:06] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:43:06] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:44:40] Attempting to fetch data for user ID: 1
+[2025-05-24 08:44:40] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:44:40] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:44:40] Attempting to fetch data for user ID: 1
+[2025-05-24 08:44:40] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:44:40] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:45:43] Attempting to fetch data for user ID: 1
+[2025-05-24 08:45:43] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:45:43] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:45:43] Attempting to fetch data for user ID: 1
+[2025-05-24 08:45:43] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:45:43] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:45:44] Attempting to fetch data for user ID: 1
+[2025-05-24 08:45:44] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:45:44] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:45:44] Attempting to fetch data for user ID: 1
+[2025-05-24 08:45:44] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:45:44] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:46:48] Attempting to fetch data for user ID: 1
+[2025-05-24 08:46:48] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:46:48] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:46:48] Attempting to fetch data for user ID: 1
+[2025-05-24 08:46:48] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:46:48] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:46:49] Attempting to fetch data for user ID: 1
+[2025-05-24 08:46:49] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:46:49] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:46:49] Attempting to fetch data for user ID: 1
+[2025-05-24 08:46:49] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:46:49] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:47:55] Attempting to fetch data for user ID: 1
+[2025-05-24 08:47:55] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:47:55] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:47:55] Attempting to fetch data for user ID: 1
+[2025-05-24 08:47:55] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:47:55] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:47:57] Attempting to fetch data for user ID: 1
+[2025-05-24 08:47:57] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:47:57] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:47:57] Attempting to fetch data for user ID: 1
+[2025-05-24 08:47:57] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:47:57] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:48:08] Attempting to fetch data for user ID: 1
+[2025-05-24 08:48:08] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:48:08] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:48:08] Attempting to fetch data for user ID: 1
+[2025-05-24 08:48:08] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:48:08] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:50:00] Attempting to fetch data for user ID: 1
+[2025-05-24 08:50:00] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:50:00] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:50:00] Attempting to fetch data for user ID: 1
+[2025-05-24 08:50:00] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:50:00] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:50:01] Attempting to fetch data for user ID: 1
+[2025-05-24 08:50:01] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:50:01] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:50:01] Attempting to fetch data for user ID: 1
+[2025-05-24 08:50:01] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:50:01] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:50:01] Attempting to fetch data for user ID: 1
+[2025-05-24 08:50:01] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:50:01] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:50:01] Attempting to fetch data for user ID: 1
+[2025-05-24 08:50:01] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:50:01] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:50:02] Attempting to fetch data for user ID: 1
+[2025-05-24 08:50:02] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:50:02] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:50:02] Attempting to fetch data for user ID: 1
+[2025-05-24 08:50:02] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:50:02] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:51:04] Attempting to fetch data for user ID: 1
+[2025-05-24 08:51:04] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:51:04] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:51:04] Attempting to fetch data for user ID: 1
+[2025-05-24 08:51:04] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:51:04] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:51:05] Attempting to fetch data for user ID: 1
+[2025-05-24 08:51:05] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:51:05] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:51:05] Attempting to fetch data for user ID: 1
+[2025-05-24 08:51:05] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:51:05] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:51:06] Attempting to fetch data for user ID: 1
+[2025-05-24 08:51:06] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:51:06] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:51:06] Attempting to fetch data for user ID: 1
+[2025-05-24 08:51:06] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:51:06] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:51:08] Attempting to fetch data for user ID: 1
+[2025-05-24 08:51:08] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:51:08] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:51:08] Attempting to fetch data for user ID: 1
+[2025-05-24 08:51:08] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:51:08] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:51:08] Attempting to fetch data for user ID: 1
+[2025-05-24 08:51:08] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:51:08] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:51:08] Attempting to fetch data for user ID: 1
+[2025-05-24 08:51:08] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:51:08] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748067978_12e0408404133c08.JPEG"}
+[2025-05-24 08:53:40] Attempting to fetch data for user ID: 1
+[2025-05-24 08:53:40] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:53:40] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 08:53:40] Attempting to fetch data for user ID: 1
+[2025-05-24 08:53:40] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:53:40] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 08:53:46] Attempting to fetch data for user ID: 1
+[2025-05-24 08:53:55] Attempting to fetch data for user ID: 1
+[2025-05-24 08:53:55] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:53:55] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748069626_d401d1fa56cf226a.JPEG"}
+[2025-05-24 08:53:55] Attempting to fetch data for user ID: 1
+[2025-05-24 08:53:55] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:53:55] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748069626_d401d1fa56cf226a.JPEG"}
+[2025-05-24 08:55:58] Attempting to fetch data for user ID: 1
+[2025-05-24 08:55:58] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:55:58] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748069626_d401d1fa56cf226a.JPEG"}
+[2025-05-24 08:55:59] Attempting to fetch data for user ID: 1
+[2025-05-24 08:55:59] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:55:59] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748069626_d401d1fa56cf226a.JPEG"}
+[2025-05-24 08:58:44] Attempting to fetch data for user ID: 1
+[2025-05-24 08:58:44] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:58:44] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748069626_d401d1fa56cf226a.JPEG"}
+[2025-05-24 08:58:44] Attempting to fetch data for user ID: 1
+[2025-05-24 08:58:44] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:58:44] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":"uploads\/1748069626_d401d1fa56cf226a.JPEG"}
+[2025-05-24 08:59:10] Attempting to fetch data for user ID: 1
+[2025-05-24 08:59:10] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:59:10] No user found with ID: 1
+[2025-05-24 08:59:11] Attempting to fetch data for user ID: 1
+[2025-05-24 08:59:11] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:59:11] No user found with ID: 1
+[2025-05-24 08:59:41] Attempting to fetch data for user ID: 1
+[2025-05-24 08:59:41] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:59:41] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 08:59:41] Attempting to fetch data for user ID: 1
+[2025-05-24 08:59:41] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:59:41] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 08:59:43] Attempting to fetch data for user ID: 1
+[2025-05-24 08:59:43] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:59:43] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 08:59:43] Attempting to fetch data for user ID: 1
+[2025-05-24 08:59:43] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:59:43] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 08:59:50] Attempting to fetch data for user ID: 1
+[2025-05-24 08:59:50] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:59:50] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 08:59:50] Attempting to fetch data for user ID: 1
+[2025-05-24 08:59:50] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 08:59:50] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 09:06:15] Attempting to fetch data for user ID: 1
+[2025-05-24 09:06:15] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 09:06:15] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 09:06:15] Attempting to fetch data for user ID: 1
+[2025-05-24 09:06:15] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 09:06:15] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 09:06:48] Attempting to fetch data for user ID: 1
+[2025-05-24 09:06:48] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 09:06:48] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 09:06:48] Attempting to fetch data for user ID: 1
+[2025-05-24 09:06:48] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 09:06:48] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 09:07:12] Attempting to fetch data for user ID: 1
+[2025-05-24 09:07:12] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 09:07:12] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 09:07:13] Attempting to fetch data for user ID: 1
+[2025-05-24 09:07:13] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 09:07:13] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 09:07:51] Attempting to fetch data for user ID: 1
+[2025-05-24 09:07:51] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 09:07:51] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 09:07:51] Attempting to fetch data for user ID: 1
+[2025-05-24 09:07:51] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 09:07:51] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 09:08:11] Attempting to fetch data for user ID: 1
+[2025-05-24 09:08:11] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 09:08:11] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 09:08:11] Attempting to fetch data for user ID: 1
+[2025-05-24 09:08:11] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 09:08:11] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 09:09:05] Attempting to fetch data for user ID: 1
+[2025-05-24 09:09:05] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 09:09:05] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 09:09:05] Attempting to fetch data for user ID: 1
+[2025-05-24 09:09:05] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 09:09:05] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 09:10:32] Attempting to fetch data for user ID: 1
+[2025-05-24 09:10:32] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 09:10:32] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 09:10:32] Attempting to fetch data for user ID: 1
+[2025-05-24 09:10:32] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 09:10:32] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 09:11:57] Attempting to fetch data for user ID: 1
+[2025-05-24 09:11:57] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 09:11:57] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 09:11:57] Attempting to fetch data for user ID: 1
+[2025-05-24 09:11:57] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 09:11:57] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 09:13:11] Attempting to fetch data for user ID: 1
+[2025-05-24 09:13:11] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 09:13:11] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 09:13:11] Attempting to fetch data for user ID: 1
+[2025-05-24 09:13:11] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 09:13:11] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 09:20:55] Attempting to fetch data for user ID: 1
+[2025-05-24 09:20:55] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 09:20:55] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 09:20:55] Attempting to fetch data for user ID: 1
+[2025-05-24 09:20:55] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 09:20:55] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 09:21:05] Attempting to fetch data for user ID: 1
+[2025-05-24 09:21:05] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 09:21:05] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 09:21:05] Attempting to fetch data for user ID: 1
+[2025-05-24 09:21:05] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 09:21:05] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 09:21:16] Attempting to fetch data for user ID: 1
+[2025-05-24 09:21:16] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 09:21:16] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 09:21:16] Attempting to fetch data for user ID: 1
+[2025-05-24 09:21:16] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 09:21:16] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 09:24:07] Attempting to fetch data for user ID: 1
+[2025-05-24 09:24:07] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 09:24:07] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 09:24:08] Attempting to fetch data for user ID: 1
+[2025-05-24 09:24:08] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 09:24:08] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 09:24:37] Attempting to fetch data for user ID: 1
+[2025-05-24 09:24:37] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 09:24:37] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 09:24:37] Attempting to fetch data for user ID: 1
+[2025-05-24 09:24:37] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 09:24:37] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 09:26:11] Attempting to fetch data for user ID: 1
+[2025-05-24 09:26:11] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 09:26:11] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 09:26:11] Attempting to fetch data for user ID: 1
+[2025-05-24 09:26:11] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 09:26:11] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 11:37:36] Attempting to fetch data for user ID: 1
+[2025-05-24 11:37:36] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 11:37:36] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 11:37:36] Attempting to fetch data for user ID: 1
+[2025-05-24 11:37:36] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 11:37:36] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 11:38:27] Attempting to fetch data for user ID: 1
+[2025-05-24 11:38:27] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 11:38:27] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 11:38:27] Attempting to fetch data for user ID: 1
+[2025-05-24 11:38:27] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 1
+[2025-05-24 11:38:27] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 11:42:19] Attempting to fetch data for user ID: 2
+[2025-05-24 11:42:19] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 2
+[2025-05-24 11:42:19] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 11:42:19] Attempting to fetch data for user ID: 2
+[2025-05-24 11:42:19] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 2
+[2025-05-24 11:42:19] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 11:42:47] Attempting to fetch data for user ID: 2
+[2025-05-24 11:42:47] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 2
+[2025-05-24 11:42:47] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 11:42:47] Attempting to fetch data for user ID: 2
+[2025-05-24 11:42:47] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 2
+[2025-05-24 11:42:47] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 11:43:17] Attempting to fetch data for user ID: 2
+[2025-05-24 11:43:17] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 2
+[2025-05-24 11:43:17] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 11:43:17] Attempting to fetch data for user ID: 2
+[2025-05-24 11:43:17] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 2
+[2025-05-24 11:43:17] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 11:43:25] Attempting to fetch data for user ID: 2
+[2025-05-24 11:43:25] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 2
+[2025-05-24 11:43:25] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 11:43:26] Attempting to fetch data for user ID: 2
+[2025-05-24 11:43:26] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 2
+[2025-05-24 11:43:26] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 11:47:21] Attempting to fetch data for user ID: 2
+[2025-05-24 11:47:21] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 2
+[2025-05-24 11:47:21] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 11:47:21] Attempting to fetch data for user ID: 2
+[2025-05-24 11:47:21] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 2
+[2025-05-24 11:47:21] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 11:49:33] Attempting to fetch data for user ID: 2
+[2025-05-24 11:49:33] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 2
+[2025-05-24 11:49:33] No user found with ID: 2
+[2025-05-24 11:49:33] Attempting to fetch data for user ID: 2
+[2025-05-24 11:49:33] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 2
+[2025-05-24 11:49:33] No user found with ID: 2
+[2025-05-24 11:49:58] Attempting to fetch data for user ID: 3
+[2025-05-24 11:49:58] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 3
+[2025-05-24 11:49:58] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 11:49:58] Attempting to fetch data for user ID: 3
+[2025-05-24 11:49:58] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 3
+[2025-05-24 11:49:58] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 11:50:06] Attempting to fetch data for user ID: 3
+[2025-05-24 11:50:06] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 3
+[2025-05-24 11:50:06] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 11:50:06] Attempting to fetch data for user ID: 3
+[2025-05-24 11:50:06] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 3
+[2025-05-24 11:50:06] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:09:41] User not logged in. Session ID: fun451cp09po8u8qfragg2qdrd
+[2025-05-24 13:10:00] Attempting to fetch data for user ID: 3
+[2025-05-24 13:10:00] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 3
+[2025-05-24 13:10:00] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:10:01] Attempting to fetch data for user ID: 3
+[2025-05-24 13:10:01] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 3
+[2025-05-24 13:10:01] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:17:09] Attempting to fetch data for user ID: 3
+[2025-05-24 13:17:09] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 3
+[2025-05-24 13:17:10] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:17:10] Attempting to fetch data for user ID: 3
+[2025-05-24 13:17:10] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 3
+[2025-05-24 13:17:10] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:25:35] Attempting to fetch data for user ID: 3
+[2025-05-24 13:25:35] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 3
+[2025-05-24 13:25:35] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:25:35] Attempting to fetch data for user ID: 3
+[2025-05-24 13:25:35] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 3
+[2025-05-24 13:25:35] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:26:26] Attempting to fetch data for user ID: 3
+[2025-05-24 13:26:26] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 3
+[2025-05-24 13:26:26] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:26:26] Attempting to fetch data for user ID: 3
+[2025-05-24 13:26:26] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 3
+[2025-05-24 13:26:26] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:26:48] Attempting to fetch data for user ID: 3
+[2025-05-24 13:26:48] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 3
+[2025-05-24 13:26:48] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:26:48] Attempting to fetch data for user ID: 3
+[2025-05-24 13:26:48] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 3
+[2025-05-24 13:26:48] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:28:38] Attempting to fetch data for user ID: 3
+[2025-05-24 13:28:38] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 3
+[2025-05-24 13:28:38] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:28:39] Attempting to fetch data for user ID: 3
+[2025-05-24 13:28:39] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 3
+[2025-05-24 13:28:39] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:28:41] Attempting to fetch data for user ID: 3
+[2025-05-24 13:28:41] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 3
+[2025-05-24 13:28:41] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:28:41] Attempting to fetch data for user ID: 3
+[2025-05-24 13:28:41] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 3
+[2025-05-24 13:28:41] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:28:42] Attempting to fetch data for user ID: 3
+[2025-05-24 13:28:42] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 3
+[2025-05-24 13:28:42] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:28:42] Attempting to fetch data for user ID: 3
+[2025-05-24 13:28:42] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 3
+[2025-05-24 13:28:42] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:31:23] Attempting to fetch data for user ID: 4
+[2025-05-24 13:31:23] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:31:23] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:31:23] Attempting to fetch data for user ID: 4
+[2025-05-24 13:31:23] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:31:23] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:32:30] Attempting to fetch data for user ID: 4
+[2025-05-24 13:32:30] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:32:30] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:32:30] Attempting to fetch data for user ID: 4
+[2025-05-24 13:32:30] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:32:30] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:32:48] Attempting to fetch data for user ID: 4
+[2025-05-24 13:32:48] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:32:48] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:32:49] Attempting to fetch data for user ID: 4
+[2025-05-24 13:32:49] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:32:49] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:34:04] Attempting to fetch data for user ID: 4
+[2025-05-24 13:34:04] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:34:04] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:34:04] Attempting to fetch data for user ID: 4
+[2025-05-24 13:34:04] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:34:04] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:34:54] Attempting to fetch data for user ID: 4
+[2025-05-24 13:34:54] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:34:54] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:34:54] Attempting to fetch data for user ID: 4
+[2025-05-24 13:34:54] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:34:54] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:34:54] Attempting to fetch data for user ID: 4
+[2025-05-24 13:34:54] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:34:54] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:34:55] Attempting to fetch data for user ID: 4
+[2025-05-24 13:34:55] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:34:55] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:35:04] Attempting to fetch data for user ID: 4
+[2025-05-24 13:35:04] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:35:04] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:35:04] Attempting to fetch data for user ID: 4
+[2025-05-24 13:35:04] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:35:04] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:35:34] Attempting to fetch data for user ID: 4
+[2025-05-24 13:35:34] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:35:34] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:35:34] Attempting to fetch data for user ID: 4
+[2025-05-24 13:35:34] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:35:34] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:35:59] Attempting to fetch data for user ID: 4
+[2025-05-24 13:35:59] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:35:59] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:35:59] Attempting to fetch data for user ID: 4
+[2025-05-24 13:35:59] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:35:59] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:38:59] Attempting to fetch data for user ID: 4
+[2025-05-24 13:38:59] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:38:59] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:38:59] Attempting to fetch data for user ID: 4
+[2025-05-24 13:38:59] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:38:59] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:40:26] Attempting to fetch data for user ID: 4
+[2025-05-24 13:40:26] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:40:26] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:40:26] Attempting to fetch data for user ID: 4
+[2025-05-24 13:40:26] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:40:26] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:40:26] Attempting to fetch data for user ID: 4
+[2025-05-24 13:40:26] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:40:26] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:40:27] Attempting to fetch data for user ID: 4
+[2025-05-24 13:40:27] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:40:27] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:40:28] Attempting to fetch data for user ID: 4
+[2025-05-24 13:40:28] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:40:28] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:40:28] Attempting to fetch data for user ID: 4
+[2025-05-24 13:40:28] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:40:28] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:40:44] Attempting to fetch data for user ID: 4
+[2025-05-24 13:40:44] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:40:44] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:40:44] Attempting to fetch data for user ID: 4
+[2025-05-24 13:40:44] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:40:44] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:41:56] Attempting to fetch data for user ID: 4
+[2025-05-24 13:41:56] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:41:56] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:41:57] Attempting to fetch data for user ID: 4
+[2025-05-24 13:41:57] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:41:57] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:41:58] Attempting to fetch data for user ID: 4
+[2025-05-24 13:41:58] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:41:58] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:41:58] Attempting to fetch data for user ID: 4
+[2025-05-24 13:41:58] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:41:58] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:41:58] Attempting to fetch data for user ID: 4
+[2025-05-24 13:41:58] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:41:58] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:41:58] Attempting to fetch data for user ID: 4
+[2025-05-24 13:41:58] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:41:58] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:42:07] Attempting to fetch data for user ID: 4
+[2025-05-24 13:42:07] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:42:07] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:42:07] Attempting to fetch data for user ID: 4
+[2025-05-24 13:42:07] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:42:07] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:42:10] Attempting to fetch data for user ID: 4
+[2025-05-24 13:42:10] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:42:10] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:42:10] Attempting to fetch data for user ID: 4
+[2025-05-24 13:42:10] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 4
+[2025-05-24 13:42:10] User data found: {"username":"AngelTauyan2","email":"angeltauyan2@gmail.com","profile_picture":null}
+[2025-05-24 13:43:11] Attempting to fetch data for user ID: 5
+[2025-05-24 13:43:11] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 5
+[2025-05-24 13:43:11] User data found: {"username":"saida123","email":"tauyan@gmail.com","profile_picture":null}
+[2025-05-24 13:43:11] Attempting to fetch data for user ID: 5
+[2025-05-24 13:43:11] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 5
+[2025-05-24 13:43:11] User data found: {"username":"saida123","email":"tauyan@gmail.com","profile_picture":null}
+[2025-05-24 13:43:21] Attempting to fetch data for user ID: 5
+[2025-05-24 13:43:21] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 5
+[2025-05-24 13:43:21] User data found: {"username":"saida123","email":"tauyan@gmail.com","profile_picture":null}
+[2025-05-24 13:43:22] Attempting to fetch data for user ID: 5
+[2025-05-24 13:43:22] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 5
+[2025-05-24 13:43:22] User data found: {"username":"saida123","email":"tauyan@gmail.com","profile_picture":null}
+[2025-05-24 13:44:24] Attempting to fetch data for user ID: 5
+[2025-05-24 13:44:24] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 5
+[2025-05-24 13:44:24] User data found: {"username":"saida123","email":"tauyan@gmail.com","profile_picture":null}
+[2025-05-24 13:44:24] Attempting to fetch data for user ID: 5
+[2025-05-24 13:44:24] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 5
+[2025-05-24 13:44:24] User data found: {"username":"saida123","email":"tauyan@gmail.com","profile_picture":null}
+[2025-05-24 13:44:32] Attempting to fetch data for user ID: 5
+[2025-05-24 13:44:32] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 5
+[2025-05-24 13:44:32] User data found: {"username":"saida123","email":"tauyan@gmail.com","profile_picture":null}
+[2025-05-24 13:44:32] Attempting to fetch data for user ID: 5
+[2025-05-24 13:44:32] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 5
+[2025-05-24 13:44:32] User data found: {"username":"saida123","email":"tauyan@gmail.com","profile_picture":null}
+[2025-05-24 13:44:38] Attempting to fetch data for user ID: 5
+[2025-05-24 13:44:38] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 5
+[2025-05-24 13:44:38] User data found: {"username":"saida123","email":"tauyan@gmail.com","profile_picture":null}
+[2025-05-24 13:44:38] Attempting to fetch data for user ID: 5
+[2025-05-24 13:44:38] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 5
+[2025-05-24 13:44:38] User data found: {"username":"saida123","email":"tauyan@gmail.com","profile_picture":null}
+[2025-05-24 13:45:14] Attempting to fetch data for user ID: 5
+[2025-05-24 13:45:14] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 5
+[2025-05-24 13:45:14] User data found: {"username":"saida123","email":"tauyan@gmail.com","profile_picture":null}
+[2025-05-24 13:45:15] Attempting to fetch data for user ID: 5
+[2025-05-24 13:45:15] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 5
+[2025-05-24 13:45:15] User data found: {"username":"saida123","email":"tauyan@gmail.com","profile_picture":null}
+[2025-05-24 13:45:35] Attempting to fetch data for user ID: 5
+[2025-05-24 13:45:35] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 5
+[2025-05-24 13:45:35] User data found: {"username":"saida123","email":"tauyan@gmail.com","profile_picture":null}
+[2025-05-24 13:45:35] Attempting to fetch data for user ID: 5
+[2025-05-24 13:45:35] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 5
+[2025-05-24 13:45:35] User data found: {"username":"saida123","email":"tauyan@gmail.com","profile_picture":null}
+[2025-05-24 14:20:09] User not logged in. Session ID: 0j2vmvslkhqe7oksd6p06clrgl
+[2025-05-24 14:20:09] User not logged in. Session ID: 0j2vmvslkhqe7oksd6p06clrgl
+[2025-05-24 16:09:40] Attempting to fetch data for user ID: 6
+[2025-05-24 16:09:40] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 6
+[2025-05-24 16:09:40] User data found: {"username":"ziiiel97","email":"laanacario@my.cspc.edu.ph","profile_picture":null}
+[2025-05-24 16:09:40] Attempting to fetch data for user ID: 6
+[2025-05-24 16:09:40] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 6
+[2025-05-24 16:09:40] User data found: {"username":"ziiiel97","email":"laanacario@my.cspc.edu.ph","profile_picture":null}
+[2025-05-24 16:10:07] Attempting to fetch data for user ID: 6
+[2025-05-24 16:11:14] Attempting to fetch data for user ID: 6
+[2025-05-24 16:11:14] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 6
+[2025-05-24 16:11:14] User data found: {"username":"ziiiel12","email":"laanacario@my.cspc.edu.ph","profile_picture":"uploads\/1748095807_a0b7f37b9e23e8cd.JPEG"}
+[2025-05-24 16:11:14] Attempting to fetch data for user ID: 6
+[2025-05-24 16:11:14] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 6
+[2025-05-24 16:11:14] User data found: {"username":"ziiiel12","email":"laanacario@my.cspc.edu.ph","profile_picture":"uploads\/1748095807_a0b7f37b9e23e8cd.JPEG"}
+[2025-05-24 16:12:40] Attempting to fetch data for user ID: 6
+[2025-05-24 16:12:40] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 6
+[2025-05-24 16:12:40] User data found: {"username":"ziiiel12","email":"laanacario@my.cspc.edu.ph","profile_picture":"uploads\/1748095807_a0b7f37b9e23e8cd.JPEG"}
+[2025-05-24 16:12:41] Attempting to fetch data for user ID: 6
+[2025-05-24 16:12:41] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 6
+[2025-05-24 16:12:41] User data found: {"username":"ziiiel12","email":"laanacario@my.cspc.edu.ph","profile_picture":"uploads\/1748095807_a0b7f37b9e23e8cd.JPEG"}
+[2025-05-24 16:13:56] Attempting to fetch data for user ID: 6
+[2025-05-24 16:13:56] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 6
+[2025-05-24 16:13:56] User data found: {"username":"ziiiel12","email":"laanacario@my.cspc.edu.ph","profile_picture":"uploads\/1748095807_a0b7f37b9e23e8cd.JPEG"}
+[2025-05-24 16:13:56] Attempting to fetch data for user ID: 6
+[2025-05-24 16:13:56] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 6
+[2025-05-24 16:13:56] User data found: {"username":"ziiiel12","email":"laanacario@my.cspc.edu.ph","profile_picture":"uploads\/1748095807_a0b7f37b9e23e8cd.JPEG"}
+[2025-05-24 16:14:29] Attempting to fetch data for user ID: 6
+[2025-05-24 16:14:29] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 6
+[2025-05-24 16:14:29] User data found: {"username":"ziiiel12","email":"laanacario@my.cspc.edu.ph","profile_picture":"uploads\/1748095807_a0b7f37b9e23e8cd.JPEG"}
+[2025-05-24 16:14:29] Attempting to fetch data for user ID: 6
+[2025-05-24 16:14:29] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 6
+[2025-05-24 16:14:29] User data found: {"username":"ziiiel12","email":"laanacario@my.cspc.edu.ph","profile_picture":"uploads\/1748095807_a0b7f37b9e23e8cd.JPEG"}
+[2025-05-24 16:14:42] Attempting to fetch data for user ID: 6
+[2025-05-24 16:14:42] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 6
+[2025-05-24 16:14:42] User data found: {"username":"ziiiel12","email":"laanacario@my.cspc.edu.ph","profile_picture":"uploads\/1748095807_a0b7f37b9e23e8cd.JPEG"}
+[2025-05-24 16:14:43] Attempting to fetch data for user ID: 6
+[2025-05-24 16:14:43] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 6
+[2025-05-24 16:14:43] User data found: {"username":"ziiiel12","email":"laanacario@my.cspc.edu.ph","profile_picture":"uploads\/1748095807_a0b7f37b9e23e8cd.JPEG"}
+[2025-05-24 16:15:02] Attempting to fetch data for user ID: 6
+[2025-05-24 16:15:02] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 6
+[2025-05-24 16:15:02] User data found: {"username":"ziiiel12","email":"laanacario@my.cspc.edu.ph","profile_picture":"uploads\/1748095807_a0b7f37b9e23e8cd.JPEG"}
+[2025-05-24 16:15:02] Attempting to fetch data for user ID: 6
+[2025-05-24 16:15:02] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 6
+[2025-05-24 16:15:02] User data found: {"username":"ziiiel12","email":"laanacario@my.cspc.edu.ph","profile_picture":"uploads\/1748095807_a0b7f37b9e23e8cd.JPEG"}
+[2025-05-24 16:15:40] Attempting to fetch data for user ID: 6
+[2025-05-24 16:15:40] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 6
+[2025-05-24 16:15:40] User data found: {"username":"ziiiel12","email":"ziielzn@gmail.com","profile_picture":"uploads\/1748095807_a0b7f37b9e23e8cd.JPEG"}
+[2025-05-24 16:15:40] Attempting to fetch data for user ID: 6
+[2025-05-24 16:15:40] Executing query: SELECT username, email, profile_picture FROM users WHERE id = ? with ID: 6
+[2025-05-24 16:15:40] User data found: {"username":"ziiiel12","email":"ziielzn@gmail.com","profile_picture":"uploads\/1748095807_a0b7f37b9e23e8cd.JPEG"}

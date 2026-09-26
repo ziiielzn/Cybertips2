@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Log In</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .error-message {
+      color: #ff4444;
+      background: rgba(255, 68, 68, 0.1);
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      text-align: center;
+      display: none;
+      animation: fadeIn 0.3s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .shake {
+      animation: shake 0.5s ease-in-out;
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-10px); }
+      75% { transform: translateX(10px); }
+    }
+  </style>
+</head>
+<body class="login-page">
+  <!-- Background glow elements -->
+  <div class="glow-box"></div>
+  <div class="glow-box"></div>
+  <div class="glow-box"></div>
+
+  <div class="login-container">
+    <!-- Left Panel (Logo) -->
+    <div class="left-panel">
+      <img src="logo.png" alt="Cyber Tips Logo" class="logo-left" />
+    </div>
+
+    <!-- Right Panel (Form) -->
+    <div class="right-panel">
+      <h2>Log In</h2>
+      <div id="error-message" class="error-message"></div>
+      <form class="form-plain" id="loginForm" action="login.php" method="POST">
+        <input 
+          type="email" 
+          name="email" 
+          id="email"
+          placeholder="Email address" 
+          required
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          title="Please enter a valid email address"
+        />
+        <input 
+          type="password" 
+          name="password" 
+          id="password"
+          placeholder="Password" 
+          required
+          minlength="8"
+        />
+        <button type="submit" class="submit-btn">Log In</button>
+        <div class="signup-link">
+          Don't have an account? <a href="index.html">Sign Up</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const formData = new FormData(this);
+      
+      fetch('login.php', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          window.location.href = data.redirect;
+        } else {
+          const errorMessage = document.getElementById('error-message');
+          errorMessage.textContent = data.error;
+          errorMessage.style.display = 'block';
+          errorMessage.classList.add('shake');
+          
+          // Remove shake class after animation
+          setTimeout(() => {
+            errorMessage.classList.remove('shake');
+          }, 500);
+
+          // Highlight the relevant field
+          if (data.error.toLowerCase().includes('email')) {
+            document.getElementById('email').focus();
+          } else if (data.error.toLowerCase().includes('password')) {
+            document.getElementById('password').focus();
+          }
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        document.getElementById('error-message').textContent = 'An error occurred. Please try again.';
+        document.getElementById('error-message').style.display = 'block';
+      });
+    });
+  </script>
+</body>
+</html>

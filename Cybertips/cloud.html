@@ -1,0 +1,1908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is Cyber Threat?</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="nav-profile.js" defer></script>
+    <script src="session-check.js"></script>
+    <script src="course-progress.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            height: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0a192f;
+            color: #ccd6f6;
+            cursor: pointer;
+            min-height: 100%;
+            width: 100%;
+            position: relative;
+        }
+
+        /* Customize scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(100, 255, 218, 0.3);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(100, 255, 218, 0.5);
+        }
+
+        /* Background glow effects */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(135deg, rgba(0,169,224,0.1) 0%, rgba(0,0,0,0) 50%),
+                linear-gradient(-135deg, rgba(100,255,218,0.1) 0%, rgba(0,0,0,0) 50%);
+            z-index: 0;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: 
+                linear-gradient(to right, 
+                    rgba(0,169,224,0) 0%, 
+                    rgba(0,169,224,0.1) 50%, 
+                    rgba(0,169,224,0) 100%);
+            animation: animateGlow 8s linear infinite;
+            z-index: 0;
+        }
+
+        #content {
+            position: relative;
+            margin: 2rem auto;
+            width: 90%;
+            max-width: 1200px;
+            min-height: calc(100vh - 4rem);
+            padding: 20px;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        h1 {
+            color: #64ffda;
+            margin-bottom: 20px;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            text-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+            white-space: nowrap;
+            width: 100%;
+            text-align: center;
+        }
+
+        h2 {
+            color: #64ffda;
+            margin-bottom: 20px;
+            font-size: clamp(1.2rem, 1vw, 1.9rem);
+            text-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+            white-space: nowrap;
+            width: 100%;
+            text-align: center;
+        }
+
+        .logo {
+            margin: 20px 0;
+            flex-shrink: 0;
+            align-self: center;
+        }
+
+        .logo img {
+            max-width: 180px;
+            max-height: 120px;
+            width: auto;
+            height: auto;
+            /* Removed the filter that was making it white */
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+        }
+
+        .logomid {
+            margin: 20px 0;
+            flex-shrink: 0;
+            align-self: center;
+        }
+
+        .logomid img {
+            max-width: 700px;
+            max-height: 800px;
+            width: auto;
+            height: auto;
+            /* Removed the filter that was making it white */
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            margin-bottom: 15px;
+            max-width: 100%;
+            text-align: left;
+        }
+
+        ul {
+            padding-left: 0;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            list-style-type: none;
+            max-width: 100%;
+            align-self: stretch;
+        }
+
+        li {
+            margin-bottom: 12px;
+            text-align: left;
+            line-height: 1.6;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        li::before {
+            content: "✓";
+            color: #64ffda;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .continue {
+            font-style: italic;
+            color: #64ffda;
+            margin-top: 25px;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            animation: pulse 2s infinite;
+            text-shadow: 0 0 5px rgba(100, 255, 218, 0.5);
+            flex-shrink: 0;
+            width: 100%;
+            text-align: center;
+            align-self: center;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.6; }
+            50% { opacity: 1; text-shadow: 0 0 10px rgba(100, 255, 218, 0.8); }
+            100% { opacity: 0.6; }
+        }
+
+        @keyframes animateGlow {
+            0% { transform: rotate(0deg) translate(-10%, -10%) rotate(0deg); }
+            100% { transform: rotate(360deg) translate(-10%, -10%) rotate(-360deg); }
+        }
+
+        /* Floating glow elements */
+        .glow-box {
+            position: absolute;
+            border: 1px solid rgba(100, 255, 218, 0.2);
+            z-index: 0;
+            animation: float 15s infinite linear;
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+        }
+
+        .glow-box:nth-child(1) {
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .glow-box:nth-child(2) {
+            top: 70%;
+            right: 15%;
+            animation-delay: -5s;
+        }
+
+        .glow-box:nth-child(3) {
+            bottom: 20%;
+            left: 20%;
+            animation-delay: -10s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.3; }
+            50% { transform: translateY(-20px) rotate(5deg); opacity: 0.6; }
+        }
+
+        /* Mobile optimizations */
+        @media (max-height: 600px) {
+            #content {
+                max-height: 95vh;
+                padding: 10px;
+            }
+            
+            .logo img {
+                max-width: 120px;
+                max-height: 80px;
+            }
+            
+            h1 {
+                margin-bottom: 10px;
+            }
+            
+            .logo {
+                margin: 10px 0;
+            }
+            
+            p, li {
+                margin-bottom: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #content {
+                width: 95%;
+                padding: 15px;
+            }
+            
+            ul {
+                padding-left: 0;
+            }
+            
+            li {
+                padding-left: 25px;
+            }
+        }
+
+        /* Add flip card styles */
+        .flip-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 20px;
+        }
+
+        .flip-card {
+            background-color: transparent;
+            width: 320px;
+            height: 410px;
+            perspective: 1000px;
+            cursor: pointer;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card.flipped .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .flip-card-front {
+            background-color: #fff;
+            border: 2px solid #ff4444;
+            color: #333;
+        }
+
+        .flip-card-back {
+            background-color: #fff;
+            border: 2px solid #64ffda;
+            color: #333;
+            transform: rotateY(180deg);
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+
+        .card-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .card-text {
+            font-size: 0.9rem;
+            line-height: 1.4;
+            color: #666;
+        }
+
+        /* Adjust content width for cards */
+        #content {
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        /* Adjust the warning dot */
+        .warning-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #ff4444;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        .safe-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #64ffda;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        /* Dropdown styles */
+        .dropdown-section {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .arrow-mark {
+            color: #ff4444;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+
+        .arrow-mark.active {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px;
+            background: rgba(0, 25, 47, 0.95);
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .dropdown-title {
+            color: #ff4444;
+            font-size: 1.8rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .dropdown-translation {
+            display: none;
+            color: #ccd6f6;
+            font-size: 1.2rem;
+            padding: 15px;
+            padding-left: 45px;
+            position: relative;
+            background: rgba(0, 25, 47, 0.95);
+            margin-top: 2px;
+            border-radius: 5px;
+        }
+
+        .dropdown-translation.active {
+            display: block;
+        }
+
+        .dropdown-translation::before {
+            content: "→";
+            position: absolute;
+            left: 20px;
+            color: #64ffda;
+        }
+
+        .dropdown-divider {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #ff4444, transparent);
+            margin: 0;
+        }
+
+        /* Progress bar styles */
+        .progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(10, 25, 47, 0.95);
+            z-index: 1000;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .progress-wrapper {
+            flex-grow: 1;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            margin-right: 15px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #64ffda, #00a9e0);
+            width: 0%;
+            transition: width 0.3s ease;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+        }
+
+        .progress-percentage {
+            color: #64ffda;
+            font-size: 14px;
+            font-weight: bold;
+            min-width: 60px;
+            text-align: right;
+            text-shadow: 0 0 5px rgba(100, 255, 218, 0.5);
+        }
+
+        /* Back button styles */
+        .back-button {
+            position: fixed;
+            top: 60px;
+            left: 20px;
+            padding: 10px 20px;
+            background: rgba(100, 255, 218, 0.1);
+            border: 1px solid #64ffda;
+            color: #64ffda;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .back-button:hover {
+            background: rgba(100, 255, 218, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .box-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 50px auto;
+            max-width: 1000px;
+            padding: 0 20px;
+        }
+        
+        .info-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid #64ffda;
+            border-radius: 15px;
+            padding: 25px;
+            width: 300px;
+            height: 320px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(100, 255, 218, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .info-box img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 15px;
+            flex-shrink: 0;
+        }
+        
+        .info-box h3 {
+            color: #64ffda;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .info-box p {
+            color: #ccd6f6;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            margin: 0;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        #question-text {
+            white-space: pre-line;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .option-btn {
+            padding: 15px 20px;
+            background: rgba(100, 255, 218, 0.1);
+            border: 1px solid #64ffda;
+            color: #ccd6f6;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            text-align: left;
+            margin: 10px;
+            width: 100%;
+        }
+
+        .option-btn:hover {
+            background: rgba(100, 255, 218, 0.2);
+            transform: translateX(5px);
+        }
+
+        .option-btn.correct {
+            background: rgba(0, 255, 0, 0.2);
+            border-color: #00ff00;
+        }
+
+        .option-btn.incorrect {
+            background: rgba(255, 0, 0, 0.2);
+            border-color: #ff0000;
+        }
+
+        #continue-btn, #retry-btn {
+            padding: 10px 20px;
+            background: rgba(100, 255, 218, 0.1);
+            border: 1px solid #64ffda;
+            color: #64ffda;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        #continue-btn:hover, #retry-btn:hover {
+            background: rgba(100, 255, 218, 0.2);
+        }
+
+        #quiz-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 25, 47, 0.95);
+            border-radius: 10px;
+            border: 1px solid #64ffda;
+            text-align: center;
+        }
+
+        #question-text {
+            white-space: pre-line;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+            align-items: center;
+            width: 100%;
+        }
+
+        .option-btn {
+            padding: 15px 20px;
+            background: rgba(100, 255, 218, 0.1);
+            border: 1px solid #64ffda;
+            color: #ccd6f6;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            text-align: center;
+            margin: 10px;
+            width: 80%;
+            max-width: 400px;
+        }
+
+        .option-btn:hover {
+            background: rgba(100, 255, 218, 0.2);
+            transform: translateX(5px);
+        }
+
+        .option-btn.correct {
+            background: rgba(0, 255, 0, 0.2);
+            border-color: #00ff00;
+        }
+
+        .option-btn.incorrect {
+            background: rgba(255, 0, 0, 0.2);
+            border-color: #ff0000;
+        }
+
+        #continue-btn, #retry-btn {
+            padding: 10px 20px;
+            background: rgba(100, 255, 218, 0.1);
+            border: 1px solid #64ffda;
+            color: #64ffda;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 20px auto;
+            transition: all 0.3s ease;
+            display: block;
+        }
+
+        #continue-btn:hover, #retry-btn:hover {
+            background: rgba(100, 255, 218, 0.2);
+        }
+
+        #score-container {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #64ffda;
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-container">
+        <div class="progress-wrapper">
+            <div class="progress-bar"></div>
+        </div>
+        <div class="progress-percentage">0%</div>
+    </div>
+    <a href="learn.html" class="back-button">← Back</a>
+    <div id="content">
+        <!-- Content will be updated here with each click -->
+    </div>
+
+    <!-- Glow elements -->
+    <div class="glow-box"></div>
+    <div class="glow-box"></div>
+    <div class="glow-box"></div>
+
+    <script>
+        const TOTAL_CONTENT_SLIDES = 45; // Total number of content slides
+        const slides = [
+            `<h1>WHAT IS CLOUD AND DATA SECURITY?</h1>
+            <div class="logo">
+                <img src="cloud1.png" alt="Cyber Security">
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>WHAT IS CLOUD AND DATA SECURITY?</h1>
+            <div class="logo">
+                <img src="cloud1.png" alt="Cyber Security">
+            </div>
+            <p>Cloud and data security refers to the protection of digital information stored, processed, and transmitted through cloud services.</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>WHAT IS CLOUD AND DATA SECURITY?</h1>
+            <div class="logo">
+                <img src="cloud1.png" alt="Cyber Security">
+            </div>
+            <p>Cloud and data security refers to the protection of digital information stored, processed, and transmitted through cloud services.</p>
+            <p>As businesses and individuals rely more on cloud computing, securing sensitive data from cyber threats becomes essential.</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>WHAT IS CLOUD AND DATA SECURITY?</h1>
+            <div class="logo">
+                <img src="cloud1.png" alt="Cyber Security">
+            </div>
+            <p>Cloud and data security refers to the protection of digital information stored, processed, and transmitted through cloud services.</p>
+            <p>As businesses and individuals rely more on cloud computing, securing sensitive data from cyber threats becomes essential.</p>
+            <p>Cybercriminals target cloud environments through data breaches, account hijacking, and system misconfigurations, making cloud security a critical aspect of modern cybersecurity.</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>WHAT IS CLOUD AND DATA SECURITY?</h1>
+            <div class="logo">
+                <img src="cloud1.png" alt="Cyber Security">
+            </div>
+            <p>Cloud and data security refers to the protection of digital information stored, processed, and transmitted through cloud services.</p>
+            <p>As businesses and individuals rely more on cloud computing, securing sensitive data from cyber threats becomes essential.</p>
+            <p>Cybercriminals target cloud environments through data breaches, account hijacking, and system misconfigurations, making cloud security a critical aspect of modern cybersecurity.</p>
+            <p>Cloud and Data Security means protecting your data—documents, photos, videos, apps, and more—that are stored online from unauthorized access, leaks, theft, or loss.</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>WHAT IS CLOUD AND DATA SECURITY?</h1>
+            <div class="logo">
+                <img src="cloud1.png" alt="Cyber Security">
+            </div>
+            <p>Cloud and data security refers to the protection of digital information stored, processed, and transmitted through cloud services.</p>
+            <p>As businesses and individuals rely more on cloud computing, securing sensitive data from cyber threats becomes essential.</p>
+            <p>Cybercriminals target cloud environments through data breaches, account hijacking, and system misconfigurations, making cloud security a critical aspect of modern cybersecurity.</p>
+            <p>Cloud and Data Security means protecting your data—documents, photos, videos, apps, and more—that are stored online from unauthorized access, leaks, theft, or loss.</p>
+            <p>Why it matters:</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>WHAT IS CLOUD AND DATA SECURITY?</h1>
+            <div class="logo">
+                <img src="cloud1.png" alt="Cyber Security">
+            </div>
+            <p>Cloud and data security refers to the protection of digital information stored, processed, and transmitted through cloud services.</p>
+            <p>As businesses and individuals rely more on cloud computing, securing sensitive data from cyber threats becomes essential.</p>
+            <p>Cybercriminals target cloud environments through data breaches, account hijacking, and system misconfigurations, making cloud security a critical aspect of modern cybersecurity.</p>
+            <p>Cloud and Data Security means protecting your data—documents, photos, videos, apps, and more—that are stored online from unauthorized access, leaks, theft, or loss.</p>
+            <p>Why it matters:</p>
+            <p>Just like you wouldn't leave your house keys outside your door, you shouldn't leave your cloud data unprotected. Cybercriminals look for easy targets—and misconfigured cloud accounts or weak passwords are like unlocked doors.</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>WHAT IS CLOUD AND DATA SECURITY?</h1>
+            <div class="logo">
+                <img src="cloud1.png" alt="Cyber Security">
+            </div>
+            <p>Cloud and data security refers to the protection of digital information stored, processed, and transmitted through cloud services.</p>
+            <p>As businesses and individuals rely more on cloud computing, securing sensitive data from cyber threats becomes essential.</p>
+            <p>Cybercriminals target cloud environments through data breaches, account hijacking, and system misconfigurations, making cloud security a critical aspect of modern cybersecurity.</p>
+            <p>Cloud and Data Security means protecting your data—documents, photos, videos, apps, and more—that are stored online from unauthorized access, leaks, theft, or loss.</p>
+            <p>Why it matters:</p>
+            <p>Just like you wouldn't leave your house keys outside your door, you shouldn't leave your cloud data unprotected. Cybercriminals look for easy targets—and misconfigured cloud accounts or weak passwords are like unlocked doors.</p>
+            <p>What You Will Learn in This Module:</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>WHAT IS CLOUD AND DATA SECURITY?</h1>
+            <div class="logo">
+                <img src="cloud1.png" alt="Cyber Security">
+            </div>
+            <p>Cloud and data security refers to the protection of digital information stored, processed, and transmitted through cloud services.</p>
+            <p>As businesses and individuals rely more on cloud computing, securing sensitive data from cyber threats becomes essential.</p>
+            <p>Cybercriminals target cloud environments through data breaches, account hijacking, and system misconfigurations, making cloud security a critical aspect of modern cybersecurity.</p>
+            <p>Cloud and Data Security means protecting your data—documents, photos, videos, apps, and more—that are stored online from unauthorized access, leaks, theft, or loss.</p>
+            <p>Why it matters:</p>
+            <p>Just like you wouldn't leave your house keys outside your door, you shouldn't leave your cloud data unprotected. Cybercriminals look for easy targets—and misconfigured cloud accounts or weak passwords are like unlocked doors.</p>
+            <p>What You Will Learn in This Module:</p>
+            <ul>
+                <li>Define cloud and data security and explain its importance.</li>
+            </ul>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>WHAT IS CLOUD AND DATA SECURITY?</h1>
+            <div class="logo">
+                <img src="cloud1.png" alt="Cyber Security">
+            </div>
+            <p>Cloud and data security refers to the protection of digital information stored, processed, and transmitted through cloud services.</p>
+            <p>As businesses and individuals rely more on cloud computing, securing sensitive data from cyber threats becomes essential.</p>
+            <p>Cybercriminals target cloud environments through data breaches, account hijacking, and system misconfigurations, making cloud security a critical aspect of modern cybersecurity.</p>
+            <p>Cloud and Data Security means protecting your data—documents, photos, videos, apps, and more—that are stored online from unauthorized access, leaks, theft, or loss.</p>
+            <p>Why it matters:</p>
+            <p>Just like you wouldn't leave your house keys outside your door, you shouldn't leave your cloud data unprotected. Cybercriminals look for easy targets—and misconfigured cloud accounts or weak passwords are like unlocked doors.</p>
+            <p>What You Will Learn in This Module:</p>
+            <ul>
+                <li>Define cloud and data security and explain its importance.</li>
+                <li>Identify common cloud-related threats such as data breaches, insider risks, and account hijacking.</li>
+            </ul>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>WHAT IS CLOUD AND DATA SECURITY?</h1>
+            <div class="logo">
+                <img src="cloud1.png" alt="Cyber Security">
+            </div>
+            <p>Cloud and data security refers to the protection of digital information stored, processed, and transmitted through cloud services.</p>
+            <p>As businesses and individuals rely more on cloud computing, securing sensitive data from cyber threats becomes essential.</p>
+            <p>Cybercriminals target cloud environments through data breaches, account hijacking, and system misconfigurations, making cloud security a critical aspect of modern cybersecurity.</p>
+            <p>Cloud and Data Security means protecting your data—documents, photos, videos, apps, and more—that are stored online from unauthorized access, leaks, theft, or loss.</p>
+            <p>Why it matters:</p>
+            <p>Just like you wouldn't leave your house keys outside your door, you shouldn't leave your cloud data unprotected. Cybercriminals look for easy targets—and misconfigured cloud accounts or weak passwords are like unlocked doors.</p>
+            <p>What You Will Learn in This Module:</p>
+            <ul>
+                <li>Define cloud and data security and explain its importance.</li>
+                <li>Identify common cloud-related threats such as data breaches, insider risks, and account hijacking.</li>
+                <li>Understand how misconfigurations and poor habits lead to security incidents.</li>
+            </ul>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>WHAT IS CLOUD AND DATA SECURITY?</h1>
+            <div class="logo">
+                <img src="cloud1.png" alt="Cyber Security">
+            </div>
+            <p>Cloud and data security refers to the protection of digital information stored, processed, and transmitted through cloud services.</p>
+            <p>As businesses and individuals rely more on cloud computing, securing sensitive data from cyber threats becomes essential.</p>
+            <p>Cybercriminals target cloud environments through data breaches, account hijacking, and system misconfigurations, making cloud security a critical aspect of modern cybersecurity.</p>
+            <p>Cloud and Data Security means protecting your data—documents, photos, videos, apps, and more—that are stored online from unauthorized access, leaks, theft, or loss.</p>
+            <p>Why it matters:</p>
+            <p>Just like you wouldn't leave your house keys outside your door, you shouldn't leave your cloud data unprotected. Cybercriminals look for easy targets—and misconfigured cloud accounts or weak passwords are like unlocked doors.</p>
+            <p>What You Will Learn in This Module:</p>
+            <ul>
+                <li>Define cloud and data security and explain its importance.</li>
+                <li>Identify common cloud-related threats such as data breaches, insider risks, and account hijacking.</li>
+                <li>Understand how misconfigurations and poor habits lead to security incidents.</li>
+                <li>Apply concrete best practices to protect your data in the cloud.</li>
+            </ul>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>WHAT IS CLOUD AND DATA SECURITY?</h1>
+            <div class="logo">
+                <img src="cloud1.png" alt="Cyber Security">
+            </div>
+            <p>Cloud and data security refers to the protection of digital information stored, processed, and transmitted through cloud services.</p>
+            <p>As businesses and individuals rely more on cloud computing, securing sensitive data from cyber threats becomes essential.</p>
+            <p>Cybercriminals target cloud environments through data breaches, account hijacking, and system misconfigurations, making cloud security a critical aspect of modern cybersecurity.</p>
+            <p>Cloud and Data Security means protecting your data—documents, photos, videos, apps, and more—that are stored online from unauthorized access, leaks, theft, or loss.</p>
+            <p>Why it matters:</p>
+            <p>Just like you wouldn't leave your house keys outside your door, you shouldn't leave your cloud data unprotected. Cybercriminals look for easy targets—and misconfigured cloud accounts or weak passwords are like unlocked doors.</p>
+            <p>What You Will Learn in This Module:</p>
+            <ul>
+                <li>Define cloud and data security and explain its importance.</li>
+                <li>Identify common cloud-related threats such as data breaches, insider risks, and account hijacking.</li>
+                <li>Understand how misconfigurations and poor habits lead to security incidents.</li>
+                <li>Apply concrete best practices to protect your data in the cloud.</li>
+                <li>Take a self-assessment quiz to reinforce your understanding.</li>
+            </ul>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>UNDERSTANDING CLOUD SECURITY</h1>
+            <div class="logo">
+                <img src="cloud2.png" alt="Cyber Security">
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>UNDERSTANDING CLOUD SECURITY</h1>
+            <div class="logo">
+                <img src="cloud2.png" alt="Cyber Security">
+            </div>
+            <p>Cloud security involves a combination of tools, processes, and human practices to protect:</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>UNDERSTANDING CLOUD SECURITY</h1>
+            <div class="logo">
+                <img src="cloud2.png" alt="Cyber Security">
+            </div>
+            <p>Cloud security involves a combination of tools, processes, and human practices to protect:</p>
+            <ul>
+                <li>Data stored on cloud servers (like Google Drive)</li>
+            </ul>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>UNDERSTANDING CLOUD SECURITY</h1>
+            <div class="logo">
+                <img src="cloud2.png" alt="Cyber Security">
+            </div>
+            <p>Cloud security involves a combination of tools, processes, and human practices to protect:</p>
+            <ul>
+                <li>Data stored on cloud servers (like Google Drive)</li>
+                <li>Cloud-based applications (like Zoom or Microsoft Teams)</li>
+            </ul>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>UNDERSTANDING CLOUD SECURITY</h1>
+            <div class="logo">
+                <img src="cloud2.png" alt="Cyber Security">
+            </div>
+            <p>Cloud security involves a combination of tools, processes, and human practices to protect:</p>
+            <ul>
+                <li>Data stored on cloud servers (like Google Drive)</li>
+                <li>Cloud-based applications (like Zoom or Microsoft Teams)</li>
+                <li>User identities and credentials (your accounts and passwords)</li>
+            </ul>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>UNDERSTANDING CLOUD SECURITY</h1>
+            <div class="logo">
+                <img src="cloud2.png" alt="Cyber Security">
+            </div>
+            <p>Cloud security involves a combination of tools, processes, and human practices to protect:</p>
+            <ul>
+                <li>Data stored on cloud servers (like Google Drive)</li>
+                <li>Cloud-based applications (like Zoom or Microsoft Teams)</li>
+                <li>User identities and credentials (your accounts and passwords)</li>
+            </ul>
+            <p>Key idea:</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>UNDERSTANDING CLOUD SECURITY</h1>
+            <div class="logo">
+                <img src="cloud2.png" alt="Cyber Security">
+            </div>
+            <p>Cloud security involves a combination of tools, processes, and human practices to protect:</p>
+            <ul>
+                <li>Data stored on cloud servers (like Google Drive)</li>
+                <li>Cloud-based applications (like Zoom or Microsoft Teams)</li>
+                <li>User identities and credentials (your accounts and passwords)</li>
+            </ul>
+            <p>Key idea:</p>
+            <ul>
+                <li>Security isn't just the job of companies like Google or Apple—you, the user, are also responsible for keeping your files and accounts safe.</li>
+            </ul>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>COMMON CLOUD THREATS AND HOW THEY WORK</h1>
+            <div class="logo">
+                <img src="cloud3.png" alt="Cyber Security">
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>COMMON CLOUD THREATS AND HOW THEY WORK</h1>
+            <div class="logo">
+                <img src="cloud3.png" alt="Cyber Security">
+            </div>
+            <p>Click the Card to Flip!</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>COMMON CLOUD THREATS AND HOW THEY WORK</h1>
+            <div class="logo">
+                <img src="cloud3.png" alt="Cyber Security">
+            </div>
+            <p>Click the Card to Flip!</p>
+            <div class="flip-container">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="les1.png" alt="Weak Password" class="card-icon">
+                            <div class="card-title"><span class="warning-dot"></span>Data Breaches</div>
+                            <div class="card-text">
+                                What is it?
+                                <br><br>
+                                A data breach happens when someone accesses your data without permission.
+                                <br><br>
+                                How does it happen?
+                                <br><br>
+                                A hacker guesses your weak password.
+                                <br><br>
+                                Your files were set to "public" without realizing it.
+                                <br><br>
+                                You shared a link to a file and forgot to disable it later.
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="les1.png" alt="Strong Password" class="card-icon">
+                            <div class="card-text">
+                                Real-life impact:
+                                <br><br>
+                                A leaked ID or assignment can be used for fraud, impersonation, or public embarrassment.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>COMMON CLOUD THREATS AND HOW THEY WORK</h1>
+            <div class="logo">
+                <img src="cloud3.png" alt="Cyber Security">
+            </div>
+            <p>Click the Card to Flip!</p>
+            <div class="flip-container">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="les1.png" alt="Weak Password" class="card-icon">
+                            <div class="card-title"><span class="warning-dot"></span>Data Breaches</div>
+                            <div class="card-text">
+                                What is it?
+                                <br><br>
+                                A data breach happens when someone accesses your data without permission.
+                                <br><br>
+                                How does it happen?
+                                <br><br>
+                                A hacker guesses your weak password.
+                                <br><br>
+                                Your files were set to "public" without realizing it.
+                                <br><br>
+                                You shared a link to a file and forgot to disable it later.
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="les1.png" alt="Strong Password" class="card-icon">
+                            <div class="card-text">
+                                Real-life impact:
+                                <br><br>
+                                A leaked ID or assignment can be used for fraud, impersonation, or public embarrassment.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="les2.png" alt="Weak Password" class="card-icon">
+                            <div class="card-title"><span class="warning-dot"></span>Misconfigured Cloud Storage</div>
+                            <div class="card-text">
+                                What is it?
+                                <br><br>
+                                When the settings of your cloud account (like folder visibility) are set in a way that exposes your files.
+                                <br><br>
+                                Example:
+                                <br><br>
+                                You upload your project to Google Drive, share it with classmates, but forget to restrict access. It's now viewable by anyone who gets the link—and sometimes even searchable on Google!
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="les2.png" alt="Strong Password" class="card-icon">
+                            <div class="card-text">
+                                Lesson:
+                                <br><br>
+                                Always check and control your sharing permissions.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>COMMON CLOUD THREATS AND HOW THEY WORK</h1>
+            <div class="logo">
+                <img src="cloud3.png" alt="Cyber Security">
+            </div>
+            <p>Click the Card to Flip!</p>
+            <div class="flip-container">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="les1.png" alt="Weak Password" class="card-icon">
+                            <div class="card-title"><span class="warning-dot"></span>Data Breaches</div>
+                            <div class="card-text">
+                                What is it?
+                                <br><br>
+                                A data breach happens when someone accesses your data without permission.
+                                <br><br>
+                                How does it happen?
+                                <br><br>
+                                A hacker guesses your weak password.
+                                <br><br>
+                                Your files were set to "public" without realizing it.
+                                <br><br>
+                                You shared a link to a file and forgot to disable it later.
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="les1.png" alt="Strong Password" class="card-icon">
+                            <div class="card-text">
+                                Real-life impact:
+                                <br><br>
+                                A leaked ID or assignment can be used for fraud, impersonation, or public embarrassment.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="les2.png" alt="Weak Password" class="card-icon">
+                            <div class="card-title"><span class="warning-dot"></span>Misconfigured Cloud Storage</div>
+                            <div class="card-text">
+                                What is it?
+                                <br><br>
+                                When the settings of your cloud account (like folder visibility) are set in a way that exposes your files.
+                                <br><br>
+                                Example:
+                                <br><br>
+                                You upload your project to Google Drive, share it with classmates, but forget to restrict access. It's now viewable by anyone who gets the link—and sometimes even searchable on Google!
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="les2.png" alt="Strong Password" class="card-icon">
+                            <div class="card-text">
+                                Lesson:
+                                <br><br>
+                                Always check and control your sharing permissions.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="les3.png" alt="Weak Password" class="card-icon">
+                            <div class="card-title"><span class="warning-dot"></span>Account Hijacking</div>
+                            <div class="card-text">
+                                What is it?
+                                <br><br>
+                                A cybercriminal gains access to your account and controls it.
+                                <br><br>
+                                Causes:
+                                <br><br>
+                                You fall for a phishing email.
+                                <br><br>
+                                You use the same password across sites and one of them gets breached.
+                                <br><br>
+                                No two-factor authentication (2FA) was set up.
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="les3.png" alt="Strong Password" class="card-icon">
+                            <div class="card-text">
+                                Results:
+                                <br><br>
+                                Your files are deleted or stolen.
+                                <br><br>
+                                Your identity is used to scam others.
+                                <br><br>
+                                You lose control of your cloud account.
+                                <br><br>
+                                Defense:
+                                <br><br>
+                                Use strong passwords and turn on 2FA. Never click suspicious links.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>COMMON CLOUD THREATS AND HOW THEY WORK</h1>
+            <div class="logo">
+                <img src="cloud3.png" alt="Cyber Security">
+            </div>
+            <p>Click the Card to Flip!</p>
+            <div class="flip-container">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="les1.png" alt="Weak Password" class="card-icon">
+                            <div class="card-title"><span class="warning-dot"></span>Data Breaches</div>
+                            <div class="card-text">
+                                What is it?
+                                <br><br>
+                                A data breach happens when someone accesses your data without permission.
+                                <br><br>
+                                How does it happen?
+                                <br><br>
+                                A hacker guesses your weak password.
+                                <br><br>
+                                Your files were set to "public" without realizing it.
+                                <br><br>
+                                You shared a link to a file and forgot to disable it later.
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="les1.png" alt="Strong Password" class="card-icon">
+                            <div class="card-text">
+                                Real-life impact:
+                                <br><br>
+                                A leaked ID or assignment can be used for fraud, impersonation, or public embarrassment.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="les2.png" alt="Weak Password" class="card-icon">
+                            <div class="card-title"><span class="warning-dot"></span>Misconfigured Cloud Storage</div>
+                            <div class="card-text">
+                                What is it?
+                                <br><br>
+                                When the settings of your cloud account (like folder visibility) are set in a way that exposes your files.
+                                <br><br>
+                                Example:
+                                <br><br>
+                                You upload your project to Google Drive, share it with classmates, but forget to restrict access. It's now viewable by anyone who gets the link—and sometimes even searchable on Google!
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="les2.png" alt="Strong Password" class="card-icon">
+                            <div class="card-text">
+                                Lesson:
+                                <br><br>
+                                Always check and control your sharing permissions.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="les3.png" alt="Weak Password" class="card-icon">
+                            <div class="card-title"><span class="warning-dot"></span>Account Hijacking</div>
+                            <div class="card-text">
+                                What is it?
+                                <br><br>
+                                A cybercriminal gains access to your account and controls it.
+                                <br><br>
+                                Causes:
+                                <br><br>
+                                You fall for a phishing email.
+                                <br><br>
+                                You use the same password across sites and one of them gets breached.
+                                <br><br>
+                                No two-factor authentication (2FA) was set up.
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="les3.png" alt="Strong Password" class="card-icon">
+                            <div class="card-text">
+                                Results:
+                                <br><br>
+                                Your files are deleted or stolen.
+                                <br><br>
+                                Your identity is used to scam others.
+                                <br><br>
+                                You lose control of your cloud account.
+                                <br><br>
+                                Defense:
+                                <br><br>
+                                Use strong passwords and turn on 2FA. Never click suspicious links.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="les4.png" alt="Weak Password" class="card-icon">
+                            <div class="card-title"><span class="warning-dot"></span>Insider Threats</div>
+                            <div class="card-text">
+                                What is it?
+                                <br><br>
+                                A risk coming from someone you know—intentionally or accidentally.
+                                <br><br>
+                                Examples:
+                                <br><br>
+                                A teammate shares the wrong file with outsiders.
+                                <br><br>
+                                A former groupmate still has access to your cloud folder.
+                                <br><br>
+                                A student uploads sensitive data to the wrong shared drive.
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="les4.png" alt="Strong Password" class="card-icon">
+                            <div class="card-text">
+                                Solution:
+                                <br><br>
+                                Regularly review who has access to what.
+                                <br><br>
+                                Remove users who no longer need access.
+                                <br><br>
+                                Create access levels (e.g., viewer, editor).
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>HOW TO PROTECT YOUR CLOUD DATA</h1>
+            <div class="logo">
+                <img src="cloud4.png" alt="Cyber Security">
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>HOW TO PROTECT YOUR CLOUD DATA</h1>
+            <div class="logo">
+                <img src="cloud4.png" alt="Cyber Security">
+            </div>
+            <div class="box-container">
+                <div class="info-box">
+                    <img src="pro1.png" alt="MITM Attack">
+                    <h3><span class="safe-dot"></span>Use Strong Passwords</h3>
+                    <p>Avoid names, birthdays, or "123456".</p>
+                    <p>Use combinations of letters (upper/lower), numbers, and symbols.</p>
+                    <p>Use a password manager to safely store and generate strong passwords.</p>
+                </div>
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+        
+            `<h1>HOW TO PROTECT YOUR CLOUD DATA</h1>
+            <div class="logo">
+                <img src="cloud4.png" alt="Cyber Security">
+            </div>
+            <div class="box-container">
+                <div class="info-box">
+                    <img src="pro1.png" alt="MITM Attack">
+                    <h3><span class="safe-dot"></span>Use Strong Passwords</h3>
+                    <p>Avoid names, birthdays, or "123456".</p>
+                    <p>Use combinations of letters (upper/lower), numbers, and symbols.</p>
+                    <p>Use a password manager to safely store and generate strong passwords.</p>
+                </div>
+
+                <div class="info-box">
+                    <img src="pro2.png" alt="Unauthorized Access">
+                    <h3><span class="safe-dot"></span>Enable Two-Factor Authentication (2FA)</h3>
+                    <p>This adds a second layer of security. Even if someone has your password, they won't get in without a code sent to your phone or email.</p>
+                </div>
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>HOW TO PROTECT YOUR CLOUD DATA</h1>
+            <div class="logo">
+                <img src="cloud4.png" alt="Cyber Security">
+            </div>
+            <div class="box-container">
+                <div class="info-box">
+                    <img src="pro1.png" alt="MITM Attack">
+                    <h3><span class="safe-dot"></span>Use Strong Passwords</h3>
+                    <p>Avoid names, birthdays, or "123456".</p>
+                    <p>Use combinations of letters (upper/lower), numbers, and symbols.</p>
+                    <p>Use a password manager to safely store and generate strong passwords.</p>
+                </div>
+
+                <div class="info-box">
+                    <img src="pro2.png" alt="Unauthorized Access">
+                    <h3><span class="safe-dot"></span>Enable Two-Factor Authentication (2FA)</h3>
+                    <p>This adds a second layer of security. Even if someone has your password, they won't get in without a code sent to your phone or email.</p>
+                </div>
+
+                <div class="info-box">
+                    <img src="pro3.png" alt="Network Sniffing">
+                    <h3><span class="safe-dot"></span>Encrypt Sensitive Files Before Uploading</h3>
+                    <p>Encryption turns your data into unreadable code.</p>
+                    <p>Tools: 7-Zip, VeraCrypt, BitLocker (for Windows), or FileVault (Mac).</p>
+                    <p>Especially useful when storing ID documents, contracts, or credentials.</p>
+                </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+        
+            `<h1>HOW TO PROTECT YOUR CLOUD DATA</h1>
+            <div class="logo">
+                <img src="cloud4.png" alt="Cyber Security">
+            </div>
+            <div class="box-container">
+                <div class="info-box">
+                    <img src="pro1.png" alt="MITM Attack">
+                    <h3><span class="safe-dot"></span>Use Strong Passwords</h3>
+                    <p>Avoid names, birthdays, or "123456".</p>
+                    <p>Use combinations of letters (upper/lower), numbers, and symbols.</p>
+                    <p>Use a password manager to safely store and generate strong passwords.</p>
+                </div>
+
+                <div class="info-box">
+                    <img src="pro2.png" alt="Unauthorized Access">
+                    <h3><span class="safe-dot"></span>Enable Two-Factor Authentication (2FA)</h3>
+                    <p>This adds a second layer of security. Even if someone has your password, they won't get in without a code sent to your phone or email.</p>
+                </div>
+
+                <div class="info-box">
+                    <img src="pro3.png" alt="Network Sniffing">
+                    <h3><span class="safe-dot"></span>Encrypt Sensitive Files Before Uploading</h3>
+                    <p>Encryption turns your data into unreadable code.</p>
+                    <p>Tools: 7-Zip, VeraCrypt, BitLocker (for Windows), or FileVault (Mac).</p>
+                    <p>Especially useful when storing ID documents, contracts, or credentials.</p>
+                </div>
+
+                <div class="info-box">
+                    <img src="pro4.png" alt="MITM Attack">
+                    <h3><span class="safe-dot"></span>Be Careful with Public Wi-Fi</h3>
+                    <p>Never access your cloud storage from a public Wi-Fi (like in cafes or airports) unless you are using a VPN. Public Wi-Fi is often unencrypted and easy for hackers to snoop on.</p>
+                </div>
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>HOW TO PROTECT YOUR CLOUD DATA</h1>
+            <div class="logo">
+                <img src="cloud4.png" alt="Cyber Security">
+            </div>
+            <div class="box-container">
+                <div class="info-box">
+                    <img src="pro1.png" alt="MITM Attack">
+                    <h3><span class="safe-dot"></span>Use Strong Passwords</h3>
+                    <p>Avoid names, birthdays, or "123456".</p>
+                    <p>Use combinations of letters (upper/lower), numbers, and symbols.</p>
+                    <p>Use a password manager to safely store and generate strong passwords.</p>
+                </div>
+
+                <div class="info-box">
+                    <img src="pro2.png" alt="Unauthorized Access">
+                    <h3><span class="safe-dot"></span>Enable Two-Factor Authentication (2FA)</h3>
+                    <p>This adds a second layer of security. Even if someone has your password, they won't get in without a code sent to your phone or email.</p>
+                </div>
+
+                <div class="info-box">
+                    <img src="pro3.png" alt="Network Sniffing">
+                    <h3><span class="safe-dot"></span>Encrypt Sensitive Files Before Uploading</h3>
+                    <p>Encryption turns your data into unreadable code.</p>
+                    <p>Tools: 7-Zip, VeraCrypt, BitLocker (for Windows), or FileVault (Mac).</p>
+                    <p>Especially useful when storing ID documents, contracts, or credentials.</p>
+                </div>
+
+                <div class="info-box">
+                    <img src="pro4.png" alt="MITM Attack">
+                    <h3><span class="safe-dot"></span>Be Careful with Public Wi-Fi</h3>
+                    <p>Never access your cloud storage from a public Wi-Fi (like in cafes or airports) unless you are using a VPN. Public Wi-Fi is often unencrypted and easy for hackers to snoop on.</p>
+                </div>
+
+                <div class="info-box">
+                    <img src="pro5.png" alt="Unauthorized Access">
+                    <h3><span class="safe-dot"></span>Regularly Check Access Settings</h3>
+                    <p>Go through your shared files monthly.</p>
+                    <p>Remove access from people who no longer need it.</p>
+                    <p>Make sure confidential files are not accidentally "Public."</p>
+                </div>
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>HOW TO PROTECT YOUR CLOUD DATA</h1>
+            <div class="logo">
+                <img src="cloud4.png" alt="Cyber Security">
+            </div>
+            <div class="box-container">
+                <div class="info-box">
+                    <img src="pro1.png" alt="MITM Attack">
+                    <h3><span class="safe-dot"></span>Use Strong Passwords</h3>
+                    <p>Avoid names, birthdays, or "123456".</p>
+                    <p>Use combinations of letters (upper/lower), numbers, and symbols.</p>
+                    <p>Use a password manager to safely store and generate strong passwords.</p>
+                </div>
+
+                <div class="info-box">
+                    <img src="pro2.png" alt="Unauthorized Access">
+                    <h3><span class="safe-dot"></span>Enable Two-Factor Authentication (2FA)</h3>
+                    <p>This adds a second layer of security. Even if someone has your password, they won't get in without a code sent to your phone or email.</p>
+                </div>
+
+                <div class="info-box">
+                    <img src="pro3.png" alt="Network Sniffing">
+                    <h3><span class="safe-dot"></span>Encrypt Sensitive Files Before Uploading</h3>
+                    <p>Encryption turns your data into unreadable code.</p>
+                    <p>Tools: 7-Zip, VeraCrypt, BitLocker (for Windows), or FileVault (Mac).</p>
+                    <p>Especially useful when storing ID documents, contracts, or credentials.</p>
+                </div>
+
+                <div class="info-box">
+                    <img src="pro4.png" alt="MITM Attack">
+                    <h3><span class="safe-dot"></span>Be Careful with Public Wi-Fi</h3>
+                    <p>Never access your cloud storage from a public Wi-Fi (like in cafes or airports) unless you are using a VPN. Public Wi-Fi is often unencrypted and easy for hackers to snoop on.</p>
+                </div>
+
+                <div class="info-box">
+                    <img src="pro5.png" alt="Unauthorized Access">
+                    <h3><span class="safe-dot"></span>Regularly Check Access Settings</h3>
+                    <p>Go through your shared files monthly.</p>
+                    <p>Remove access from people who no longer need it.</p>
+                    <p>Make sure confidential files are not accidentally "Public."</p>
+                </div>
+
+                <div class="info-box">
+                    <img src="pro6.png" alt="Network Sniffing">
+                    <h3><span class="safe-dot"></span>Keep Backups</h3>
+                    <p>Save important files in a separate cloud or offline backup (USB or hard drive).</p>
+                    <p>This helps in case of accidental deletion or ransomware attacks.</p>
+                </div>
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<div class="logo">
+                <img src="cloud1.png" alt="Cyber Security">
+            </div>
+            <h1>Case Study: The Public Folder Accident</h1>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<div class="logo">
+                <img src="cloud1.png" alt="Cyber Security">
+            </div>
+            <h1>Case Study: The Public Folder Accident</h1>
+            <p>Scenario:</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<div class="logo">
+                <img src="cloud1.png" alt="Cyber Security">
+            </div>
+            <h1>Case Study: The Public Folder Accident</h1>
+            <p>Scenario:</p>
+            <ul>
+                <li>Mark, a student, uploads a group project to Google Drive. He shares the folder with his professor, but forgets it's set to "Anyone with the link can view." The link is passed around, and suddenly, students from another school are copying their content.</li>
+            </ul>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<div class="logo">
+                <img src="cloud1.png" alt="Cyber Security">
+            </div>
+            <h1>Case Study: The Public Folder Accident</h1>
+            <p>Scenario:</p>
+            <ul>
+                <li>Mark, a student, uploads a group project to Google Drive. He shares the folder with his professor, but forgets it's set to "Anyone with the link can view." The link is passed around, and suddenly, students from another school are copying their content.</li>
+            </ul>
+            <p>What Went Wrong:</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<div class="logo">
+                <img src="cloud1.png" alt="Cyber Security">
+            </div>
+            <h1>Case Study: The Public Folder Accident</h1>
+            <p>Scenario:</p>
+            <ul>
+                <li>Mark, a student, uploads a group project to Google Drive. He shares the folder with his professor, but forgets it's set to "Anyone with the link can view." The link is passed around, and suddenly, students from another school are copying their content.</li>
+            </ul>
+            <p>What Went Wrong:</p>
+            <p><span class="warning-dot"></span>Mark didn't check sharing settings.</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+            
+            `<div class="logo">
+                <img src="cloud1.png" alt="Cyber Security">
+            </div>
+            <h1>Case Study: The Public Folder Accident</h1>
+            <p>Scenario:</p>
+            <ul>
+                <li>Mark, a student, uploads a group project to Google Drive. He shares the folder with his professor, but forgets it's set to "Anyone with the link can view." The link is passed around, and suddenly, students from another school are copying their content.</li>
+            </ul>
+            <p>What Went Wrong:</p>
+            <p><span class="warning-dot"></span>Mark didn't check sharing settings.</p>
+            <p><span class="warning-dot"></span>No encryption was used.</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<div class="logo">
+                <img src="cloud1.png" alt="Cyber Security">
+            </div>
+            <h1>Case Study: The Public Folder Accident</h1>
+            <p>Scenario:</p>
+            <ul>
+                <li>Mark, a student, uploads a group project to Google Drive. He shares the folder with his professor, but forgets it's set to "Anyone with the link can view." The link is passed around, and suddenly, students from another school are copying their content.</li>
+            </ul>
+            <p>What Went Wrong:</p>
+            <p><span class="warning-dot"></span>Mark didn't check sharing settings.</p>
+            <p><span class="warning-dot"></span>No encryption was used.</p>
+            <p><span class="warning-dot"></span>He used public Wi-Fi at the café to upload everything.</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<div class="logo">
+                <img src="cloud1.png" alt="Cyber Security">
+            </div>
+            <h1>Case Study: The Public Folder Accident</h1>
+            <p>Scenario:</p>
+            <ul>
+                <li>Mark, a student, uploads a group project to Google Drive. He shares the folder with his professor, but forgets it's set to "Anyone with the link can view." The link is passed around, and suddenly, students from another school are copying their content.</li>
+            </ul>
+            <p>What Went Wrong:</p>
+            <p><span class="warning-dot"></span>Mark didn't check sharing settings.</p>
+            <p><span class="warning-dot"></span>No encryption was used.</p>
+            <p><span class="warning-dot"></span>He used public Wi-Fi at the café to upload everything.</p>
+            <p>What should've been done?</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<div class="logo">
+                <img src="cloud1.png" alt="Cyber Security">
+            </div>
+            <h1>Case Study: The Public Folder Accident</h1>
+            <p>Scenario:</p>
+            <ul>
+                <li>Mark, a student, uploads a group project to Google Drive. He shares the folder with his professor, but forgets it's set to "Anyone with the link can view." The link is passed around, and suddenly, students from another school are copying their content.</li>
+            </ul>
+            <p>What Went Wrong:</p>
+            <p><span class="warning-dot"></span>Mark didn't check sharing settings.</p>
+            <p><span class="warning-dot"></span>No encryption was used.</p>
+            <p><span class="warning-dot"></span>He used public Wi-Fi at the café to upload everything.</p>
+            <p>What should've been done?</p>
+            <p><span class="safe-dot"></span>Mark should've used "Restricted" sharing with selected emails.</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<div class="logo">
+                <img src="cloud1.png" alt="Cyber Security">
+            </div>
+            <h1>Case Study: The Public Folder Accident</h1>
+            <p>Scenario:</p>
+            <ul>
+                <li>Mark, a student, uploads a group project to Google Drive. He shares the folder with his professor, but forgets it's set to "Anyone with the link can view." The link is passed around, and suddenly, students from another school are copying their content.</li>
+            </ul>
+            <p>What Went Wrong:</p>
+            <p><span class="warning-dot"></span>Mark didn't check sharing settings.</p>
+            <p><span class="warning-dot"></span>No encryption was used.</p>
+            <p><span class="warning-dot"></span>He used public Wi-Fi at the café to upload everything.</p>
+            <p>What should've been done?</p>
+            <p><span class="safe-dot"></span>Mark should've used "Restricted" sharing with selected emails.</p>
+            <p><span class="safe-dot"></span>Turned on 2FA.</span></p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<div class="logo">
+                <img src="cloud1.png" alt="Cyber Security">
+            </div>
+            <h1>Case Study: The Public Folder Accident</h1>
+            <p>Scenario:</p>
+            <ul>
+                <li>Mark, a student, uploads a group project to Google Drive. He shares the folder with his professor, but forgets it's set to "Anyone with the link can view." The link is passed around, and suddenly, students from another school are copying their content.</li>
+            </ul>
+            <p>What Went Wrong:</p>
+            <p><span class="warning-dot"></span>Mark didn't check sharing settings.</p>
+            <p><span class="warning-dot"></span>No encryption was used.</p>
+            <p><span class="warning-dot"></span>He used public Wi-Fi at the café to upload everything.</p>
+            <p>What should've been done?</p>
+            <p><span class="safe-dot"></span>Mark should've used "Restricted" sharing with selected emails.</p>
+            <p><span class="safe-dot"></span>Turned on 2FA.</span></p>
+            <p><span class="safe-dot"></span>Used a VPN or waited to upload from a secure network.</p>
+            <div class="continue">Click anywhere to continue...</div>`,    
+
+            `<h1>CLOUD AND SECURITY ACCOUNT</h1>
+            <div class="logomid">
+                <img src="cloud1.png" alt="Cyber Security">
+            </div>
+            <h1>CONGRATULATIONS! YOU COMPLETED THE LESSON!</h1>
+            <h2>You must complete the quiz to finish this course.</h2>
+            <div class="continue">Click anywhere to take the quiz...</div>`
+        ];
+
+        const quizQuestions = [
+            {
+                question: "What is a data breach?",
+                options: [
+                    "A) Deleting a file",
+                    "B) Gaining unauthorized access to data",
+                    "C) Forgetting your password"
+                ],
+                correct: 1
+            },
+            {
+                question: "Which of these is a good password?",
+                options: [
+                    "A) password123",
+                    "B) Mark2024",
+                    "C) tH7$Yk*21R@"
+                ],
+                correct: 2
+            },
+            {
+                question: "What is the purpose of 2FA?",
+                options: [
+                    "A) Makes logging in faster",
+                    "B) Encrypts your files",
+                    "C) Adds extra security even if your password is stolen"
+                ],
+                correct: 2
+            },
+            {
+                question: "How can you prevent unauthorized sharing?",
+                options: [
+                    "A) Set folders to Anyone with link",
+                    "B) Review and restrict sharing settings",
+                    "C) Share only on social media"
+                ],
+                correct: 1
+            },
+            {
+                question: "When using public Wi-Fi to access cloud storage, you should:",
+                options: [
+                    "A) Hackers can intercept your data",
+                    "B) It's too slow",
+                    "C) Your files won't sync"
+                ],
+                correct: 0
+            }
+        ];
+
+        let currentSlide = 0;
+        const contentDiv = document.getElementById('content');
+
+        
+        // Prevent context menu on right click
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        // Initialize with first slide
+        contentDiv.innerHTML = slides[currentSlide];
+        updateProgressBar();
+        
+        // Initialize course progress tracking
+        const courseProgress = new CourseProgress(4, TOTAL_CONTENT_SLIDES); // Course ID 4 for Cloud Security
+        courseProgress.init();
+
+        // Set initial slide progress
+        courseProgress.setCurrentSlide(currentSlide + 1);
+        
+        // Add click event listener for dropdown and flip cards
+        document.addEventListener('click', function(e) {
+            const flipCard = e.target.closest('.flip-card');
+            const dropdownHeader = e.target.closest('.dropdown-header');
+            const backButton = e.target.closest('.back-button');
+            
+            // Hide back button on last slide
+            const backButtonElement = document.querySelector('.back-button');
+            if (currentSlide === slides.length - 1 && backButtonElement) {
+                backButtonElement.style.display = 'none';
+            } else if (backButtonElement) {
+                backButtonElement.style.display = 'block';
+            }
+
+            if (backButton) {
+                return;
+            } else if (flipCard) {
+                e.stopPropagation();
+                flipCard.classList.toggle('flipped');
+            } else if (dropdownHeader) {
+                e.stopPropagation();
+                const arrow = dropdownHeader.querySelector('.arrow-mark');
+                const translation = dropdownHeader.nextElementSibling;
+                arrow.classList.toggle('active');
+                translation.classList.toggle('active');
+            } else {
+                if (currentSlide === slides.length - 1) {
+                    // Redirect to quiz page on last slide click
+                    window.location.href = 'cloud-quiz.html';
+                    return;
+                } else {
+                    currentSlide++;
+                    contentDiv.innerHTML = slides[currentSlide];
+                    contentDiv.scrollTop = 0;
+                    updateProgressBar();
+                    // Update course progress
+                    courseProgress.setCurrentSlide(currentSlide + 1);
+                    
+                    // Check if we need to hide back button after slide change
+                    if (currentSlide === slides.length - 1 && backButtonElement) {
+                        backButtonElement.style.display = 'none';
+                    }
+                }
+            }
+        });
+        
+        // Handle touch events with the same logic
+        document.addEventListener('touchstart', function(e) {
+            const flipCard = e.target.closest('.flip-card');
+            const dropdownHeader = e.target.closest('.dropdown-header');
+            const backButton = e.target.closest('.back-button');
+            
+            // Hide back button on last slide
+            const backButtonElement = document.querySelector('.back-button');
+            if (currentSlide === slides.length - 1 && backButtonElement) {
+                backButtonElement.style.display = 'none';
+            } else if (backButtonElement) {
+                backButtonElement.style.display = 'block';
+            }
+
+            if (backButton) {
+                return;
+            } else if (flipCard) {
+                e.stopPropagation();
+                flipCard.classList.toggle('flipped');
+            } else if (dropdownHeader) {
+                e.stopPropagation();
+                const arrow = dropdownHeader.querySelector('.arrow-mark');
+                const translation = dropdownHeader.nextElementSibling;
+                arrow.classList.toggle('active');
+                translation.classList.toggle('active');
+            } else {
+                if (currentSlide === slides.length - 1) {
+                    // Redirect to quiz page on last slide click
+                    window.location.href = 'cloud-quiz.html';
+                    return;
+                } else {
+                    currentSlide++;
+                    contentDiv.innerHTML = slides[currentSlide];
+                    contentDiv.scrollTop = 0;
+                    updateProgressBar();
+                    // Update course progress
+                    courseProgress.setCurrentSlide(currentSlide + 1);
+                    
+                    // Check if we need to hide back button after slide change
+                    if (currentSlide === slides.length - 1 && backButtonElement) {
+                        backButtonElement.style.display = 'none';
+                    }
+                }
+            }
+        });
+
+        // Initialize - check if we need to hide back button on page load
+        window.addEventListener('load', function() {
+            const backButtonElement = document.querySelector('.back-button');
+            if (currentSlide === slides.length - 1 && backButtonElement) {
+                backButtonElement.style.display = 'none';
+            }
+        });
+
+        // Function to update progress bar
+        function updateProgressBar() {
+            const progress = ((currentSlide + 1) / slides.length) * 100;
+            document.querySelector('.progress-bar').style.width = `${progress}%`;
+            document.querySelector('.progress-percentage').textContent = `${Math.round(progress)}%`;
+        }
+
+        let currentQuestion = 0;
+        let score = 0;
+        let quizCompleted = false;
+
+        function displayQuestion() {
+            const questionContainer = document.getElementById('question-container');
+            const questionText = document.getElementById('question-text');
+            const options = document.getElementsByClassName('option-btn');
+            
+            // Remove any existing explanation
+            const oldExplanation = questionContainer.querySelector('.explanation-text');
+            if (oldExplanation) {
+                oldExplanation.remove();
+            }
+            
+            questionText.textContent = quizQuestions[currentQuestion].question;
+            for (let i = 0; i < 4; i++) {
+                options[i].textContent = quizQuestions[currentQuestion].options[i];
+                options[i].className = 'option-btn';
+                options[i].disabled = false;
+            }
+        }
+
+        function checkAnswer(choice) {
+            if (quizCompleted) return;
+            
+            const options = document.getElementsByClassName('option-btn');
+            const correct = quizQuestions[currentQuestion].correct;
+            
+            // Disable all buttons to prevent multiple answers
+            Array.from(options).forEach(btn => btn.disabled = true);
+            
+            options[choice].classList.add(choice === correct ? 'correct' : 'incorrect');
+            options[correct].classList.add('correct');
+            
+            if (choice === correct) score++;
+            
+            setTimeout(() => {
+                currentQuestion++;
+                if (currentQuestion < quizQuestions.length) {
+                    displayQuestion();
+                } else {
+                    showResults();
+                }
+            }, 1000);
+        }
+
+        function showResults() {
+            const scorePercent = (score / quizQuestions.length) * 100;
+            document.getElementById('question-container').style.display = 'none';
+            document.getElementById('score-container').style.display = 'block';
+            document.getElementById('score').textContent = scorePercent;
+            
+            if (scorePercent >= 80) {
+                quizCompleted = true;
+                document.getElementById('continue-btn').style.display = 'block';
+                document.getElementById('retry-btn').style.display = 'none';
+            } else {
+                document.getElementById('retry-btn').style.display = 'block';
+                document.getElementById('continue-btn').style.display = 'none';
+            }
+        }
+
+        function retryQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            document.getElementById('question-container').style.display = 'block';
+            document.getElementById('score-container').style.display = 'none';
+            document.getElementById('retry-btn').style.display = 'none';
+            displayQuestion();
+        }
+
+        function proceedToNext() {
+            if (quizCompleted) {
+                currentSlide++;
+                contentDiv.innerHTML = slides[currentSlide];
+                contentDiv.scrollTop = 0;
+                updateProgressBar();
+            }
+        }
+    </script>
+</body>
+</html>

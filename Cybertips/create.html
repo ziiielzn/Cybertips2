@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Account</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .password-requirements {
+      font-size: 0.9em;
+      color: #666;
+      margin: 5px 0;
+      border-radius: 5px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      opacity: 0;
+    }
+    .password-requirements.show {
+      max-height: 200px;
+      opacity: 1;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .requirement {
+      margin: 3px 0;
+    }
+    .requirement.valid {
+      color: #2ecc71;
+    }
+    .requirement.invalid {
+      color: #e74c3c;
+    }
+  </style>
+</head>
+<body class="create-page">
+  <!-- Background glow elements -->
+  <div class="glow-box"></div>
+  <div class="glow-box"></div>
+  <div class="glow-box"></div>
+
+  <div class="create-container">
+    <!-- Left Panel (Logo) -->
+    <div class="left-panel">
+      <img src="logo.png" alt="Cyber Tips Logo" class="logo-left" />
+    </div>
+
+    <!-- Right Panel (Form) -->
+    <div class="right-panel">
+      <h2>Create Account</h2>
+      <form class="form-plain" action="register.php" method="POST" onsubmit="return validateForm()">
+        <!-- Username field -->
+        <input 
+          type="text" 
+          name="username" 
+          placeholder="Username" 
+          required 
+          pattern="[a-zA-Z0-9_]{3,20}" 
+          title="Username must be between 3 and 20 characters, and can only contain letters, numbers, and underscores" 
+        />
+
+        <!-- Email field -->
+        <input 
+          type="email" 
+          name="email" 
+          placeholder="Email address" 
+          required 
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+          title="Please enter a valid email address" 
+        />
+
+        <!-- Password field -->
+        <input 
+          type="password" 
+          name="password" 
+          id="password" 
+          placeholder="Password" 
+          required 
+          minlength="8" 
+          oninput="checkPassword(this.value)"
+          pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};:'\\|,.<>\/?]).{8,}$" 
+          title="Password must be at least 8 characters and include: one uppercase letter, one lowercase letter, one number, and one special character (!@#$%^&*()_+-=[]{}|;:'\,.<>/?)" 
+        />
+
+        <!-- Password Requirements Display -->
+        <div class="password-requirements" id="password-requirements">
+          <div class="requirement" id="length">✓ At least 8 characters</div>
+          <div class="requirement" id="lowercase">✓ One lowercase letter</div>
+          <div class="requirement" id="uppercase">✓ One uppercase letter</div>
+          <div class="requirement" id="number">✓ One number</div>
+          <div class="requirement" id="special">✓ One special character</div>
+        </div>
+
+        <!-- Confirm password field -->
+        <input 
+          type="password" 
+          name="confirm-password" 
+          id="confirm-password" 
+          placeholder="Confirm password" 
+          required 
+          minlength="8" 
+          pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};:'\\|,.<>\/?]).{8,}$" 
+          title="Password must be at least 8 characters and include: one uppercase letter, one lowercase letter, one number, and one special character (!@#$%^&*()_+-=[]{}|;:'\,.<>/?)"
+        />
+
+        <!-- Submit Button -->
+        <button type="submit" class="submit-btn">Create Account</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function checkPassword(password) {
+      const requirements = {
+        length: password.length >= 8,
+        lowercase: /[a-z]/.test(password),
+        uppercase: /[A-Z]/.test(password),
+        number: /[0-9]/.test(password),
+        special: /[!@#$%^&*()_+\-=\[\]{};:'\\|,.<>\/?]/.test(password)
+      };
+
+      // Update the visual feedback for each requirement
+      for (let req in requirements) {
+        const element = document.getElementById(req);
+        if (requirements[req]) {
+          element.classList.add('valid');
+          element.classList.remove('invalid');
+        } else {
+          element.classList.add('invalid');
+          element.classList.remove('valid');
+        }
+      }
+
+      return Object.values(requirements).every(Boolean);
+    }
+
+    // Add event listeners for password field focus
+    document.addEventListener('DOMContentLoaded', function() {
+      const passwordField = document.getElementById('password');
+      const requirementsDiv = document.getElementById('password-requirements');
+
+      passwordField.addEventListener('focus', function() {
+        requirementsDiv.classList.add('show');
+      });
+
+      passwordField.addEventListener('blur', function() {
+        if (this.value === '') {
+          requirementsDiv.classList.remove('show');
+        }
+      });
+
+      // Keep requirements visible if there's text in the password field
+      passwordField.addEventListener('input', function() {
+        if (this.value !== '') {
+          requirementsDiv.classList.add('show');
+        }
+      });
+    });
+
+    function validateForm() {
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirm-password").value;
+      
+      if (!checkPassword(password)) {
+        alert("Password does not meet all requirements.");
+        return false;
+      }
+
+      if (password !== confirmPassword) {
+        alert("Passwords do not match.");
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+</body>
+</html>

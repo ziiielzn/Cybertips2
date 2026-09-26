@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Quiz</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="session-check.js"></script>
+    <script src="nav-profile.js" defer></script>
+    <script src="course-progress.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0a192f;
+            color: #ccd6f6;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #quiz-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 25, 47, 0.95);
+            border-radius: 10px;
+            border: 1px solid #64ffda;
+            text-align: center;
+        }
+
+        #question-text {
+            white-space: pre-line;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            text-align: left;
+            padding: 15px;
+            background: rgba(100, 255, 218, 0.1);
+            border-radius: 5px;
+        }
+
+        /* Add style for completion message */
+        #question-text p {
+            text-align: center;
+        }
+
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .option-btn {
+            padding: 15px 20px;
+            background: rgba(100, 255, 218, 0.1);
+            border: 1px solid #64ffda;
+            color: #ccd6f6;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            text-align: left;
+            margin: 10px;
+            width: 100%;
+        }
+
+        .option-btn:hover {
+            background: rgba(100, 255, 218, 0.2);
+            transform: translateX(5px);
+        }
+
+        .option-btn.correct {
+            background: rgba(0, 255, 0, 0.2);
+            border-color: #00ff00;
+        }
+
+        .option-btn.incorrect {
+            background: rgba(255, 0, 0, 0.2);
+            border-color: #ff0000;
+        }
+
+        #continue-btn, #retry-btn {
+            padding: 10px 20px;
+            background: rgba(100, 255, 218, 0.1);
+            border: 1px solid #64ffda;
+            color: #64ffda;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        #continue-btn:hover, #retry-btn:hover {
+            background: rgba(100, 255, 218, 0.2);
+        }
+
+        #score-container {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #64ffda;
+            display: none;
+        }
+
+        .explanation-text {
+            margin-top: 15px;
+            padding: 15px;
+            background: rgba(100, 255, 218, 0.1);
+            border-left: 3px solid #64ffda;
+            color: #ccd6f6;
+            border-radius: 0 5px 5px 0;
+            font-style: italic;
+            display: none;
+            animation: fadeIn 0.5s ease-in;
+            text-align: left;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            color: #64ffda;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Phishing Security Quiz</h1>
+    <div id="quiz-container">
+        <div id="question-container">
+            <div id="question-text"></div>
+            <div class="quiz-options">
+                <button class="option-btn" onclick="checkAnswer(0)"></button>
+                <button class="option-btn" onclick="checkAnswer(1)"></button>
+            </div>
+        </div>
+        <div id="score-container" style="display: none;">
+            <h2>Quiz Complete!</h2>
+            <p style="text-align: center;">You must complete the quiz to finish this course.</p>
+            <p>Your Score: <span id="score"></span>%</p>
+            <button id="retry-btn" onclick="retryQuiz()" style="display: none;">Try Again</button>
+            <button id="continue-btn" onclick="window.location.href='learn.html'" style="display: none;">Return to Learn</button>
+        </div>
+    </div>
+
+    <script>
+        const quizQuestions = [
+            {
+                question: "Subject: URGENT: Your Netflix account has been suspended!\nMessage: \"We couldn't process your payment. Click the link below to update your billing info within 24 hours to avoid losing access.\" [Update Now]",
+                options: ["Phishing", "Legit"],
+                correct: 0,
+                explanation: "Urgent tone, suspicious link, and fear-based tactics are classic phishing signs."
+            },
+            {
+                question: 'Subject: Urgent: Account Verification Required \nMessage: "Your account has been temporarily suspended. To restore access, please verify your identity by clicking here." [Verify Account]',
+                options: ["Phishing", "Legit"],
+                correct: 0,
+                explanation: "Legitimate companies usually provide a secure method of verifying your account directly through their official website, not through unsolicited emails. Be cautious of urgent requests for personal information or actions. Always go directly to the website to verify."
+            },
+            {
+                question: 'Subject: Facebook Login Attempt from New Device \n"We detected a login attempt from a new device. If this was not you, click here to secure your account." [Review Activity]',
+                options: ["Phishing", "Legit"],
+                correct: 1,
+                explanation: "Facebook does send alerts like this. But always go directly to the website/app instead of clicking links in emails."
+            },
+            {
+                question: 'Subject: Free Starbucks Voucher Just for You! \nMessage: "Complete this quick survey and get a ₱500 Starbucks voucher instantly!" [Take Survey]',
+                options: ["Phishing", "Legit"],
+                correct: 0,
+                explanation: '"Free stuff" scams are baiting techniques. Suspicious URL = hard pass.'
+            },
+            {
+                question: 'Subject: Class Schedule Update from the Registrar \nMessage: "We have updated your schedule for the upcoming semester. Please log in to the student portal to view the changes. Kindly check your portal."',
+                options: ["Phishing", "Legit"],
+                correct: 1,
+                explanation: "If it's from an official school email and the link goes to the actual student portal, it's likely legit."
+            },
+            {
+                question: 'Subject: Order Confirmation #12345 \nMessage: "Thank you for your purchase! Your order #12345 has been successfully processed. You can track your order or view the details below."',
+                options: ["Phishing", "Legit"],
+                correct: 1,
+                explanation: "Order confirmations from well-known companies usually include links for tracking or managing your order. If you recognize the retailer and the order number matches your recent purchases, it's a legitimate email. Always confirm the sender's address."
+            },
+            {
+                question: 'Subject: Your GCash Account Will Be Locked \nMessage: "Due to suspicious activity, we are locking your GCash account. Click the link below to verify your identity." [Verify Now]',
+                options: ["Phishing", "Legit"],
+                correct: 0,
+                explanation: "Financial scare tactics + fake urgency = red flag. Always verify with the official app."
+            },
+            {
+                question: 'Subject: Your Monthly Statement Is Ready \nMessage: "Your monthly bank statement is now available. Click below to view or download your statement. Use this as your password to open the file birthmonth(last3digitsofacctnumber)" [View Statement]',
+                options: ["Phishing", "Legit"],
+                correct: 1,
+                explanation: "Most banks and financial institutions send secure notifications when your statements are available. The link provided should direct you to the official bank website, not a third-party site. Always double-check the sender's email address."
+            },
+            {
+                question: 'Subject: Congratulations! You have Won a $500 Gift Card \nMessage: "Congratulations! You have been selected to receive a $500 gift card. Click the link below to claim your prize!" [Claim Gift Card]',
+                options: ["Phishing", "Legit"],
+                correct: 0,
+                explanation: "Emails claiming you've won a prize you didn't enter for are a classic phishing tactic. Legitimate companies don't randomly give away gift cards without a proper contest entry or verification. Always be skeptical of unsolicited rewards."
+            },
+            {
+                question: 'Subject: Your Payment Is Due: Immediate Action Required \nMessage: "Your payment for XYZ Service is overdue. Failure to pay within 24 hours will result in a suspension of your account. Click here to make the payment."',
+                options: ["Phishing", "Legit"],
+                correct: 0,
+                explanation: "Legitimate businesses typically provide ample time for payment and will contact you via secure means. The urgency and link in the email could be an attempt to trick you into entering payment details on a fake site. Always verify through official channels."
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+        let quizCompleted = false;
+
+        function displayQuestion() {
+            const questionContainer = document.getElementById('question-container');
+            const questionText = document.getElementById('question-text');
+            const options = document.getElementsByClassName('option-btn');
+            
+            // Remove any existing explanation
+            const oldExplanation = questionContainer.querySelector('.explanation-text');
+            if (oldExplanation) {
+                oldExplanation.remove();
+            }
+            
+            // Check if it's a completion message
+            if (quizQuestions[currentQuestion].question.includes("You must complete the quiz")) {
+                questionText.style.textAlign = 'center';
+            } else {
+                questionText.style.textAlign = 'left';
+            }
+            
+            questionText.textContent = quizQuestions[currentQuestion].question;
+            for (let i = 0; i < 2; i++) {
+                options[i].textContent = quizQuestions[currentQuestion].options[i];
+                options[i].className = 'option-btn';
+                options[i].disabled = false;
+            }
+        }
+
+        function checkAnswer(choice) {
+            if (quizCompleted) return;
+            
+            const options = document.getElementsByClassName('option-btn');
+            const correct = quizQuestions[currentQuestion].correct;
+            const questionContainer = document.getElementById('question-container');
+            
+            // Disable all buttons to prevent multiple answers
+            Array.from(options).forEach(btn => btn.disabled = true);
+            
+            options[choice].classList.add(choice === correct ? 'correct' : 'incorrect');
+            options[correct].classList.add('correct');
+            
+            if (choice === correct) {
+                score++;
+                // Show explanation for correct answer
+                const explanationDiv = document.createElement('div');
+                explanationDiv.className = 'explanation-text';
+                explanationDiv.textContent = quizQuestions[currentQuestion].explanation;
+                questionContainer.appendChild(explanationDiv);
+                
+                // Show explanation with animation
+                setTimeout(() => {
+                    explanationDiv.style.display = 'block';
+                }, 100);
+            }
+            
+            // Adjust timing based on whether showing explanation
+            const delayTime = choice === correct ? 2500 : 1000;
+            
+            setTimeout(() => {
+                currentQuestion++;
+                if (currentQuestion < quizQuestions.length) {
+                    displayQuestion();
+                } else {
+                    showResults();
+                }
+            }, delayTime);
+        }
+
+        function showResults() {
+            const scorePercent = (score / quizQuestions.length) * 100;
+            document.getElementById('question-container').style.display = 'none';
+            document.getElementById('score-container').style.display = 'block';
+            document.getElementById('score').textContent = scorePercent;
+            
+            if (scorePercent >= 80) {
+                quizCompleted = true;
+                document.getElementById('continue-btn').style.display = 'block';
+                document.getElementById('retry-btn').style.display = 'none';
+            } else {
+                document.getElementById('retry-btn').style.display = 'block';
+                document.getElementById('continue-btn').style.display = 'none';
+            }
+        }
+
+        function retryQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            document.getElementById('question-container').style.display = 'block';
+            document.getElementById('score-container').style.display = 'none';
+            document.getElementById('retry-btn').style.display = 'none';
+            displayQuestion();
+        }
+
+        // Initialize the quiz
+        displayQuestion();
+    </script>
+</body>
+</html> 

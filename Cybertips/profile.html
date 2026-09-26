@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Profile</title>
+  <!-- Include Font Awesome CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <script src="session-check.js"></script>
+  <style>
+    .privacy-button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      background-color: #2c3e50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .privacy-button:hover {
+      background-color: #34495e;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+    }
+
+    .modal-content {
+      position: relative;
+      background-color: #1a1a1a;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #2c3e50;
+      border-radius: 5px;
+      width: 80%;
+      max-width: 500px;
+      color: white;
+    }
+
+    .close-button {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      font-size: 24px;
+      cursor: pointer;
+      color: #666;
+    }
+
+    .close-button:hover {
+      color: #fff;
+    }
+
+    .modal form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .modal input {
+      padding: 8px;
+      border: 1px solid #2c3e50;
+      border-radius: 4px;
+      background-color: #2c3e50;
+      color: white;
+    }
+
+    .modal button {
+      padding: 10px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .modal button:hover {
+      background-color: #2980b9;
+    }
+
+    .error-message {
+      color: #e74c3c;
+      margin-top: 5px;
+      font-size: 14px;
+    }
+
+    /* Learning History Styles */
+    .course-progress {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .course-item {
+      background: rgba(0, 25, 47, 0.5);
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid rgba(100, 255, 218, 0.1);
+    }
+
+    .course-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .course-name {
+      color: #ffffff;
+      font-size: 1rem;
+    }
+
+    .progress-percent {
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+
+    .progress-percent.completed {
+      color: #64ffda;
+    }
+
+    .progress-percent.in-progress {
+      color: #ffd700;
+    }
+
+    .progress-percent.not-started {
+      color: #8892b0;
+    }
+
+    .progress-bar-container {
+      width: 100%;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 3px;
+      margin-bottom: 8px;
+    }
+
+    .progress-bar {
+      height: 100%;
+      border-radius: 3px;
+      transition: width 0.3s ease;
+    }
+
+    .course-item:has(.completed) .progress-bar {
+      background: linear-gradient(90deg, #64ffda, #00a9e0);
+    }
+
+    .course-item:has(.in-progress) .progress-bar {
+      background: linear-gradient(90deg, #ffd700, #ff8c00);
+    }
+
+    .course-item:has(.not-started) .progress-bar {
+      background: #8892b0;
+    }
+
+    .status-tag {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+
+    .status-tag.completed {
+      background: rgba(100, 255, 218, 0.1);
+      color: #64ffda;
+      border: 1px solid #64ffda;
+    }
+
+    .status-tag.in-progress {
+      background: rgba(255, 215, 0, 0.1);
+      color: #ffd700;
+      border: 1px solid #ffd700;
+    }
+
+    .status-tag.not-started {
+      background: rgba(136, 146, 176, 0.1);
+      color: #8892b0;
+      border: 1px solid #8892b0;
+    }
+
+    /* Hover effects */
+    .course-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 15px rgba(100, 255, 218, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .loading-indicator {
+        text-align: center;
+        padding: 20px;
+        color: #8892b0;
+    }
+
+    .error-container {
+        text-align: center;
+        padding: 20px;
+        color: #e74c3c;
+        background: rgba(231, 76, 60, 0.1);
+        border-radius: 8px;
+        margin: 10px 0;
+    }
+
+    .retry-button {
+        background: #3498db;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .retry-button:hover {
+        background: #2980b9;
+    }
+  </style>
+</head>
+<body class="profile-page">
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="logo-container">
+      <img src="logo.png" alt="Cyber Tips Logo" class="logo"/>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="faqs.html">FAQs</a></li>
+      </ul>
+    </nav>
+    <div class="profile-icon-container">
+      <a href="profile.html">
+        <i class="fas fa-user profile-icon"></i>
+      </a>
+      <a href="logout.php" class="logout-btn">
+        <i class="fas fa-sign-out-alt"></i>
+        Logout
+      </a>
+    </div>
+  </header>
+
+  <section class="profile-section">
+    <div class="profile-card">
+      <div class="profile-header">
+        <h2>Profile Dashboard</h2>
+      </div>
+      <div class="profile-content">
+        <div class="profile-info">
+          <div class="profile-image-container">
+            <img src="default-profile.jpg" alt="Profile Picture" class="profile-img" id="profile-image" onerror="this.src='default-profile.jpg'">
+          </div>
+          <button class="change-profile-btn">Change Profile Picture</button>
+        </div>
+
+        <div class="user-details">
+          <p><strong>Name:</strong> <span id="username">Loading...</span></p>
+          <p><strong>Email:</strong> <span id="user-email">Loading...</span></p>
+        </div>
+
+        <div class="profile-options">
+          <div class="learning-history">
+            <h3>Learning History</h3>
+            <div class="course-progress" id="course-progress-container">
+              <div class="loading-indicator">Loading course progress...</div>
+            </div>
+          </div>
+          <div class="privacy-settings">
+            <h3>Privacy Settings</h3>
+            <button class="privacy-button" onclick="openModal('username-modal')">
+              <i class="fas fa-user"></i> Change Username
+            </button>
+            <button class="privacy-button" onclick="openModal('email-modal')">
+              <i class="fas fa-envelope"></i> Change Email
+            </button>
+            <button class="privacy-button" onclick="openModal('password-modal')">
+              <i class="fas fa-lock"></i> Change Password
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Username Change Modal -->
+  <div id="username-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" onclick="closeModal('username-modal')">&times;</span>
+      <h3>Change Username</h3>
+      <form id="username-form" onsubmit="return updateUsername(event)">
+        <input type="text" name="new-username" placeholder="New Username" required 
+               pattern="[a-zA-Z0-9_]{3,20}" 
+               title="Username must be between 3 and 20 characters, and can only contain letters, numbers, and underscores">
+        <input type="password" name="current-password" placeholder="Current Password" required>
+        <button type="submit">Update Username</button>
+        <div class="error-message" id="username-error"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Email Change Modal -->
+  <div id="email-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" onclick="closeModal('email-modal')">&times;</span>
+      <h3>Change Email</h3>
+      <form id="email-form" onsubmit="return updateEmail(event)">
+        <input type="email" name="new-email" placeholder="New Email" required>
+        <input type="password" name="current-password" placeholder="Current Password" required>
+        <button type="submit">Update Email</button>
+        <div class="error-message" id="email-error"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Password Change Modal -->
+  <div id="password-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" onclick="closeModal('password-modal')">&times;</span>
+      <h3>Change Password</h3>
+      <form id="password-form" onsubmit="return updatePassword(event)">
+        <input type="password" name="current-password" placeholder="Current Password" required>
+        <input type="password" name="new-password" placeholder="New Password" required 
+               pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$" 
+               title="Password must be at least 8 characters, with at least one uppercase letter, one lowercase letter, and one number">
+        <input type="password" name="confirm-password" placeholder="Confirm New Password" required>
+        <button type="submit">Update Password</button>
+        <div class="error-message" id="password-error"></div>
+      </form>
+    </div>
+  </div>
+
+  <div class="glow-box"></div>
+  <div class="glow-box"></div>
+  <div class="glow-box"></div>
+
+  <script>
+    // Function to handle errors and redirects
+    function handleResponse(response) {
+      if (response.status === 401) {
+        window.location.href = 'login.html';
+        throw new Error('Please log in to continue');
+      }
+      return response.json();
+    }
+
+    // Function to update navigation profile picture
+    function updateNavProfilePic(profilePicPath) {
+      const profileContainer = document.querySelector('.profile-icon-container a[href="profile.html"]');
+      if (profileContainer) {
+        // Remove existing content
+        profileContainer.innerHTML = '';
+        
+        // Create and add profile image
+        const img = document.createElement('img');
+        img.src = profilePicPath || 'default-profile.jpg';
+        img.alt = 'Profile';
+        img.classList.add('nav-profile-pic');
+        img.onerror = function() {
+          this.src = 'default-profile.jpg';
+        };
+        profileContainer.appendChild(img);
+      }
+    }
+
+    // Function to show error message
+    function showError(elementId, message) {
+      document.getElementById(elementId).textContent = message;
+    }
+
+    // Modal functions
+    function openModal(modalId) {
+      document.getElementById(modalId).style.display = 'block';
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).style.display = 'none';
+      // Clear error messages when closing modal
+      const errorElement = document.getElementById(modalId.replace('-modal', '-error'));
+      if (errorElement) {
+        errorElement.textContent = '';
+      }
+    }
+
+    // Close modal if clicking outside
+    window.onclick = function(event) {
+      if (event.target.className === 'modal') {
+        event.target.style.display = 'none';
+      }
+    }
+
+    // Update functions
+    function updateUsername(event) {
+      event.preventDefault();
+      const form = document.getElementById('username-form');
+      const formData = new FormData(form);
+      
+      fetch('update_profile.php', {
+        method: 'POST',
+        body: formData
+      })
+      .then(handleResponse)
+      .then(data => {
+        if (data.success) {
+          document.getElementById('username').textContent = formData.get('new-username');
+          closeModal('username-modal');
+          form.reset();
+        } else {
+          showError('username-error', data.error);
+        }
+      })
+      .catch(error => showError('username-error', error.message));
+      
+      return false;
+    }
+
+    function updateEmail(event) {
+      event.preventDefault();
+      const form = document.getElementById('email-form');
+      const formData = new FormData(form);
+      
+      fetch('update_profile.php', {
+        method: 'POST',
+        body: formData
+      })
+      .then(handleResponse)
+      .then(data => {
+        if (data.success) {
+          document.getElementById('user-email').textContent = formData.get('new-email');
+          closeModal('email-modal');
+          form.reset();
+        } else {
+          showError('email-error', data.error);
+        }
+      })
+      .catch(error => showError('email-error', error.message));
+      
+      return false;
+    }
+
+    function updatePassword(event) {
+      event.preventDefault();
+      const form = document.getElementById('password-form');
+      const formData = new FormData(form);
+      
+      if (formData.get('new-password') !== formData.get('confirm-password')) {
+        showError('password-error', 'Passwords do not match');
+        return false;
+      }
+      
+      fetch('update_profile.php', {
+        method: 'POST',
+        body: formData
+      })
+      .then(handleResponse)
+      .then(data => {
+        if (data.success) {
+          closeModal('password-modal');
+          form.reset();
+          alert('Password updated successfully!');
+        } else {
+          showError('password-error', data.error);
+        }
+      })
+      .catch(error => showError('password-error', error.message));
+      
+      return false;
+    }
+
+    // Fetch user data when page loads
+    function loadUserData() {
+      fetch('profile.php', {
+        method: 'GET',
+        credentials: 'include'
+      })
+      .then(handleResponse)
+      .then(data => {
+        if (data.success && data.data) {
+          document.getElementById('username').textContent = data.data.username;
+          document.getElementById('user-email').textContent = data.data.email;
+          if (data.data.profile_picture) {
+            document.getElementById('profile-image').src = data.data.profile_picture;
+            updateNavProfilePic(data.data.profile_picture);
+          }
+        } else {
+          throw new Error(data.error || 'Failed to load user data');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert(error.message);
+      });
+    }
+
+    // Load user data immediately
+    loadUserData();
+
+    // Profile picture upload handler
+    document.querySelector('.change-profile-btn').addEventListener('click', function() {
+        const fileInput = document.createElement('input');
+        fileInput.type = 'file';
+        fileInput.accept = 'image/*';
+        
+        fileInput.addEventListener('change', function() {
+            if (fileInput.files && fileInput.files[0]) {
+                const formData = new FormData();
+                formData.append('profile-picture', fileInput.files[0]);
+
+                fetch('profile.php', {
+                    method: 'POST',
+                    credentials: 'include',
+                    body: formData
+                })
+                .then(handleResponse)
+                .then(data => {
+                    if (data.success) {
+                        // Update the profile image source
+                        const profileImage = document.getElementById('profile-image');
+                        profileImage.src = data.newImagePath;
+                        
+                        // Add error handling for image load
+                        profileImage.onerror = function() {
+                            // If image fails to load, set to default
+                            this.src = 'default-profile.jpg';
+                            console.error('Failed to load profile image:', data.newImagePath);
+                        };
+                    } else {
+                        throw new Error(data.error || 'Failed to update profile picture');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert(error.message);
+                });
+            }
+        });
+
+        fileInput.click();
+    });
+
+    // Function to load and display course progress
+    function loadCourseProgress() {
+        const progressContainer = document.getElementById('course-progress-container');
+        progressContainer.innerHTML = '<div class="loading-indicator">Loading course progress...</div>';
+        
+        fetch('get_progress.php', {
+            method: 'GET',
+            headers: {
+                'Cache-Control': 'no-cache',
+                'Pragma': 'no-cache'
+            },
+            credentials: 'include'
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data.success && data.data) {
+                progressContainer.innerHTML = data.data.map(course => `
+                    <div class="course-item">
+                        <div class="course-header">
+                            <span class="course-name">${course.name}</span>
+                            <span class="progress-percent ${course.status}">${course.percentage}%</span>
+                        </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" style="width: ${course.percentage}%"></div>
+                        </div>
+                        <span class="status-tag ${course.status}">${
+                            course.status === 'completed' ? 'Completed' :
+                            course.status === 'in-progress' ? 'In Progress' :
+                            'Not Started'
+                        }</span>
+                    </div>
+                `).join('');
+            } else {
+                throw new Error(data.error || 'Failed to load course progress');
+            }
+        })
+        .catch(error => {
+            console.error('Error loading course progress:', error);
+            progressContainer.innerHTML = `
+                <div class="error-container">
+                    <p>Error loading course progress</p>
+                    <p>${error.message}</p>
+                    <button class="retry-button" onclick="loadCourseProgress()">
+                        <i class="fas fa-sync"></i> Retry
+                    </button>
+                </div>
+            `;
+        });
+    }
+
+    // Load user data and course progress when page loads
+    document.addEventListener('DOMContentLoaded', () => {
+        loadUserData();
+        loadCourseProgress();
+    });
+
+    // Refresh progress data when the page becomes visible
+    document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') {
+            loadCourseProgress();
+        }
+    });
+
+    // Refresh progress data when returning from other pages
+    window.addEventListener('pageshow', (event) => {
+        if (event.persisted) {
+            loadCourseProgress();
+        }
+    });
+
+    // Refresh progress every 30 seconds
+    setInterval(loadCourseProgress, 30000);
+  </script>
+</body>
+</html>

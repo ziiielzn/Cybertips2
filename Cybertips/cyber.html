@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is Cyber Threat?</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="nav-profile.js" defer></script>
+    <script src="session-check.js"></script>
+    <script src="course-progress.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            height: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0a192f;
+            color: #ccd6f6;
+            cursor: pointer;
+            min-height: 100%;
+            width: 100%;
+            position: relative;
+        }
+
+        /* Customize scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(100, 255, 218, 0.3);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(100, 255, 218, 0.5);
+        }
+
+        /* Background glow effects */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(135deg, rgba(0,169,224,0.1) 0%, rgba(0,0,0,0) 50%),
+                linear-gradient(-135deg, rgba(100,255,218,0.1) 0%, rgba(0,0,0,0) 50%);
+            z-index: 0;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: 
+                linear-gradient(to right, 
+                    rgba(0,169,224,0) 0%, 
+                    rgba(0,169,224,0.1) 50%, 
+                    rgba(0,169,224,0) 100%);
+            animation: animateGlow 8s linear infinite;
+            z-index: 0;
+        }
+
+        #content {
+            position: relative;
+            margin: 2rem auto;
+            width: 90%;
+            max-width: 1200px;
+            min-height: calc(100vh - 4rem);
+            padding: 20px;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        h1 {
+            color: #64ffda;
+            margin-bottom: 20px;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            text-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+            white-space: nowrap;
+            width: 100%;
+            text-align: center;
+        }
+
+        .logo {
+            margin: 20px 0;
+            flex-shrink: 0;
+            align-self: center;
+        }
+
+        .logo img {
+            max-width: 180px;
+            max-height: 120px;
+            width: auto;
+            height: auto;
+            /* Removed the filter that was making it white */
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+        }
+
+        .logomid {
+            margin: 20px 0;
+            flex-shrink: 0;
+            align-self: center;
+        }
+
+        .logomid img {
+            max-width: 400px;
+            max-height: 500px;
+            width: auto;
+            height: auto;
+            /* Removed the filter that was making it white */
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            margin-bottom: 15px;
+            max-width: 100%;
+            text-align: left;
+        }
+
+        ul {
+            padding-left: 0;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            list-style-type: none;
+            max-width: 100%;
+            align-self: stretch;
+        }
+
+        li {
+            margin-bottom: 12px;
+            text-align: left;
+            line-height: 1.6;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        li::before {
+            content: "✓";
+            color: #64ffda;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .continue {
+            font-style: italic;
+            color: #64ffda;
+            margin-top: 25px;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            animation: pulse 2s infinite;
+            text-shadow: 0 0 5px rgba(100, 255, 218, 0.5);
+            flex-shrink: 0;
+            width: 100%;
+            text-align: center;
+            align-self: center;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.6; }
+            50% { opacity: 1; text-shadow: 0 0 10px rgba(100, 255, 218, 0.8); }
+            100% { opacity: 0.6; }
+        }
+
+        @keyframes animateGlow {
+            0% { transform: rotate(0deg) translate(-10%, -10%) rotate(0deg); }
+            100% { transform: rotate(360deg) translate(-10%, -10%) rotate(-360deg); }
+        }
+
+        /* Floating glow elements */
+        .glow-box {
+            position: absolute;
+            border: 1px solid rgba(100, 255, 218, 0.2);
+            z-index: 0;
+            animation: float 15s infinite linear;
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+        }
+
+        .glow-box:nth-child(1) {
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .glow-box:nth-child(2) {
+            top: 70%;
+            right: 15%;
+            animation-delay: -5s;
+        }
+
+        .glow-box:nth-child(3) {
+            bottom: 20%;
+            left: 20%;
+            animation-delay: -10s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.3; }
+            50% { transform: translateY(-20px) rotate(5deg); opacity: 0.6; }
+        }
+
+        /* Mobile optimizations */
+        @media (max-height: 600px) {
+            #content {
+                max-height: 95vh;
+                padding: 10px;
+            }
+            
+            .logo img {
+                max-width: 120px;
+                max-height: 80px;
+            }
+            
+            h1 {
+                margin-bottom: 10px;
+            }
+            
+            .logo {
+                margin: 10px 0;
+            }
+            
+            p, li {
+                margin-bottom: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #content {
+                width: 95%;
+                padding: 15px;
+            }
+            
+            ul {
+                padding-left: 0;
+            }
+            
+            li {
+                padding-left: 25px;
+            }
+        }
+
+        /* Add flip card styles */
+        .flip-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 10px;
+        }
+
+        .flip-card {
+            background-color: transparent;
+            width: 320px;
+            height: 280px;
+            perspective: 1000px;
+            cursor: pointer;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card.flipped .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .flip-card-front {
+            background-color: #fff;
+            border: 2px solid #ff4444;
+            color: #333;
+        }
+
+        .flip-card-back {
+            background-color: #fff;
+            border: 2px solid #64ffda;
+            color: #333;
+            transform: rotateY(180deg);
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+
+        .card-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .card-text {
+            font-size: 0.9rem;
+            line-height: 1.4;
+            color: #666;
+        }
+
+        /* Adjust content width for cards */
+        #content {
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        /* Adjust the warning dot */
+        .warning-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #ff4444;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        .safe-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #64ffda;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        /* Dropdown styles */
+        .dropdown-section {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .arrow-mark {
+            color: #ff4444;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+
+        .arrow-mark.active {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px;
+            background: rgba(0, 25, 47, 0.95);
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .dropdown-title {
+            color: #ff4444;
+            font-size: 1.8rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .dropdown-translation {
+            display: none;
+            color: #ccd6f6;
+            font-size: 1.2rem;
+            padding: 15px;
+            padding-left: 45px;
+            position: relative;
+            background: rgba(0, 25, 47, 0.95);
+            margin-top: 2px;
+            border-radius: 5px;
+        }
+
+        .dropdown-translation.active {
+            display: block;
+        }
+
+        .dropdown-translation::before {
+            content: "→";
+            position: absolute;
+            left: 20px;
+            color: #64ffda;
+        }
+
+        .dropdown-divider {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #ff4444, transparent);
+            margin: 0;
+        }
+
+        /* Progress bar styles */
+        .progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(10, 25, 47, 0.95);
+            z-index: 1000;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .progress-wrapper {
+            flex-grow: 1;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            margin-right: 15px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #64ffda, #00a9e0);
+            width: 0%;
+            transition: width 0.3s ease;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+        }
+
+        .progress-percentage {
+            color: #64ffda;
+            font-size: 14px;
+            font-weight: bold;
+            min-width: 60px;
+            text-align: right;
+            text-shadow: 0 0 5px rgba(100, 255, 218, 0.5);
+        }
+
+        /* Back button styles */
+        .back-button {
+            position: fixed;
+            top: 60px;
+            left: 20px;
+            padding: 10px 20px;
+            background: rgba(100, 255, 218, 0.1);
+            border: 1px solid #64ffda;
+            color: #64ffda;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .back-button:hover {
+            background: rgba(100, 255, 218, 0.2);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-container">
+        <div class="progress-wrapper">
+            <div class="progress-bar"></div>
+        </div>
+        <div class="progress-percentage">0%</div>
+    </div>
+    <a href="learn.html" class="back-button">← Back</a>
+    <div id="content">
+        <!-- Content will be updated here with each click -->
+    </div>
+
+    <!-- Glow elements -->
+    <div class="glow-box"></div>
+    <div class="glow-box"></div>
+    <div class="glow-box"></div>
+
+    <script>
+        const TOTAL_CONTENT_SLIDES = 24; // Total number of content slides
+        const slides = [
+            `<h1>WHAT IS CYBER THREAT?</h1>
+            <div class="logo">
+                <img src="cyber1.png" alt="Cyber Security">
+            </div>
+            <p>Cyber threats are malicious activities aimed at disrupting, damaging, or gaining unauthorized access to computer systems, networks, and data.</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+            
+            `<h1>WHAT IS CYBER THREAT?</h1>
+            <div class="logo">
+                <img src="cyber1.png" alt="Cyber Security">
+            </div>
+            <p>Cyber threats are malicious activities aimed at disrupting, damaging, or gaining unauthorized access to computer systems, networks, and data.</p>
+            <p>These threats can come from various sources, including hackers, cybercriminal organizations, and even nation-state actors.</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+            
+            `<h1>WHAT IS CYBER THREAT?</h1>
+            <div class="logo">
+                <img src="cyber1.png" alt="Cyber Security">
+            </div>
+            <p>Cyber threats are malicious activities aimed at disrupting, damaging, or gaining unauthorized access to computer systems, networks, and data.</p>
+            <p>These threats can come from various sources, including hackers, cybercriminal organizations, and even nation-state actors.</p>
+            <p>Cyber threats can result in:</p>
+            <ul>
+                <li>Data breaches – Theft or exposure of personal and business data.</li>
+            </ul>
+            <div class="continue">Click anywhere to continue...</div>`,
+            
+            `<h1>WHAT IS CYBER THREAT?</h1>
+            <div class="logo">
+                <img src="cyber1.png" alt="Cyber Security">
+            </div>
+            <p>Cyber threats are malicious activities aimed at disrupting, damaging, or gaining unauthorized access to computer systems, networks, and data.</p>
+            <p>These threats can come from various sources, including hackers, cybercriminal organizations, and even nation-state actors.</p>
+            <p>Cyber threats can result in:</p>
+            <ul>
+                <li>Data breaches – Theft or exposure of personal and business data.</li>
+                <li>Financial losses – Fraud, ransom demands, and online scams.</li>
+            </ul>
+            <div class="continue">Click anywhere to continue...</div>`,
+            
+            `<h1>WHAT IS CYBER THREAT?</h1>
+            <div class="logo">
+                <img src="cyber1.png" alt="Cyber Security">
+            </div>
+            <p>Cyber threats are malicious activities aimed at disrupting, damaging, or gaining unauthorized access to computer systems, networks, and data.</p>
+            <p>These threats can come from various sources, including hackers, cybercriminal organizations, and even nation-state actors.</p>
+            <p>Cyber threats can result in:</p>
+            <ul>
+                <li>Data breaches – Theft or exposure of personal and business data.</li>
+                <li>Financial losses – Fraud, ransom demands, and online scams.</li>
+                <li>Disruptions – Attacks that shut down systems, networks, or services.</li>
+            </ul>
+            <div class="continue">Click anywhere to continue...</div>`,
+            
+            `<h1>HOW ATTACKERS EXPLOIT WEAK SECURITY MEASURES</h1>
+            <div class="logo">
+                <img src="cyber2.png" alt="Cyber Security">
+            </div>
+            <p>Cybercriminals are always on the lookout for gaps in digital security.</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>HOW ATTACKERS EXPLOIT WEAK SECURITY MEASURES</h1>
+            <div class="logo">
+                <img src="cyber2.png" alt="Cyber Security">
+            </div>
+            <p>Cybercriminals are always on the lookout for gaps in digital security.</p>
+            <p>They exploit weaknesses in systems, software, and user behavior to gain unauthorized access, steal data, or launch attacks. Let me look you through an in-depth look at how attackers take advantage of them.</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>HOW ATTACKERS EXPLOIT WEAK SECURITY MEASURES</h1>
+            <div class="logo">
+                <img src="cyber2.png" alt="Cyber Security">
+            </div>
+            <p>Cybercriminals are always on the lookout for gaps in digital security.</p>
+            <p>They exploit weaknesses in systems, software, and user behavior to gain unauthorized access, steal data, or launch attacks. Let me look you through an in-depth look at how attackers take advantage of them.</p>
+            <p><span class="safe-dot"></span>Flip To Know How To Stay Safe:</p>
+            <div class="flip-container">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="red1.png" alt="Weak Password" class="card-icon">
+                            <div class="card-title"><span class="warning-dot"></span>Weak Passwords</div>
+                            <div class="card-text">
+                                Hackers use brute force attacks, systematically guessing weak passwords until they gain access.
+                                <br><br>
+                                Attackers use social engineering to trick users into revealing passwords through fake login pages or scam emails.
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="green1.png" alt="Strong Password" class="card-icon">
+                            <div class="card-title"><span class="safe-dot"></span>Strong Passwords</div>
+                            <div class="card-text">
+                                Use strong, unique passwords for every account.
+                                <br><br>
+                                Enable Multi-Factor Authentication (MFA) for an extra layer of security.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>HOW ATTACKERS EXPLOIT WEAK SECURITY MEASURES</h1>
+            <div class="logo">
+                <img src="cyber2.png" alt="Cyber Security">
+            </div>
+            <p>Cybercriminals are always on the lookout for gaps in digital security.</p>
+            <p>They exploit weaknesses in systems, software, and user behavior to gain unauthorized access, steal data, or launch attacks. Let me look you through an in-depth look at how attackers take advantage of them.</p>
+            <p><span class="safe-dot"></span>Flip To Know How To Stay Safe:</p>
+            <div class="flip-container">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="red1.png" alt="Weak Password" class="card-icon">
+                            <div class="card-title"><span class="warning-dot"></span>Weak Passwords</div>
+                            <div class="card-text">
+                                Hackers use brute force attacks, systematically guessing weak passwords until they gain access.
+                                <br><br>
+                                Attackers use social engineering to trick users into revealing passwords through fake login pages or scam emails.
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="green1.png" alt="Strong Password" class="card-icon">
+                            <div class="card-title"><span class="safe-dot"></span>Strong Passwords</div>
+                            <div class="card-text">
+                                Use strong, unique passwords for every account.
+                                <br><br>
+                                Enable Multi-Factor Authentication (MFA) for an extra layer of security.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="red2.png" alt="Outdated Software" class="card-icon">
+                            <div class="card-title"><span class="warning-dot"></span>Outdated Software</div>
+                            <div class="card-text">
+                                Old versions of operating systems, browsers, and apps often contain known vulnerabilities that hackers exploit.
+                                <br><br>
+                                Cybercriminals deploy exploit kits, automated tools that find and attack unpatched systems.
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="green2.png" alt="Update Software" class="card-icon">
+                            <div class="card-title"><span class="safe-dot"></span>Update Software</div>
+                            <div class="card-text">
+                                Always update your software and operating systems as soon as new patches are available.
+                                <br><br>
+                                Use reputable antivirus and endpoint protection tools to detect vulnerabilities.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>HOW ATTACKERS EXPLOIT WEAK SECURITY MEASURES</h1>
+            <div class="logo">
+                <img src="cyber2.png" alt="Cyber Security">
+            </div>
+            <p>Cybercriminals are always on the lookout for gaps in digital security.</p>
+            <p>They exploit weaknesses in systems, software, and user behavior to gain unauthorized access, steal data, or launch attacks. Let me look you through an in-depth look at how attackers take advantage of them.</p>
+            <p><span class="safe-dot"></span>Flip To Know How To Stay Safe:</p>
+            <div class="flip-container">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="red1.png" alt="Weak Password" class="card-icon">
+                            <div class="card-title"><span class="warning-dot"></span>Weak Passwords</div>
+                            <div class="card-text">
+                                Hackers use brute force attacks, systematically guessing weak passwords until they gain access.
+                                <br><br>
+                                Attackers use social engineering to trick users into revealing passwords through fake login pages or scam emails.
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="green1.png" alt="Strong Password" class="card-icon">
+                            <div class="card-title"><span class="safe-dot"></span>Strong Passwords</div>
+                            <div class="card-text">
+                                Use strong, unique passwords for every account.
+                                <br><br>
+                                Enable Multi-Factor Authentication (MFA) for an extra layer of security.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="red2.png" alt="Outdated Software" class="card-icon">
+                            <div class="card-title"><span class="warning-dot"></span>Outdated Software</div>
+                            <div class="card-text">
+                                Old versions of operating systems, browsers, and apps often contain known vulnerabilities that hackers exploit.
+                                <br><br>
+                                Cybercriminals deploy exploit kits, automated tools that find and attack unpatched systems.
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="green2.png" alt="Update Software" class="card-icon">
+                            <div class="card-title"><span class="safe-dot"></span>Update Software</div>
+                            <div class="card-text">
+                                Always update your software and operating systems as soon as new patches are available.
+                                <br><br>
+                                Use reputable antivirus and endpoint protection tools to detect vulnerabilities.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="red3.png" alt="Unsecured Network" class="card-icon">
+                            <div class="card-title"><span class="warning-dot"></span>Unsecured Networks</div>
+                            <div class="card-text">
+                                Hackers intercept unencrypted data on public Wi-Fi networks (e.g., cafes, airports) using Man-in-the-Middle (MitM) attacks.
+                                <br><br>
+                                Cybercriminals set up fake Wi-Fi hotspots that look like legitimate networks to steal credentials and personal data.
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="green3.png" alt="Secure Network" class="card-icon">
+                            <div class="card-title"><span class="safe-dot"></span>Secure Network</div>
+                            <div class="card-text">
+                                Avoid entering sensitive information when connected to public Wi-Fi—use a VPN (Virtual Private Network) for encryption.
+                                <br><br>
+                                Always verify the network name before connecting to avoid rogue hotspots.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>HOW ATTACKERS EXPLOIT WEAK SECURITY MEASURES</h1>
+            <div class="logo">
+                <img src="cyber1.png" alt="Cyber Security">
+            </div>
+            <p>Lack of Awareness - The Biggest Security Gap</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+            
+            `<h1>HOW ATTACKERS EXPLOIT WEAK SECURITY MEASURES</h1>
+            <div class="logo">
+                <img src="cyber1.png" alt="Cyber Security">
+            </div>
+            <p>Lack of Awareness - The Biggest Security Gap</p>
+            <p><span class="warning-dot"></span>Phishing emails trick users into clicking malicious links, downloading infected files, or entering login credentials on fake websites.</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>HOW ATTACKERS EXPLOIT WEAK SECURITY MEASURES</h1>
+            <div class="logo">
+                <img src="cyber1.png" alt="Cyber Security">
+            </div>
+            <p>Lack of Awareness - The Biggest Security Gap</p>
+            <p><span class="warning-dot"></span>Phishing emails trick users into clicking malicious links, downloading infected files, or entering login credentials on fake websites.</p>
+            <p><span class="warning-dot"></span>Scammers use social engineering tactics to impersonate trusted entities (banks, tech support, or coworkers) to steal sensitive information.</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>HOW ATTACKERS EXPLOIT WEAK SECURITY MEASURES</h1>
+            <div class="logo">
+                <img src="cyber1.png" alt="Cyber Security">
+            </div>
+            <p>Lack of Awareness - The Biggest Security Gap</p>
+            <p><span class="warning-dot"></span>Phishing emails trick users into clicking malicious links, downloading infected files, or entering login credentials on fake websites.</p>
+            <p><span class="warning-dot"></span>Scammers use social engineering tactics to impersonate trusted entities (banks, tech support, or coworkers) to steal sensitive information.</p>
+            <p><span class="warning-dot"></span>Many users unknowingly install malware, thinking it's a legitimate app, browser extension, or email attachment.</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>HOW ATTACKERS EXPLOIT WEAK SECURITY MEASURES</h1>
+            <div class="logo">
+                <img src="cyber1.png" alt="Cyber Security">
+            </div>
+            <p>How to be Aware</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>HOW ATTACKERS EXPLOIT WEAK SECURITY MEASURES</h1>
+            <div class="logo">
+                <img src="cyber1.png" alt="Cyber Security">
+            </div>
+            <p>How to be Aware</p>
+            <p><span class="safe-dot"></span>Think before you click—verify links and sender addresses before opening attachments</p>
+            <div class="continue">Click anywhere to continue...</div>`, 
+
+            `<h1>HOW ATTACKERS EXPLOIT WEAK SECURITY MEASURES</h1>
+            <div class="logo">
+                <img src="cyber1.png" alt="Cyber Security">
+            </div>
+            <p>How to be Aware</p>
+            <p><span class="safe-dot"></span>Think before you click—verify links and sender addresses before opening attachments</p>
+            <p><span class="safe-dot"></span>Be skeptical of urgent requests for personal information or payments.</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>HOW ATTACKERS EXPLOIT WEAK SECURITY MEASURES</h1>
+            <div class="logo">
+                <img src="cyber1.png" alt="Cyber Security">
+            </div>
+            <p>How to be Aware</p>
+            <p><span class="safe-dot"></span>Think before you click—verify links and sender addresses before opening attachments</p>
+            <p><span class="safe-dot"></span>Be skeptical of urgent requests for personal information or payments.</p>
+            <p><span class="safe-dot"></span>Regularly educate yourself on the latest scams and cybersecurity threats.</p>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>CYBERTHREATS</h1>
+            <div class="logomid">
+                <img src="cyber1.png" alt="Cyber Security">
+            </div>
+            <h1>sneaky cybersecurity warnings</h1>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `</h1><div class="logo">
+                <img src="cyber1.png" alt="Cyber Security">
+            </div>
+            <h1>Click the arrow for more information</h1>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `</h1><div class="logo">
+                <img src="cyber1.png" alt="Cyber Security">
+            </div>
+            <h1>Click the arrow for more information</h1>
+            <div class="dropdown-section">
+                <div class="dropdown-header">
+                    <span class="arrow-mark">▼</span><h2 class="dropdown-title">"Not Every Link Deserves a Click"</h2>
+                </div>
+                <div class="dropdown-translation">
+                    (Translation: Avoid phishing attacks by being cautious of suspicious links and emails.)
+                </div>
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `</h1><div class="logo">
+                <img src="cyber1.png" alt="Cyber Security">
+            </div>
+            <h1>Click the arrow for more information</h1>
+            <div class="dropdown-section">
+                <div class="dropdown-header">
+                    <span class="arrow-mark">▼</span><h2 class="dropdown-title">"Not Every Link Deserves a Click"</h2>
+                </div>
+                <div class="dropdown-translation">
+                    (Translation: Avoid phishing attacks by being cautious of suspicious links and emails.)
+                </div>
+            </div>
+            <div class="dropdown-section">
+                <div class="dropdown-header">
+                    <span class="arrow-mark">▼</span><h2 class="dropdown-title">"That Free Download Might Cost You More Than You Think"</h2>
+                </div>
+                <div class="dropdown-translation">
+                    (Translation: Be wary of malware-infected files disguised as free software, movies, or games.)
+                </div>
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `</h1><div class="logo">
+                <img src="cyber1.png" alt="Cyber Security">
+            </div>
+            <h1>Click the arrow for more information</h1>
+            <div class="dropdown-section">
+                <div class="dropdown-header">
+                    <span class="arrow-mark">▼</span><h2 class="dropdown-title">"Not Every Link Deserves a Click"</h2>
+                </div>
+                <div class="dropdown-translation">
+                    (Translation: Avoid phishing attacks by being cautious of suspicious links and emails.)
+                </div>
+            </div>
+            <div class="dropdown-section">
+                <div class="dropdown-header">
+                    <span class="arrow-mark">▼</span><h2 class="dropdown-title">"That Free Download Might Cost You More Than You Think"</h2>
+                </div>
+                <div class="dropdown-translation">
+                    (Translation: Be wary of malware-infected files disguised as free software, movies, or games.)
+                </div>
+            </div>
+            <div class="dropdown-section">
+                <div class="dropdown-header">
+                    <span class="arrow-mark">▼</span><h2 class="dropdown-title">"A Stranger's Curiosity is Never Innocent"</h2>
+                </div>
+                <div class="dropdown-translation">
+                    (Translation: Hackers use social engineering to trick you into revealing personal information.)
+                </div>
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `</h1><div class="logo">
+                <img src="cyber1.png" alt="Cyber Security">
+            </div>
+            <h1>Click the arrow for more information</h1>
+            <div class="dropdown-section">
+                <div class="dropdown-header">
+                    <span class="arrow-mark">▼</span><h2 class="dropdown-title">"A Simple 'Yes' Could Be a Big Mistake"</h2>
+                </div>
+                <div class="dropdown-translation">
+                     (Translation: Be cautious when granting app permissions—they might be accessing more than you realize.)
+                </div>
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `</h1><div class="logo">
+                <img src="cyber1.png" alt="Cyber Security">
+            </div>
+            <h1>Click the arrow for more information</h1>
+            <div class="dropdown-section">
+                <div class="dropdown-header">
+                    <span class="arrow-mark">▼</span><h2 class="dropdown-title">"A Simple 'Yes' Could Be a Big Mistake"</h2>
+                </div>
+                <div class="dropdown-translation">
+                     (Translation: Be cautious when granting app permissions—they might be accessing more than you realize.)
+                </div>
+            </div>
+            <div class="dropdown-section">
+                <div class="dropdown-header">
+                    <span class="arrow-mark">▼</span><h2 class="dropdown-title">"Not All Attachments Come with Good Intentions"</h2>
+                </div>
+                <div class="dropdown-translation">
+                     (Translation: Email attachments can contain malware—only open trusted files.)
+                </div>
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `</h1><div class="logo">
+                <img src="cyber1.png" alt="Cyber Security">
+            </div>
+            <h1>Click the arrow for more information</h1>
+            <div class="dropdown-section">
+                <div class="dropdown-header">
+                    <span class="arrow-mark">▼</span><h2 class="dropdown-title">"A Simple 'Yes' Could Be a Big Mistake"</h2>
+                </div>
+                <div class="dropdown-translation">
+                     (Translation: Be cautious when granting app permissions—they might be accessing more than you realize.)
+                </div>
+            </div>
+            <div class="dropdown-section">
+                <div class="dropdown-header">
+                    <span class="arrow-mark">▼</span><h2 class="dropdown-title">"Not All Attachments Come with Good Intentions"</h2>
+                </div>
+                <div class="dropdown-translation">
+                     (Translation: Email attachments can contain malware—only open trusted files.)
+                </div>
+            </div>
+            <div class="dropdown-section">
+                <div class="dropdown-header">
+                    <span class="arrow-mark">▼</span><h2 class="dropdown-title">"Your Inbox is a Minefield—Step Carefully"</h2>
+                </div>
+                <div class="dropdown-translation">
+                     (Translation: Phishing emails often look real but are designed to steal your data.)
+                </div>
+            </div>
+            <div class="continue">Click anywhere to continue...</div>`,
+
+            `<h1>CYBERTHREATS</h1>
+            <div class="logomid">
+                <img src="cyber1.png" alt="Cyber Security">
+            </div>
+            <h1>CONGRATULATIONS! YOU COMPLETED THE LESSON!</h1>
+            <div class="continue">Presentation complete. Click to finish.</div>`
+        ];
+
+        let currentSlide = 0;
+        const contentDiv = document.getElementById('content');
+        
+        // Prevent context menu on right click
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        // Initialize with first slide
+        contentDiv.innerHTML = slides[currentSlide];
+        updateProgressBar();
+        
+        // Initialize course progress tracking
+        const courseProgress = new CourseProgress(1, TOTAL_CONTENT_SLIDES); // Course ID 1 for Cyberthreats
+        courseProgress.init();
+
+        // Set initial slide progress
+        courseProgress.setCurrentSlide(currentSlide + 1);
+
+        // Add click event listener for dropdown and flip cards
+        document.addEventListener('click', function(e) {
+            const flipCard = e.target.closest('.flip-card');
+            const dropdownHeader = e.target.closest('.dropdown-header');
+            const backButton = e.target.closest('.back-button');
+            
+            if (backButton) {
+                // Let the link handle the navigation
+                return;
+            } else if (flipCard) {
+                e.stopPropagation();
+                flipCard.classList.toggle('flipped');
+            } else if (dropdownHeader) {
+                e.stopPropagation();
+                const arrow = dropdownHeader.querySelector('.arrow-mark');
+                const translation = dropdownHeader.nextElementSibling;
+                arrow.classList.toggle('active');
+                translation.classList.toggle('active');
+            } else {
+                if (currentSlide === slides.length - 1) {
+                    // If we're on the last slide, update progress before redirecting
+                    courseProgress.setCurrentSlide(TOTAL_CONTENT_SLIDES);
+                    window.location.href = 'learn.html';
+                } else {
+                    currentSlide++;
+                    contentDiv.innerHTML = slides[currentSlide];
+                    contentDiv.scrollTop = 0;
+                    updateProgressBar();
+                    // Update course progress
+                    courseProgress.setCurrentSlide(Math.min(currentSlide + 1, TOTAL_CONTENT_SLIDES));
+                }
+            }
+        });
+        
+        // Handle touch events with the same logic
+        document.addEventListener('touchstart', function(e) {
+            const flipCard = e.target.closest('.flip-card');
+            const dropdownHeader = e.target.closest('.dropdown-header');
+            const backButton = e.target.closest('.back-button');
+            
+            if (backButton) {
+                // Let the link handle the navigation
+                return;
+            } else if (flipCard) {
+                e.stopPropagation();
+                flipCard.classList.toggle('flipped');
+            } else if (dropdownHeader) {
+                e.stopPropagation();
+                const arrow = dropdownHeader.querySelector('.arrow-mark');
+                const translation = dropdownHeader.nextElementSibling;
+                arrow.classList.toggle('active');
+                translation.classList.toggle('active');
+            } else {
+                if (currentSlide === slides.length - 1) {
+                    // If we're on the last slide, update progress before redirecting
+                    courseProgress.setCurrentSlide(TOTAL_CONTENT_SLIDES);
+                    window.location.href = 'learn.html';
+                } else {
+                    currentSlide++;
+                    contentDiv.innerHTML = slides[currentSlide];
+                    contentDiv.scrollTop = 0;
+                    updateProgressBar();
+                    // Update course progress
+                    courseProgress.setCurrentSlide(Math.min(currentSlide + 1, TOTAL_CONTENT_SLIDES));
+                }
+            }
+        });
+        // Function to update progress bar
+        function updateProgressBar() {
+            const progress = Math.min(((currentSlide + 1) / TOTAL_CONTENT_SLIDES) * 100, 100); // Cap at 100%
+            document.querySelector('.progress-bar').style.width = `${progress}%`;
+            document.querySelector('.progress-percentage').textContent = `${Math.min(Math.round(progress), 100)}%`;
+        }
+    </script>
+</body>
+</html>

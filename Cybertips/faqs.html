@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - CyberTips</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="nav-profile.js" defer></script>
+    <script src="session-check.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            height: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0a192f;
+            color: #ccd6f6;
+            min-height: 100%;
+            width: 100%;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Customize scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(100, 255, 218, 0.3);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(100, 255, 218, 0.5);
+        }
+
+        /* Background glow effects */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(135deg, rgba(0,169,224,0.1) 0%, rgba(0,0,0,0) 50%),
+                linear-gradient(-135deg, rgba(100,255,218,0.1) 0%, rgba(0,0,0,0) 50%);
+            z-index: 0;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: 
+                linear-gradient(to right, 
+                    rgba(0,169,224,0) 0%, 
+                    rgba(0,169,224,0.1) 50%, 
+                    rgba(0,169,224,0) 100%);
+            animation: animateGlow 8s linear infinite;
+            z-index: 0;
+        }
+
+        .faq-container {
+            flex: 1 0 auto;
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 20px;
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .faq-header h1 {
+            color: #64ffda;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+        }
+
+        .faq-header p {
+            color: #ccd6f6;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: rgba(13, 36, 64, 0.5);
+            border: 1px solid rgba(100, 255, 218, 0.2);
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 15px rgba(100, 255, 218, 0.2);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #64ffda;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .faq-question i {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            color: #ccd6f6;
+            line-height: 1.6;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 1rem 1.5rem;
+            max-height: 500px;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        @keyframes animateGlow {
+            0% { transform: rotate(0deg) translate(-10%, -10%) rotate(0deg); }
+            100% { transform: rotate(360deg) translate(-10%, -10%) rotate(-360deg); }
+        }
+    </style>
+</head>
+<body class="faqs-page">
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="logo.png" alt="Cyber Tips Logo" class="logo"/>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="learn.html">Learn</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+            </ul>
+        </nav>
+        <div class="profile-icon-container">
+            <a href="profile.html">
+                <i class="fas fa-user profile-icon"></i>
+            </a>
+        </div>
+    </header>
+
+    <div class="glow-box"></div>
+    <div class="glow-box"></div>
+    <div class="glow-box"></div>
+
+    <!-- FAQ Content -->
+    <div class="faq-container">
+        <div class="faq-header">
+            <h1>Your Questions, Answered</h1>
+            <p>Find answers to commonly asked questions about our cybersecurity services and resources.</p>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                How can I get started with the cybersecurity course?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                Simply sign up on our website, and you'll get access to all the lessons to start learning at your own pace.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Do I need prior knowledge of technology to take the course?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                No prior technical knowledge is required. Our lessons are designed for beginners to intermediate learners.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                How can I track my progress in the course?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                You can track your progress through your profile dashboard, which displays completed and in progress lessons.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                What should I do if I encounter any issues with the course?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                If you face any issues, feel free to reach out to our team through the about us page. We'll be happy to assist you.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                What are some of the common cyber threats discussed in your blog?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                Our blog covers topics like malware, phishing, ransomware, data breaches, and other emerging threats to keep you informed about the latest cybersecurity issues.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                How can I improve my personal cybersecurity?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                We offer practical tips on our blog about securing passwords, using two-factor authentication, avoiding phishing attacks, and maintaining up-to-date software.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Are the lessons free?
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                Yes, all of our lessons are completely free. You can access them anytime without any cost.
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <img src="logo.png" alt="Cyber Tips Logo" class="footer-logo">
+        <p class="footer-text">© 2024 CyberTips. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Add click event listeners to FAQ items
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                // Close all other FAQ items
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle the clicked item
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

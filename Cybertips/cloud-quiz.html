@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Security Quiz</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="session-check.js"></script>
+    <script src="nav-profile.js" defer></script>
+    <script src="course-progress.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0a192f;
+            color: #ccd6f6;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #quiz-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 25, 47, 0.95);
+            border-radius: 10px;
+            border: 1px solid #64ffda;
+            text-align: center;
+        }
+
+        #question-text {
+            white-space: pre-line;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            text-align: left;
+            padding: 15px;
+            background: rgba(100, 255, 218, 0.1);
+            border-radius: 5px;
+        }
+
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .option-btn {
+            padding: 15px 20px;
+            background: rgba(100, 255, 218, 0.1);
+            border: 1px solid #64ffda;
+            color: #ccd6f6;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            text-align: left;
+            margin: 10px;
+            width: 100%;
+        }
+
+        .option-btn:hover {
+            background: rgba(100, 255, 218, 0.2);
+            transform: translateX(5px);
+        }
+
+        .option-btn.correct {
+            background: rgba(0, 255, 0, 0.2);
+            border-color: #00ff00;
+        }
+
+        .option-btn.incorrect {
+            background: rgba(255, 0, 0, 0.2);
+            border-color: #ff0000;
+        }
+
+        #continue-btn, #retry-btn {
+            padding: 10px 20px;
+            background: rgba(100, 255, 218, 0.1);
+            border: 1px solid #64ffda;
+            color: #64ffda;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        #continue-btn:hover, #retry-btn:hover {
+            background: rgba(100, 255, 218, 0.2);
+        }
+
+        #score-container {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #64ffda;
+            display: none;
+        }
+
+        .explanation-text {
+            margin-top: 15px;
+            padding: 15px;
+            background: rgba(100, 255, 218, 0.1);
+            border-left: 3px solid #64ffda;
+            color: #ccd6f6;
+            border-radius: 0 5px 5px 0;
+            font-style: italic;
+            display: none;
+            animation: fadeIn 0.5s ease-in;
+            text-align: left;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            color: #64ffda;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cloud Security Quiz</h1>
+    <div id="quiz-container">
+        <div id="question-container">
+            <div id="question-text"></div>
+            <div class="quiz-options">
+                <button class="option-btn" onclick="checkAnswer(0)"></button>
+                <button class="option-btn" onclick="checkAnswer(1)"></button>
+                <button class="option-btn" onclick="checkAnswer(2)"></button>
+            </div>
+        </div>
+        <div id="score-container" style="display: none;">
+            <h2>Quiz Complete!</h2>
+            <p>Your Score: <span id="score"></span>%</p>
+            <button id="retry-btn" onclick="retryQuiz()" style="display: none;">Try Again</button>
+            <button id="continue-btn" onclick="window.location.href='learn.html'" style="display: none;">Return to Learn</button>
+        </div>
+    </div>
+
+    <script>
+        const quizQuestions = [
+            {
+                question: "What is a data breach?",
+                options: [
+                    "A) Deleting a file",
+                    "B) Gaining unauthorized access to data",
+                    "C) Forgetting your password"
+                ],
+                correct: 1,
+                explanation: "A data breach occurs when someone gains unauthorized access to your data, potentially exposing sensitive information to malicious actors."
+            },
+            {
+                question: "Which of these is a good password?",
+                options: [
+                    "A) password123",
+                    "B) Mark2024",
+                    "C) tH7$Yk*21R@"
+                ],
+                correct: 2,
+                explanation: "A strong password contains a mix of uppercase and lowercase letters, numbers, and special characters, making it harder to guess or crack."
+            },
+            {
+                question: "What is the purpose of 2FA?",
+                options: [
+                    "A) Makes logging in faster",
+                    "B) Encrypts your files",
+                    "C) Adds extra security even if your password is stolen"
+                ],
+                correct: 2,
+                explanation: "Two-Factor Authentication (2FA) provides an additional layer of security by requiring a second form of verification, even if someone has your password."
+            },
+            {
+                question: "How can you prevent unauthorized sharing?",
+                options: [
+                    "A) Set folders to Anyone with link",
+                    "B) Review and restrict sharing settings",
+                    "C) Share only on social media"
+                ],
+                correct: 1,
+                explanation: "Regularly reviewing and restricting sharing settings ensures that only authorized people have access to your files and helps prevent accidental exposure."
+            },
+            {
+                question: "When using public Wi-Fi to access cloud storage, you should:",
+                options: [
+                    "A) Use a VPN for protection",
+                    "B) It's too slow",
+                    "C) Your files won't sync"
+                ],
+                correct: 0,
+                explanation: "Using a VPN on public Wi-Fi encrypts your connection and protects your data from potential eavesdroppers who might be monitoring the network."
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+        let quizCompleted = false;
+
+        function displayQuestion() {
+            const questionContainer = document.getElementById('question-container');
+            const questionText = document.getElementById('question-text');
+            const options = document.getElementsByClassName('option-btn');
+            
+            // Remove any existing explanation
+            const oldExplanation = questionContainer.querySelector('.explanation-text');
+            if (oldExplanation) {
+                oldExplanation.remove();
+            }
+            
+            questionText.textContent = quizQuestions[currentQuestion].question;
+            for (let i = 0; i < 3; i++) {
+                options[i].textContent = quizQuestions[currentQuestion].options[i];
+                options[i].className = 'option-btn';
+                options[i].disabled = false;
+            }
+        }
+
+        function checkAnswer(choice) {
+            if (quizCompleted) return;
+            
+            const options = document.getElementsByClassName('option-btn');
+            const correct = quizQuestions[currentQuestion].correct;
+            const questionContainer = document.getElementById('question-container');
+            
+            // Disable all buttons to prevent multiple answers
+            Array.from(options).forEach(btn => btn.disabled = true);
+            
+            options[choice].classList.add(choice === correct ? 'correct' : 'incorrect');
+            options[correct].classList.add('correct');
+            
+            if (choice === correct) {
+                score++;
+                // Show explanation for correct answer
+                const explanationDiv = document.createElement('div');
+                explanationDiv.className = 'explanation-text';
+                explanationDiv.textContent = quizQuestions[currentQuestion].explanation;
+                questionContainer.appendChild(explanationDiv);
+                
+                // Show explanation with animation
+                setTimeout(() => {
+                    explanationDiv.style.display = 'block';
+                }, 100);
+            }
+            
+            // Adjust timing based on whether showing explanation
+            const delayTime = choice === correct ? 2500 : 1000;
+            
+            setTimeout(() => {
+                currentQuestion++;
+                if (currentQuestion < quizQuestions.length) {
+                    displayQuestion();
+                } else {
+                    showResults();
+                }
+            }, delayTime);
+        }
+
+        function showResults() {
+            const scorePercent = (score / quizQuestions.length) * 100;
+            document.getElementById('question-container').style.display = 'none';
+            document.getElementById('score-container').style.display = 'block';
+            document.getElementById('score').textContent = scorePercent;
+            
+            if (scorePercent >= 80) {
+                quizCompleted = true;
+                document.getElementById('continue-btn').style.display = 'block';
+                document.getElementById('retry-btn').style.display = 'none';
+            } else {
+                document.getElementById('retry-btn').style.display = 'block';
+                document.getElementById('continue-btn').style.display = 'none';
+            }
+        }
+
+        function retryQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            document.getElementById('question-container').style.display = 'block';
+            document.getElementById('score-container').style.display = 'none';
+            document.getElementById('retry-btn').style.display = 'none';
+            displayQuestion();
+        }
+
+        // Initialize the quiz
+        displayQuestion();
+    </script>
+</body>
+</html> 
